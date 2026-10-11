@@ -15,6 +15,16 @@ scan/              the "Find" and "Re-check" steps of the loop
   baseline/            dated output from 11 Oct 2026, the "before" for the monthly re-check
 ```
 
+## Keys
+
+```bash
+cp .env.example .env    # then fill in DataForSEO and OpenRouter keys
+```
+
+`.env` is git-ignored. `visibility.mjs` and `llm-panel.mjs` load it automatically (Node 20.12+);
+real environment variables take precedence. Cloudflare doesn't read `.env`: the live panel's
+keys go in the Pages project as secrets (below).
+
 ## Deploy to Cloudflare Pages
 
 No build step.
@@ -52,11 +62,11 @@ Behind a proxy: prefix with `NODE_USE_ENV_PROXY=1`.
 
 ```bash
 node scan/visibility.mjs                          # dry run: plan + estimated cost, spends nothing
-DATAFORSEO_LOGIN=... DATAFORSEO_PASSWORD=... node scan/visibility.mjs --confirm --budget 0.5
+node scan/visibility.mjs --confirm --budget 0.5           # keys from .env
 node scan/visibility.mjs --confirm --only mentions   # one part only; writes its own file
 ```
 
-Credentials come from environment variables only. Never commit them.
+Credentials come from `.env` (or real environment variables). Never commit them.
 
 Measured cost per call on this account (Oct 2026): ChatGPT scraper $0.004, Gemini scraper $0.004,
 Google AI Mode $0.004, Google organic $0.002, LLM Mentions multi-target $0.11. A full run is about
@@ -80,7 +90,7 @@ add `"mcp__dataforseo__api_request"` to `permissions.ask` in `.claude/settings.j
 
 ```bash
 node scan/llm-panel.mjs                                   # dry run
-OPENROUTER_API_KEY=... node scan/llm-panel.mjs --confirm --budget 5
+node scan/llm-panel.mjs --confirm --budget 5              # key from .env
 ```
 
 80 calls (10 questions x 4 models x memory/web) cost $1.52 on 11 Oct 2026. Model IDs are pinned

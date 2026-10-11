@@ -10,6 +10,11 @@
 // Node 18+. Behind a proxy, run with NODE_USE_ENV_PROXY=1.
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+
+// Keys come from .env at the repo root (git-ignored; see .env.example). Real env vars win.
+try { process.loadEnvFile(fileURLToPath(new URL('../.env', import.meta.url))); } catch {}
+
 
 // Current flagship IDs on OpenRouter, Oct 2026. Check https://openrouter.ai/api/v1/models before changing.
 const MODELS = {
