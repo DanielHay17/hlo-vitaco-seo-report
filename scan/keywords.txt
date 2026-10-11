@@ -1,0 +1,6 @@
+# High-intent AU queries. One per line. No search operators (site:, quotes, -term): the script refuses them
+# because each operator bills as an extra SERP.
+# TODO(Daniel): add the other five queries from the original eight.
+best protein powder australia
+is creatine safe to take daily
+pre workout without caffeine australia

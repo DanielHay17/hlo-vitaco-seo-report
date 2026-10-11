@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitaco Search Health · Phlo</title>
+<meta name="description" content="Search health findings across Vitaco Health's six consumer sites, prepared by Phlo for Dhiren Dunraj.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000000;
+    --bg-near: #050505;
+    --surface: #171717;
+    --surface-2: #202020;
+    --accent: #11EDC5;
+    --accent-mid: #34BBC7;
+    --accent-dark: #33C6AA;
+    --text: #FFFFFF;
+    --text-2: #AFAFAF;
+    --muted: #919191;
+    --dim: #626262;
+    --line: #2a2a2a;
+    --btn: #DEDEDE;
+    --crit: #FF6B5E;
+    --warn: #F5B83D;
+    --display: 'Satoshi', 'Manrope', sans-serif;
+    --body: 'Manrope', sans-serif;
+    --mono: 'Roboto Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+    color: var(--text-2);
+    font: 400 16px/1.6 var(--body);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 500; color: var(--text); margin: 0; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(40px, 7vw, 72px); line-height: 1.12; }
+  h2 { font-size: clamp(32px, 5vw, 54px); line-height: 1.12; }
+  h3 { font-size: clamp(22px, 2.6vw, 28px); line-height: 1.25; }
+  .hl { color: var(--accent); }
+  .grad { background: linear-gradient(90deg, var(--accent), var(--accent-mid), var(--accent-dark)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .star { color: var(--accent); font-size: 0.6em; vertical-align: 0.35em; margin: 0 0.15em; }
+  .eyebrow { font: 600 13px/1.4 var(--body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  p { margin: 0 0 1em; }
+  .lede { font-size: 18px; color: var(--text-2); max-width: 720px; }
+  code, pre { font-family: var(--mono); font-size: 14px; }
+  code { color: var(--text); background: var(--surface-2); padding: 1px 6px; border-radius: 5px; word-break: break-word; }
+
+  /* Nav */
+  .nav-shell { position: sticky; top: 14px; z-index: 10; display: flex; justify-content: center; padding: 0 16px; }
+  nav {
+    display: flex; align-items: center; gap: 28px;
+    background: var(--bg-near); border: 1px solid var(--line); border-radius: 40px;
+    padding: 10px 10px 10px 24px; max-width: 100%;
+  }
+  .logo { font: 600 24px/1 var(--body); color: var(--text); letter-spacing: -0.02em; }
+  .logo span { color: var(--accent); }
+  nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; }
+  nav ul a { color: var(--text-2); font-size: 15px; }
+  nav ul a:hover { color: var(--text); text-decoration: none; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--surface-2); color: var(--btn); border: 1px solid #3a3a3a; border-radius: 7px;
+    padding: 10px 18px; font: 400 15px/1 var(--body); white-space: nowrap;
+  }
+  .btn:hover { text-decoration: none; border-color: var(--btn); }
+  .btn.ghost { background: transparent; padding: 15px 27px; }
+
+  section { padding: 96px 0; }
+  .section-head { margin-bottom: 48px; max-width: 820px; }
+  .section-head .eyebrow { margin-bottom: 14px; display: block; }
+  .section-head h2 { margin-bottom: 18px; }
+
+  /* Hero */
+  .hero { padding: 120px 0 72px; text-align: center; }
+  .hero .eyebrow { margin-bottom: 22px; display: block; }
+  .hero h1 { max-width: 960px; margin: 0 auto 26px; }
+  .hero .lede { margin: 0 auto 40px; }
+  .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 72px; text-align: left; }
+  .metric { background: var(--surface); border-radius: 14px; padding: 26px 22px; border: 1px solid #1f1f1f; }
+  .metric .num { font: 500 44px/1 var(--display); color: var(--accent); margin-bottom: 12px; white-space: nowrap; }
+  .metric .num small { font-size: 22px; color: var(--accent-dark); }
+  .metric p { margin: 0; color: var(--text); font-size: 15px; line-height: 1.45; }
+  .metric .src { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }
+
+  /* Property board */
+  .board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .prop { background: var(--surface); border-radius: 14px; padding: 24px; border: 1px solid #1f1f1f; display: flex; flex-direction: column; gap: 10px; }
+  .prop.crit { border-color: rgba(255,107,94,0.45); box-shadow: 0 0 0 1px rgba(255,107,94,0.12), 0 18px 40px -20px rgba(255,107,94,0.35); }
+  .prop .top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .prop .domain { font: 500 20px/1.2 var(--display); color: var(--text); word-break: break-word; }
+  .prop .platform { font: 400 13px/1.3 var(--mono); color: var(--muted); }
+  .prop p { margin: 0; font-size: 15px; }
+  .pill { font: 600 12px/1 var(--body); letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 10px; border-radius: 20px; white-space: nowrap; }
+  .pill.ok { color: var(--accent); background: rgba(17,237,197,0.1); }
+  .pill.warn { color: var(--warn); background: rgba(245,184,61,0.12); }
+  .pill.crit { color: var(--crit); background: rgba(255,107,94,0.12); }
+  .board-note { margin-top: 22px; color: var(--muted); font-size: 14px; }
+
+  /* Findings */
+  .group-title { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin: 64px 0 22px; }
+  .group-title:first-of-type { margin-top: 0; }
+  .finding { background: var(--surface); border-radius: 14px; border: 1px solid #1f1f1f; padding: 30px; margin-bottom: 16px; }
+  .finding header { display: flex; gap: 16px; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+  .finding .id { font: 400 13px/1 var(--mono); color: var(--muted); margin-bottom: 10px; display: block; }
+  .finding .cols { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; margin-top: 18px; }
+  .finding h4 { font: 600 12px/1 var(--body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  .finding .cols p { font-size: 15px; }
+  .finding .cols p:last-child { margin-bottom: 0; }
+  pre.term {
+    background: var(--bg-near); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px 18px; margin: 0; overflow-x: auto; color: var(--text-2); line-height: 1.65;
+  }
+  pre.term .c { color: var(--accent); }
+  pre.term .o { color: var(--text); }
+  pre.term .k { color: var(--dim); }
+  .contrast { background: linear-gradient(135deg, rgba(17,237,197,0.08), rgba(17,237,197,0.01)); border: 1px solid rgba(17,237,197,0.25); border-radius: 14px; padding: 30px; }
+  .contrast ul { margin: 14px 0 0; padding-left: 20px; }
+  .contrast li { margin-bottom: 6px; }
+
+  /* Competitive */
+  .comp { display: grid; grid-template-columns: 1.15fr 1fr; gap: 32px; align-items: start; }
+  .chart { background: var(--surface); border-radius: 14px; padding: 30px; border: 1px solid #1f1f1f; }
+  .chart h3 { font-size: 20px; margin-bottom: 4px; }
+  .chart .sub { color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr 44px; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .bar-row .name { color: var(--text); font-size: 15px; }
+  .bar-track { height: 14px; background: var(--surface-2); border-radius: 7px; overflow: hidden; }
+  .bar-fill { height: 100%; background: #5c5c5c; border-radius: 7px; }
+  .bar-row.us .bar-fill { background: var(--accent); }
+  .bar-row.us .name { color: var(--accent); }
+  .bar-row .val { font: 400 14px var(--mono); color: var(--text); text-align: right; }
+  .queries { list-style: none; padding: 0; margin: 0; }
+  .queries li { font: 400 14px/1.4 var(--mono); color: var(--text); background: var(--bg-near); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
+  .callout { border-left: 2px solid var(--accent); padding: 4px 0 4px 18px; margin-top: 26px; }
+  .callout p { margin: 0; color: var(--text); }
+
+  /* Loop */
+  .loop-section { background: linear-gradient(180deg, transparent, rgba(17,237,197,0.04) 30%, rgba(17,237,197,0.04) 70%, transparent); }
+  .loop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .loop-svg { width: 100%; max-width: 540px; height: auto; display: block; margin: 0 auto; }
+  .steps { list-style: none; margin: 0; padding: 0; }
+  .steps li { display: grid; grid-template-columns: 52px 1fr; gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .steps li:last-child { border-bottom: 0; }
+  .steps .n { font: 500 28px/1 var(--display); color: var(--accent); }
+  .steps h3 { font-size: 22px; margin-bottom: 6px; }
+  .steps p { margin: 0; font-size: 15px; }
+  .slogan { text-align: center; margin: 80px auto 40px; max-width: 820px; }
+  .slogan h3 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.2; }
+  .lanes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .lane { background: var(--surface); border-radius: 14px; padding: 26px; border: 1px solid #1f1f1f; display: flex; flex-direction: column; }
+  .lane.auto { border-color: rgba(17,237,197,0.4); }
+  .lane .tag { align-self: flex-start; margin-bottom: 16px; }
+  .lane h3 { font-size: 22px; margin-bottom: 4px; }
+  .lane .who { font: 400 13px/1.4 var(--mono); color: var(--muted); margin-bottom: 16px; }
+  .lane ol { margin: 0 0 16px; padding-left: 20px; font-size: 15px; }
+  .lane ol li { margin-bottom: 6px; }
+  .lane .foot { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+
+  .ticket { margin-top: 40px; background: var(--bg-near); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .ticket .bar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 22px; background: var(--surface); border-bottom: 1px solid var(--line); font: 400 13px var(--mono); color: var(--muted); }
+  .ticket .bar b { color: var(--text); font-weight: 400; }
+  .ticket dl { margin: 0; padding: 22px; display: grid; grid-template-columns: 170px 1fr; gap: 12px 22px; font-size: 15px; }
+  .ticket dt { font: 400 13px/1.6 var(--mono); color: var(--muted); }
+  .ticket dd { margin: 0; color: var(--text-2); min-width: 0; }
+  .ticket dl > *, .cols > *, .comp > *, .loop-grid > *, .about > * { min-width: 0; }
+  .ticket dd pre { margin-top: 4px; }
+
+  /* Plan */
+  .plan { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+  .phase { background: var(--surface); border-radius: 14px; padding: 26px; border: 1px solid #1f1f1f; }
+  .phase .when { font: 400 13px var(--mono); color: var(--accent); margin-bottom: 10px; display: block; }
+  .phase h3 { font-size: 22px; margin-bottom: 10px; }
+  .phase ul { margin: 0; padding-left: 18px; font-size: 15px; }
+  .phase li { margin-bottom: 6px; }
+  .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid #1f1f1f; }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); font-size: 15px; min-width: 600px; }
+  th, td { text-align: left; padding: 14px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font: 600 12px/1.4 var(--body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); background: var(--surface-2); }
+  td { color: var(--text-2); }
+  td.now { color: var(--crit); font-family: var(--mono); font-size: 14px; }
+  td.goal { color: var(--accent); font-family: var(--mono); font-size: 14px; }
+  tr:last-child td { border-bottom: 0; }
+  .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .note { background: var(--surface); border-radius: 14px; padding: 24px; border: 1px solid #1f1f1f; }
+  .note h3 { font-size: 20px; margin-bottom: 8px; }
+  .note p { margin: 0; font-size: 15px; }
+
+  /* About */
+  .about { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: start; }
+  .about p { font-size: 17px; }
+  .about .facts { list-style: none; margin: 0; padding: 0; }
+  .about .facts li { padding: 14px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 130px 1fr; gap: 14px; font-size: 15px; }
+  .about .facts li span:first-child { color: var(--muted); }
+  .about .facts li span:last-child { color: var(--text); }
+
+  /* Method */
+  .method { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .method .note p + p { margin-top: 10px; }
+
+  footer { border-top: 1px solid var(--line); padding: 40px 0 56px; margin-top: 40px; }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+
+  @media (max-width: 960px) {
+    nav ul { display: none; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .board, .lanes, .plan, .method { grid-template-columns: 1fr 1fr; }
+    .comp, .loop-grid, .about { grid-template-columns: 1fr; }
+    .finding .cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px; }
+    section { padding: 64px 0; }
+    .hero { padding: 72px 0 48px; }
+    .metrics, .board, .lanes, .plan, .method, .notes { grid-template-columns: 1fr; }
+    .metric .num { font-size: 38px; }
+    .finding, .chart, .contrast { padding: 22px 18px; }
+    .finding header { flex-direction: column; gap: 8px; }
+    .bar-row { grid-template-columns: 110px 1fr 40px; gap: 10px; }
+    .ticket dl { grid-template-columns: 1fr; gap: 4px; }
+    .ticket dd { margin-bottom: 12px; }
+    .about .facts li { grid-template-columns: 1fr; gap: 2px; }
+    nav { gap: 14px; padding-left: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-shell">
+  <nav aria-label="Report sections">
+    <a href="#top" class="logo" aria-label="Phlo">Phlo<span>.</span></a>
+    <ul>
+      <li><a href="#board">Properties</a></li>
+      <li><a href="#findings">Findings</a></li>
+      <li><a href="#competitive">Competitive</a></li>
+      <li><a href="#loop">The loop</a></li>
+      <li><a href="#first">First 30 days</a></li>
+    </ul>
+    <a class="btn" href="https://phloing.com" target="_blank" rel="noopener">Let's Talk <span aria-hidden="true">↗</span></a>
+  </nav>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Prepared for Dhiren Dunraj · Vitaco Health · 14 October 2026</span>
+    <h1>One of your six sites is <span class="grad">on fire</span><span class="star" aria-hidden="true">✦</span> and nothing told you.</h1>
+    <p class="lede">We checked Vitaco's six consumer sites using plain HTTP requests and public search data. Musashi is well built. Healtheries publishes an Australian sitemap with no Australian pages in it, returns 200 for pages that don't exist and 500 for products that do. Every finding below includes a command your team can run to check it.</p>
+    <div class="hero-ctas">
+      <a class="btn ghost" href="#findings">See the evidence <span aria-hidden="true">↘</span></a>
+      <a class="btn ghost" href="#loop">How we'd fix it <span aria-hidden="true">↘</span></a>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="num">286<small>/286</small></div>
+        <p>URLs in the healtheries.com.au sitemap that point to healtheries.co.nz</p>
+        <span class="src">Zero Australian URLs</span>
+      </div>
+      <div class="metric">
+        <div class="num">74<small>/167</small></div>
+        <p>Healtheries product URLs in the sitemap that return HTTP 500</p>
+        <span class="src">44% of product URLs in the sitemap</span>
+      </div>
+      <div class="metric">
+        <div class="num">0</div>
+        <p>hreflang links between Nutra-Life AU and Nutra-Life NZ</p>
+        <span class="src">Two sites competing for one set of searches</span>
+      </div>
+      <div class="metric">
+        <div class="num">2<small>/8</small></div>
+        <p>high-intent Australian searches where any Vitaco brand reaches page one</p>
+        <span class="src">VPA and Bulk Nutrients: 4 each</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROPERTY BOARD ============ -->
+<section id="board">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">01 · The six sites</span>
+      <h2>Five are <span class="hl">fine or close</span>. One is not.</h2>
+      <p class="lede">This isn't a report about Vitaco's SEO being bad. Musashi shows the team knows how to build this properly. What's missing is a way to see when one site quietly breaks.</p>
+    </div>
+    <div class="board">
+      <article class="prop">
+        <div class="top"><span class="domain">musashi.com</span><span class="pill ok">Healthy</span></div>
+        <span class="platform">Shopify</span>
+        <p>Correct canonicals, valid Product and Collection JSON-LD. Two minor findings. This is the standard to match.</p>
+      </article>
+      <article class="prop">
+        <div class="top"><span class="domain">aussiebodies.com</span><span class="pill ok">Healthy</span></div>
+        <span class="platform">WordPress · WooCommerce</span>
+        <p>Canonical tags present, JSON-LD rendered, every sitemap URL we sampled returned 200. No high-severity findings.</p>
+      </article>
+      <article class="prop">
+        <div class="top"><span class="domain">nutralife.com.au</span><span class="pill warn">Conflict</span></div>
+        <span class="platform">Shopify</span>
+        <p>Healthy as a standalone site. Its hreflang only points to itself, so Google has no way to tell that the NZ site is its sister.</p>
+      </article>
+      <article class="prop">
+        <div class="top"><span class="domain">nutralife.co.nz</span><span class="pill warn">Conflict</span></div>
+        <span class="platform">WordPress · WooCommerce</span>
+        <p>Tells search engines it is Australian: <code>lang="en-AU"</code> on the page and <code>"inLanguage":"en-AU"</code> three times in its JSON-LD.</p>
+      </article>
+      <article class="prop crit">
+        <div class="top"><span class="domain">healtheries.com.au</span><span class="pill crit">Critical</span></div>
+        <span class="platform">Next.js · external agency</span>
+        <p>9 high-severity issues and no rendered structured data. The sitemap, the 404 handling and the page titles are all broken.</p>
+      </article>
+      <article class="prop crit">
+        <div class="top"><span class="domain">healtheries.co.nz</span><span class="pill crit">Critical</span></div>
+        <span class="platform">Next.js · external agency</span>
+        <p>Same build, same problems: soft 404s, a homepage titled "Home", 74 product URLs returning 500.</p>
+      </article>
+    </div>
+    <p class="board-note">Redirects checked: musashi.com.au → musashi.com, aussiebodies.com.au → aussiebodies.com (both 301). Nutra-Life Australia is nutralife.com.au, no hyphen.</p>
+  </div>
+</section>
+
+<!-- ============ FINDINGS ============ -->
+<section id="findings">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">02 · Findings with evidence</span>
+      <h2>Every claim comes with a <span class="hl">command you can run</span>.</h2>
+      <p class="lede">Each finding includes the request that proves it, why it matters and the specific change that fixes it. Output shown is from 11 October 2026.</p>
+    </div>
+
+    <div class="group-title"><h3>Healtheries</h3><span class="pill crit">Agency-owned Next.js build</span></div>
+
+    <article class="finding">
+      <header>
+        <div><span class="id">HLTH-01</span><h3>The Australian sitemap contains no Australian pages</h3></div>
+        <span class="pill crit">High</span>
+      </header>
+      <pre class="term"><span class="c">$ curl -sL https://healtheries.com.au/sitemap.xml | grep -o '&lt;loc&gt;https://[^/]*' | sort | uniq -c</span>
+<span class="o">    286 &lt;loc&gt;https://healtheries.co.nz</span></pre>
+      <div class="cols">
+        <div><h4>Why it matters</h4><p>A sitemap tells Google which pages to crawl. This one sends Google to the NZ site, so the only way Google can find Australian pages is by following links.</p></div>
+        <div><h4>Fix</h4><p>Build the sitemap per domain. The most likely cause is the sitemap generator reading the NZ site URL from shared configuration. The agency can confirm that quickly.</p></div>
+      </div>
+    </article>
+
+    <article class="finding">
+      <header>
+        <div><span class="id">HLTH-02</span><h3>Pages that don't exist return HTTP 200 (soft 404s)</h3></div>
+        <span class="pill crit">High</span>
+      </header>
+      <pre class="term"><span class="c">$ curl -sL -o /dev/null -w '%{http_code}\n' https://healtheries.com.au/any-made-up-path</span>
+<span class="o">200</span>
+<span class="c">$ curl -sL https://healtheries.com.au/any-made-up-path | grep -o '&lt;title&gt;[^&lt;]*'</span>
+<span class="o">&lt;title&gt;Page Not Found</span></pre>
+      <div class="cols">
+        <div><h4>Why it matters</h4><p>The page says "not found" but the status code says it exists. Crawlers spend their time on junk URLs, and real broken links never show up as 404s in Search Console, so nobody gets alerted.</p></div>
+        <div><h4>Fix</h4><p>Return a real 404 status: <code>notFound()</code> in the App Router, or <code>return { notFound: true }</code> in the Pages Router. The not-found template can stay exactly as it is.</p></div>
+      </div>
+    </article>
+
+    <article class="finding">
+      <header>
+        <div><span class="id">HLTH-03</span><h3>74 of 167 product URLs return HTTP 500</h3></div>
+        <span class="pill crit">High</span>
+      </header>
+      <pre class="term"><span class="c">$ curl -sL https://healtheries.co.nz/sitemap.xml | grep -o '&lt;loc&gt;[^&lt;]*/product/[^&lt;]*' \
+    | sed 's/&lt;loc&gt;//' | xargs -P 8 -I{} curl -s -o /dev/null -w '%{http_code}\n' {} | sort | uniq -c</span>
+<span class="o">     93 200
+     74 500</span></pre>
+      <div class="cols">
+        <div><h4>Why it matters</h4><p>When a host keeps returning 5xx errors, Google crawls the whole site more slowly and eventually drops the failing URLs. The sitemap is actively sending crawlers to these errors.</p></div>
+        <div><h4>Fix</h4><p>The work order lists all 74 URLs. The likely culprits are products deleted or renamed in the CMS whose routes still exist, or a data fetch that throws instead of returning 404. A gone product should return 404 or 301, never 500.</p></div>
+      </div>
+    </article>
+
+    <article class="finding">
+      <header>
+        <div><span class="id">HLTH-04</span><h3>The homepage title is "Home". WordPress already has the right one.</h3></div>
+        <span class="pill crit">High</span>
+      </header>
+      <pre class="term"><span class="c">$ curl -sL https://healtheries.com.au/ | grep -oE '&lt;title&gt;[^&lt;]*|og:title" content="[^"]*'</span>
+<span class="o">&lt;title&gt;Home
+og:title" content="Home - Healtheries</span></pre>
+      <div class="cols">
+        <div><h4>Why it matters</h4><p>The <code>&lt;title&gt;</code> is the blue link in Google's results. Yoast in the WordPress backend already generates "Home - Healtheries", and the front end uses it for <code>og:title</code>. But it builds <code>&lt;title&gt;</code> from the raw page name.</p></div>
+        <div><h4>Fix</h4><p>A small front-end change: take <code>&lt;title&gt;</code> from the same Yoast field the <code>og:title</code> already uses. Every page then gets the titles the content team has written.</p></div>
+      </div>
+    </article>
+
+    <article class="finding">
+      <header>
+        <div><span class="id">HLTH-05</span><h3>Structured data exists in the CMS but never reaches the page</h3></div>
+        <span class="pill crit">High</span>
+      </header>
+      <pre class="term"><span class="c">$ curl -sL https://healtheries.com.au/ | grep -c '&lt;script type="application/ld+json"'</span>
+<span class="o">0</span>
+<span class="c">$ curl -sL https://healtheries.com.au/ | grep -o 'yoast-schema-graph' | wc -l</span>
+<span class="o">1</span>   <span class="k"># present, but as escaped text inside the framework's data payload</span></pre>
+      <div class="cols">
+        <div><h4>Why it matters</h4><p>Product structured data drives price, availability and review details in Google's product results and merchant listings. Yoast builds the schema graph, but the front end only passes it along as escaped text and never renders a <code>&lt;script&gt;</code> tag. The URLs inside it also point at <code>api.healtheries.au.production.beingbui.lt</code>, not the public domain.</p></div>
+        <div><h4>Fix</h4><p>Render the Yoast schema graph as a JSON-LD tag, rewriting the API host to the public domain. Add Product schema on product pages, using Musashi's markup as the reference.</p></div>
+      </div>
+    </article>
+
+    <article class="finding">
+      <header>
+        <div><span class="id">HLTH-06</span><h3>No canonical tags, no hreflang between AU and NZ</h3></div>
+        <span class="pill crit">High</span>
+      </header>
+      <pre class="term"><span class="c">$ curl -sL https://healtheries.com.au/ | grep -cE 'rel="canonical"|hreflang'</span>
+<span class="o">0</span></pre>
+      <div class="cols">
+        <div><h4>Why it matters</h4><p>Two domains serve near-identical product pages with nothing telling Google which version belongs to which country. Combined with HLTH-01, Google has every reason to rank the NZ pages in Australia.</p></div>
+        <div><h4>Fix</h4><p>Add a self-referencing canonical on every page, plus reciprocal <code>en-AU</code> / <code>en-NZ</code> hreflang between matching pages. Same pattern as NL-01 below.</p></div>
+      </div>
+    </article>
+
+    <div class="group-title"><h3>Nutra-Life</h3><span class="pill warn">Shopify (AU) + WordPress (NZ)</span></div>
+
+    <article class="finding">
+      <header>
+        <div><span class="id">NL-01</span><h3>Two sites, each pointing only to itself</h3></div>
+        <span class="pill warn">High</span>
+      </header>
+      <pre class="term"><span class="c">$ curl -sL -A "Mozilla/5.0" https://nutralife.com.au/ | grep -o '&lt;link rel="alternate" hreflang[^&gt;]*&gt;'</span>
+<span class="o">&lt;link rel="alternate" hreflang="x-default" href="https://nutralife.com.au/"&gt;
+&lt;link rel="alternate" hreflang="en" href="https://nutralife.com.au/"&gt;
+&lt;link rel="alternate" hreflang="zh-Hans" href="https://nutralife.com.au/zh"&gt;</span>
+<span class="c">$ curl -sL https://www.nutralife.co.nz/ | grep -o '&lt;link rel="alternate" hreflang[^&gt;]*&gt;'</span>
+<span class="o">&lt;link rel="alternate" hreflang="en" href="https://www.nutralife.co.nz" /&gt;
+&lt;link rel="alternate" hreflang="zh-hans" href="https://www.nutralife.co.nz/?lang=zh-hans" /&gt;</span></pre>
+      <div class="cols">
+        <div><h4>Why it matters</h4><p>Both sites declare themselves as generic <code>en</code>. Neither mentions the other. They sell the same products (Gut Relief, Magnesium Sleep, Probiotica), so to Google they are two unrelated English sites competing for the same searches.</p></div>
+        <div><h4>Fix</h4><p>Add reciprocal hreflang: <code>en-AU</code> on .com.au, <code>en-NZ</code> on .co.nz, each pointing to the other's matching product, with one <code>x-default</code>. Hreflang only works when it is reciprocal, so both platforms need the change. The product mapping becomes a Shopify metafield.</p></div>
+      </div>
+    </article>
+
+    <article class="finding">
+      <header>
+        <div><span class="id">NL-02</span><h3>The NZ site tells search engines it is Australian</h3></div>
+        <span class="pill warn">Medium</span>
+      </header>
+      <pre class="term"><span class="c">$ curl -sL https://www.nutralife.co.nz/ | grep -oE '&lt;html[^&gt;]*lang="[^"]*"|"inLanguage":"[^"]*"'</span>
+<span class="o">&lt;html lang="en-AU"
+"inLanguage":"en-AU"
+"inLanguage":"en-AU"
+"inLanguage":"en-AU"</span></pre>
+      <div class="cols">
+        <div><h4>Why it matters</h4><p>Both values come from the same source, WordPress's site language setting. Yoast uses that setting to fill in <code>inLanguage</code>. As a result, the NZ site reinforces the AU/NZ confusion from NL-01.</p></div>
+        <div><h4>Fix</h4><p>One setting: <em>Settings → General → Site Language → English (New Zealand)</em>. This fixes the html <code>lang</code> and all three JSON-LD values at once. It's the smallest fix in this report.</p></div>
+      </div>
+    </article>
+
+    <div class="group-title"><h3>Musashi</h3><span class="pill ok">The reference build</span></div>
+    <div class="contrast">
+      <h3>Same company, same category. Musashi gets the fundamentals right.</h3>
+      <ul>
+        <li>One correct, self-referencing canonical on every page we checked</li>
+        <li>Product, Brand and Organization JSON-LD rendered on product pages, and it validates</li>
+        <li>Every sitemap URL we sampled returns 200, and made-up URLs return a real 404</li>
+      </ul>
+      <p style="margin:16px 0 0">The two findings on Musashi are minor. Musashi shows that Vitaco can build this well. Healtheries shows nobody was alerted when a site broke. The rest of this report is about fixing that.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPETITIVE ============ -->
+<section id="competitive">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">03 · Competitive gap</span>
+      <h2>Challenger brands own the <span class="hl">high-intent searches</span>.</h2>
+      <p class="lede">We checked eight searches an Australian buyer types when they're close to purchase. On most of them, Vitaco's brands don't reach page one.</p>
+    </div>
+    <div class="comp">
+      <div class="chart" role="img" aria-label="Page-one presence across 8 high-intent Australian queries: VPA 4, Bulk Nutrients 4, any Vitaco brand 2.">
+        <h3>Page-one presence, 8 high-intent AU queries</h3>
+        <p class="sub">Google Australia, desktop organic results, top 10. Source: DataForSEO, October 2026.</p>
+        <div class="bar-row"><span class="name">VPA</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="val">4/8</span></div>
+        <div class="bar-row"><span class="name">Bulk Nutrients</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="val">4/8</span></div>
+        <div class="bar-row us"><span class="name">Any Vitaco brand</span><div class="bar-track"><div class="bar-fill" style="width:25%"></div></div><span class="val">2/8</span></div>
+        <div class="callout"><p>Swisse and Blackmores own the magnesium searches. That category matters for Nutra-Life's Magnesium Sleep, which is currently split across two sites competing with each other (NL-01).</p></div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:16px">Sample queries</h3>
+        <ul class="queries">
+          <li>best protein powder australia</li>
+          <li>is creatine safe to take daily</li>
+          <li>pre workout without caffeine australia</li>
+        </ul>
+        <div class="callout">
+          <p>A word of caution: fixing technical problems won't win these searches on its own. What it does is stop Vitaco losing searches it should already rank for. Today, Google can't even find Healtheries' Australian pages. Closing the competitive gap comes next, measured with the same loop.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE LOOP ============ -->
+<section id="loop" class="loop-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">04 · The loop</span>
+      <h2>Find. <span class="hl">Fix.</span> Prove it moved.</h2>
+      <p class="lede">An audit is a snapshot. Healtheries didn't break today and won't stay fixed by itself. The loop runs every month, so a broken site gets caught within weeks instead of years.</p>
+    </div>
+
+    <div class="loop-grid">
+      <svg class="loop-svg" viewBox="0 10 560 470" role="img" aria-labelledby="loopTitle loopDesc">
+        <title id="loopTitle">The Find, Fix, Re-check loop</title>
+        <desc id="loopDesc">A cycle of three steps. Step one, find: a scheduled scan. Step two, fix: through an MCP connection to the site builder. Step three, re-check: a month later, showing what moved. Then the cycle repeats.</desc>
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#11EDC5"/>
+          </marker>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#11EDC5" stop-opacity="0.16"/>
+            <stop offset="100%" stop-color="#11EDC5" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="280" cy="280" r="150" fill="url(#glow)"/>
+        <circle cx="280" cy="280" r="190" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+        <g fill="none" stroke="#11EDC5" stroke-width="2.5" marker-end="url(#arrow)">
+          <path d="M357.3,106.4 A190,190 0 0 1 469.0,299.9"/>
+          <path d="M391.7,433.7 A190,190 0 0 1 168.3,433.7"/>
+          <path d="M91.0,299.9 A190,190 0 0 1 202.7,106.4"/>
+        </g>
+        <g font-family="Manrope, sans-serif" text-anchor="middle">
+          <text x="280" y="266" fill="#919191" font-size="14" letter-spacing="2">EVERY MONTH</text>
+          <text x="280" y="296" fill="#FFFFFF" font-size="22" font-family="Satoshi, Manrope, sans-serif">Under $2 of data</text>
+          <text x="280" y="320" fill="#919191" font-size="14">per full run</text>
+        </g>
+        <g font-family="Manrope, sans-serif" text-anchor="middle">
+          <circle cx="280" cy="90" r="64" fill="#171717" stroke="#11EDC5" stroke-width="1.5"/>
+          <text x="280" y="72" fill="#11EDC5" font-size="14" font-family="Roboto Mono, monospace">01</text>
+          <text x="280" y="98" fill="#FFFFFF" font-size="24" font-family="Satoshi, Manrope, sans-serif">Find</text>
+          <text x="280" y="120" fill="#AFAFAF" font-size="13">scheduled scan</text>
+
+          <circle cx="444.5" cy="375" r="64" fill="#171717" stroke="#11EDC5" stroke-width="1.5"/>
+          <text x="444.5" y="357" fill="#11EDC5" font-size="14" font-family="Roboto Mono, monospace">02</text>
+          <text x="444.5" y="383" fill="#FFFFFF" font-size="24" font-family="Satoshi, Manrope, sans-serif">Fix</text>
+          <text x="444.5" y="405" fill="#AFAFAF" font-size="13">via MCP</text>
+
+          <circle cx="115.5" cy="375" r="64" fill="#171717" stroke="#11EDC5" stroke-width="1.5"/>
+          <text x="115.5" y="357" fill="#11EDC5" font-size="14" font-family="Roboto Mono, monospace">03</text>
+          <text x="115.5" y="383" fill="#FFFFFF" font-size="24" font-family="Satoshi, Manrope, sans-serif">Re-check</text>
+          <text x="115.5" y="405" fill="#AFAFAF" font-size="13">30 days later</text>
+        </g>
+      </svg>
+
+      <ol class="steps">
+        <li><span class="n">01</span><div><h3>Find</h3><p>A scheduled scan of all six sites. Plain HTTP checks (sitemaps, status codes, titles, canonicals, hreflang, rendered JSON-LD) cost nothing to run. DataForSEO adds where the brands rank, with a hard spending cap per run. Every technical finding in this report can be reproduced with it.</p></div></li>
+        <li><span class="n">02</span><div><h3>Fix</h3><p>An agent connected through MCP to each site's builder drafts the change. A person approves it, the agent applies it, and the change is logged with before and after. When we don't have write access, the same agent writes a precise work order instead.</p></div></li>
+        <li><span class="n">03</span><div><h3>Re-check</h3><p>The same scan runs a month later and compares results line by line: fixed, still open, newly broken. Work orders close automatically when their acceptance test passes, whoever made the fix.</p></div></li>
+      </ol>
+    </div>
+
+    <div class="slogan">
+      <h3>Everyone sells <span style="color:var(--muted)">find</span>. Almost nobody sells <span class="hl">fix</span>.</h3>
+      <p class="lede" style="margin:16px auto 0">Here is exactly where the loop closes by itself and where it hands off to someone else. Vitaco has three kinds of stack, so the loop closes in three different ways.</p>
+    </div>
+
+    <div class="lanes">
+      <article class="lane auto">
+        <span class="pill ok tag">Closes automatically</span>
+        <h3>Shopify</h3>
+        <div class="who">musashi.com · nutralife.com.au</div>
+        <ol>
+          <li>The agent drafts the change through the Shopify Admin API: theme files, metafields, SEO fields, redirects</li>
+          <li>A person approves the diff</li>
+          <li>The change is applied and logged with before/after</li>
+          <li>The re-check confirms it worked</li>
+        </ol>
+        <div class="foot">Every change can be rolled back. Nothing goes live without approval.</div>
+      </article>
+      <article class="lane">
+        <span class="pill warn tag">Closes with access</span>
+        <h3>WordPress / WooCommerce</h3>
+        <div class="who">nutralife.co.nz · aussiebodies.com</div>
+        <ol>
+          <li>With a scoped application password, the agent works like it does on Shopify, through the WordPress REST API</li>
+          <li>Without one, it produces a work order</li>
+          <li>Settings-level fixes like NL-02 are a two-minute job for whoever holds the admin login</li>
+        </ol>
+        <div class="foot">Your choice, site by site. Both routes are measured the same way.</div>
+      </article>
+      <article class="lane">
+        <span class="pill crit tag">Closes with a work order</span>
+        <h3>Agency Next.js</h3>
+        <div class="who">healtheries.com.au · healtheries.co.nz</div>
+        <ol>
+          <li>We don't have write access, and shouldn't: the agency owns the code</li>
+          <li>Each finding becomes a ticket: affected URLs, current vs expected output, likely cause, and a one-line acceptance test</li>
+          <li>The agency ships the fix. The re-check closes the ticket when the test passes</li>
+        </ol>
+        <div class="foot">Gives you a clear, checkable list of what to ask the agency for.</div>
+      </article>
+    </div>
+
+    <div class="ticket" aria-label="Example work order">
+      <div class="bar"><span><b>Work order HLTH-02</b> · healtheries.com.au, healtheries.co.nz</span><span>Owner: agency · Raised by: scheduled scan</span></div>
+      <dl>
+        <dt>Problem</dt><dd>Any non-existent path returns HTTP 200 with <code>&lt;title&gt;Page Not Found</code>.</dd>
+        <dt>Expected</dt><dd>HTTP 404 with the existing not-found template.</dd>
+        <dt>Likely cause</dt><dd>The catch-all route renders the not-found component without setting the status. Use <code>notFound()</code> (App Router) or <code>{ notFound: true }</code> (Pages Router).</dd>
+        <dt>Acceptance test</dt><dd><pre class="term"><span class="c">$ curl -s -o /dev/null -w '%{http_code}' https://healtheries.com.au/phlo-probe-x7k2</span>
+<span class="o">404</span></pre></dd>
+        <dt>Closes</dt><dd>Automatically on the next scan where the test passes on both domains.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIRST 30 DAYS ============ -->
+<section id="first">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">05 · What I'd do first</span>
+      <h2>One loop, <span class="hl">30 days</span>, measured.</h2>
+      <p class="lede">A small, fixed scope with numbers agreed upfront, so the result speaks for itself. If the numbers don't move, you've spent very little finding that out.</p>
+    </div>
+
+    <div class="plan">
+      <div class="phase">
+        <span class="when">Week 1</span>
+        <h3>Baseline</h3>
+        <ul>
+          <li>Run the full scan on all six sites and save a dated baseline</li>
+          <li>Agree the metrics below with you and your engineer</li>
+          <li>Connect Shopify read access. Write access only after you approve the change process</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="when">Weeks 1–2</span>
+        <h3>Fix</h3>
+        <ul>
+          <li>Send the Healtheries work order (HLTH-01 to 06) to the agency, with an acceptance test for each ticket</li>
+          <li>NL-02: change the NZ site language setting</li>
+          <li>NL-01: reciprocal hreflang on the shared Nutra-Life products</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="when">Day 30</span>
+        <h3>Re-check</h3>
+        <ul>
+          <li>Run the same scan again and compare line by line</li>
+          <li>One page showing what moved, what didn't, and why</li>
+          <li>You decide whether the loop keeps running</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Metric</th><th>Today</th><th>Day 30 target</th></tr></thead>
+        <tbody>
+          <tr><td>healtheries.com.au sitemap URLs on the Australian domain</td><td class="now">0 of 286</td><td class="goal">all of them</td></tr>
+          <tr><td>Made-up Healtheries URLs returning HTTP 200</td><td class="now">yes</td><td class="goal">404</td></tr>
+          <tr><td>Healtheries product URLs returning HTTP 500</td><td class="now">74 of 167</td><td class="goal">0</td></tr>
+          <tr><td>Healtheries homepage &lt;title&gt;</td><td class="now">"Home"</td><td class="goal">Yoast title</td></tr>
+          <tr><td>Rendered JSON-LD tags on Healtheries pages</td><td class="now">0</td><td class="goal">Organization + Product</td></tr>
+          <tr><td>Nutra-Life shared products with reciprocal AU/NZ hreflang</td><td class="now">0</td><td class="goal">every shared product</td></tr>
+          <tr><td>nutralife.co.nz declared language</td><td class="now">en-AU</td><td class="goal">en-NZ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="notes">
+      <div class="note">
+        <h3>What this isn't</h3>
+        <p>No AI-generated content. You ruled it out and I agree. This work makes sure the content you already have can be found, gets attributed to the right country and doesn't return errors.</p>
+      </div>
+      <div class="note">
+        <h3>Auditable by design</h3>
+        <p>Every change is a logged diff with a before and after measurement, and it can be reversed. Data costs stay under $2 per full run on DataForSEO's pay-as-you-go pricing, with a hard cap built into the scanner.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:14px">06 · Who's writing this</span>
+      <h2>Daniel Hay<span class="hl">.</span></h2>
+    </div>
+    <div>
+      <p>I studied finance at UTS and moved into AI implementation. Most of my AI work is in accounting, finance and operations. Marketing is newer ground for me, so I haven't asked you to trust my SEO instincts. Every finding here comes with a request your engineer can run and a mechanism they can check.</p>
+      <p>I'm also a Musashi customer, which is how this started.</p>
+      <ul class="facts">
+        <li><span>Company</span><span>Phlo · phloing.com</span></li>
+        <li><span>Based</span><span>Chatswood, just up the road from Macquarie Park</span></li>
+        <li><span>Also</span><span>I write The Rollout, a newsletter on AI implementation, and run free system sprints</span></li>
+      </ul>
+      <p style="margin-top:24px"><a class="btn" href="https://phloing.com" target="_blank" rel="noopener">Book A Call <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHOD ============ -->
+<section id="method" style="padding-top:24px">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Method &amp; sources</span></div>
+    <div class="method">
+      <div class="note">
+        <h3>Technical checks</h3>
+        <p>Plain HTTP requests to each live site on 11 October 2026: sitemaps, status codes, titles, canonical and hreflang tags, and rendered JSON-LD. No paid tools, nothing logged in. Sites change, so re-run the commands to see the current state.</p>
+      </div>
+      <div class="note">
+        <h3>Search data</h3>
+        <p>DataForSEO Google organic results for Australia, desktop, top 10. We use a fixed endpoint and refuse search operators, because each one bills as an extra query.</p>
+      </div>
+      <div class="note">
+        <h3>What we didn't see</h3>
+        <p>No Search Console, analytics or sales data. Indexation and traffic impact are estimates until Search Console is connected, and that's one of the first things the loop would add.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">Phlo<span>.</span></span>
+    <span>Prepared for Vitaco Health. Confidential.</span>
+    <span>© 2026 PHLOING PTY LTD. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>

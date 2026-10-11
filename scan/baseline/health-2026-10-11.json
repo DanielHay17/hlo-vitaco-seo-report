@@ -1,0 +1,298 @@
+{
+  "ranAt": "2026-10-11T04:52:08.679Z",
+  "sampleSize": 30,
+  "properties": [
+    {
+      "id": "musashi",
+      "url": "https://musashi.com/",
+      "platform": "Shopify",
+      "finalUrl": "https://musashi.com/",
+      "status": 200,
+      "title": "Supplement Store - Shop Sports Nutrition Supplements Online\n &ndash; Musashi",
+      "htmlLang": "en",
+      "canonicals": [
+        "https://musashi.com/"
+      ],
+      "hreflang": [
+        {
+          "lang": "en-US",
+          "href": "https://us.musashi.com/"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://musashi.com/"
+        },
+        {
+          "lang": "en-AU",
+          "href": "https://musashi.com/"
+        },
+        {
+          "lang": "en",
+          "href": "https://musashi.com/"
+        },
+        {
+          "lang": "en-NZ",
+          "href": "https://nz.musashi.com/"
+        },
+        {
+          "lang": "en-AE",
+          "href": "https://ae.musashi.com/"
+        }
+      ],
+      "jsonLdTags": 2,
+      "probe": {
+        "status": 404,
+        "title": "\n      404 Not Found\n &ndash; Musashi"
+      },
+      "sitemap": {
+        "count": 532,
+        "byHost": {
+          "musashi.com": 532
+        }
+      },
+      "sampleStatuses": {
+        "200": 30
+      },
+      "findings": []
+    },
+    {
+      "id": "nutralife-au",
+      "url": "https://nutralife.com.au/",
+      "platform": "Shopify",
+      "finalUrl": "https://nutralife.com.au/",
+      "status": 200,
+      "title": "Specialist Supplements &amp; Vitamins\n\n &ndash; Nutra-Life AU",
+      "htmlLang": "en",
+      "canonicals": [
+        "https://nutralife.com.au/"
+      ],
+      "hreflang": [
+        {
+          "lang": "x-default",
+          "href": "https://nutralife.com.au/"
+        },
+        {
+          "lang": "en",
+          "href": "https://nutralife.com.au/"
+        },
+        {
+          "lang": "zh-Hans",
+          "href": "https://nutralife.com.au/zh"
+        }
+      ],
+      "jsonLdTags": 2,
+      "probe": {
+        "status": 404,
+        "title": "\n      404 Not Found\n\n &ndash; Nutra-Life AU\n    "
+      },
+      "sitemap": {
+        "count": 439,
+        "byHost": {
+          "nutralife.com.au": 439
+        }
+      },
+      "sampleStatuses": {
+        "200": 30
+      },
+      "findings": []
+    },
+    {
+      "id": "nutralife-nz",
+      "url": "https://www.nutralife.co.nz/",
+      "platform": "WordPress / WooCommerce",
+      "finalUrl": "https://www.nutralife.co.nz/",
+      "status": 200,
+      "title": "Nutra-Life New Zealand | Fit for Life",
+      "htmlLang": "en-AU",
+      "canonicals": [
+        "https://www.nutralife.co.nz/"
+      ],
+      "hreflang": [
+        {
+          "lang": "en",
+          "href": "https://www.nutralife.co.nz"
+        },
+        {
+          "lang": "zh-hans",
+          "href": "https://www.nutralife.co.nz/?lang=zh-hans"
+        }
+      ],
+      "jsonLdTags": 1,
+      "probe": {
+        "status": 404,
+        "title": "Page not found | Nutra-Life New Zealand"
+      },
+      "sitemap": {
+        "count": 471,
+        "byHost": {
+          "nutralife.co.nz": 471
+        }
+      },
+      "sampleStatuses": {
+        "200": 30
+      },
+      "findings": []
+    },
+    {
+      "id": "healtheries-au",
+      "url": "https://healtheries.com.au/",
+      "platform": "Next.js (agency)",
+      "finalUrl": "https://healtheries.com.au/",
+      "status": 200,
+      "title": "Home",
+      "htmlLang": "en",
+      "canonicals": [],
+      "hreflang": [],
+      "jsonLdTags": 0,
+      "probe": {
+        "status": 200,
+        "title": "Page Not Found"
+      },
+      "sitemap": {
+        "count": 286,
+        "byHost": {
+          "healtheries.co.nz": 286
+        }
+      },
+      "sampleStatuses": {
+        "200": 22,
+        "500": 8
+      },
+      "findings": [
+        {
+          "severity": "high",
+          "code": "soft-404",
+          "detail": "Made-up URL returned HTTP 200 (title: \"Page Not Found\")"
+        },
+        {
+          "severity": "high",
+          "code": "sitemap-foreign-host",
+          "detail": "0 of 286 sitemap URLs on healtheries.com.au; hosts: {\"healtheries.co.nz\":286}"
+        },
+        {
+          "severity": "high",
+          "code": "sitemap-5xx",
+          "detail": "8 of 30 sampled sitemap URLs returned 5xx"
+        },
+        {
+          "severity": "high",
+          "code": "weak-title",
+          "detail": "Homepage <title> is \"Home\""
+        },
+        {
+          "severity": "medium",
+          "code": "no-canonical",
+          "detail": "No rel=canonical on homepage"
+        },
+        {
+          "severity": "medium",
+          "code": "no-structured-data",
+          "detail": "No rendered JSON-LD on homepage"
+        }
+      ]
+    },
+    {
+      "id": "healtheries-nz",
+      "url": "https://healtheries.co.nz/",
+      "platform": "Next.js (agency)",
+      "finalUrl": "https://healtheries.co.nz/",
+      "status": 200,
+      "title": "Home",
+      "htmlLang": "en",
+      "canonicals": [],
+      "hreflang": [],
+      "jsonLdTags": 0,
+      "probe": {
+        "status": 200,
+        "title": "Page Not Found"
+      },
+      "sitemap": {
+        "count": 286,
+        "byHost": {
+          "healtheries.co.nz": 286
+        }
+      },
+      "sampleStatuses": {
+        "200": 22,
+        "500": 8
+      },
+      "findings": [
+        {
+          "severity": "high",
+          "code": "soft-404",
+          "detail": "Made-up URL returned HTTP 200 (title: \"Page Not Found\")"
+        },
+        {
+          "severity": "high",
+          "code": "sitemap-5xx",
+          "detail": "8 of 30 sampled sitemap URLs returned 5xx"
+        },
+        {
+          "severity": "high",
+          "code": "weak-title",
+          "detail": "Homepage <title> is \"Home\""
+        },
+        {
+          "severity": "medium",
+          "code": "no-canonical",
+          "detail": "No rel=canonical on homepage"
+        },
+        {
+          "severity": "medium",
+          "code": "no-structured-data",
+          "detail": "No rendered JSON-LD on homepage"
+        }
+      ]
+    },
+    {
+      "id": "aussiebodies",
+      "url": "https://aussiebodies.com/",
+      "platform": "Shopify",
+      "finalUrl": "https://aussiebodies.com/",
+      "status": 200,
+      "title": "Honest Snacking | Aussie Bodies",
+      "htmlLang": "en-AU",
+      "canonicals": [
+        "https://aussiebodies.com/"
+      ],
+      "hreflang": [],
+      "jsonLdTags": 1,
+      "probe": {
+        "status": 404,
+        "title": "Page Not Found - Aussie Bodies"
+      },
+      "sitemap": {
+        "count": 37,
+        "byHost": {
+          "aussiebodies.com": 37
+        }
+      },
+      "sampleStatuses": {
+        "200": 30
+      },
+      "findings": []
+    }
+  ],
+  "hreflangPairs": [
+    {
+      "pair": [
+        "nutralife-au",
+        "nutralife-nz"
+      ],
+      "aRefsB": false,
+      "bRefsA": false,
+      "aLang": "en",
+      "bLang": "en-AU"
+    },
+    {
+      "pair": [
+        "healtheries-au",
+        "healtheries-nz"
+      ],
+      "aRefsB": false,
+      "bRefsA": false,
+      "aLang": "en",
+      "bLang": "en"
+    }
+  ]
+}
