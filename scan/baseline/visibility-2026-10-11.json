@@ -1,0 +1,1563 @@
+{
+  "ranAt": "2026-10-11T05:23:26.590Z",
+  "spent": 0.214,
+  "runs": 3,
+  "geminiRuns": 2,
+  "ai": [
+    {
+      "q": "What protein powder should I use?",
+      "brand": "Musashi",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 3,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "True Protein",
+              2
+            ],
+            [
+              "Bulk Nutrients",
+              1
+            ],
+            [
+              "Macro Mike",
+              1
+            ]
+          ],
+          "sources": [
+            "ausport.gov.au",
+            "bulknutrients.com.au",
+            "trueprotein.com.au",
+            "coles.com.au",
+            "whichmedicine.com.au",
+            "healthdirect.gov.au",
+            "supplementempire.com.au",
+            "proteinpowder.com.au",
+            "dietitiansaustralia.org.au",
+            "pioneergains.com",
+            "berwicksupplements.com.au",
+            "onepercentbetter.com.au",
+            "health.clevelandclinic.org",
+            "chatgpt.com",
+            "womenshealthmag.com",
+            "elitesupps.com.au",
+            "supps247.com.au",
+            "supplementsuperstore.com.au",
+            "hlthplus.com",
+            "proteinscore.com.au",
+            "recoveryguru.com.au",
+            "proteinsuppliesaustralia.com.au",
+            "productreview.com.au"
+          ],
+          "fanOut": [
+            "how to choose protein powder whey vs plant based protein powder evidence protein needs Australia 2026",
+            "best protein powder Australia whey isolate plant based dietitian advice 2026",
+            "best protein powder Australia 2026 whey isolate concentrate plant based independent reviews"
+          ]
+        },
+        "gemini": {
+          "runs": 2,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Bulk Nutrients",
+              1
+            ],
+            [
+              "Optimum Nutrition",
+              1
+            ]
+          ],
+          "sources": [
+            "healthylife.com.au",
+            "proteinsuppliesaustralia.com.au",
+            "forbes.com",
+            "google.com"
+          ],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 1,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's the best protein powder in Australia?",
+      "brand": "Musashi",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 3,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Bulk Nutrients",
+              3
+            ],
+            [
+              "True Protein",
+              3
+            ],
+            [
+              "Optimum Nutrition",
+              3
+            ]
+          ],
+          "sources": [
+            "onepercentbetter.com.au",
+            "proteinpowder.com.au",
+            "bulknutrients.com.au",
+            "trueprotein.com.au",
+            "optimumnutrition.com",
+            "supplementsuperstore.com.au",
+            "proteinscore.com.au",
+            "womenshealthmag.com",
+            "productreview.com.au",
+            "supps247.com.au",
+            "elitesupps.com.au",
+            "recoveryguru.com.au",
+            "nutritionwarehouse.com.au",
+            "whichmedicine.com.au",
+            "ascwrstorageprod001.ausport.gov.au",
+            "foodstandards.gov.au",
+            "nsw.gov.au",
+            "theguardian.com",
+            "reddit.com"
+          ],
+          "fanOut": [
+            "best protein powders Australia 2026 reviews whey isolate vegan protein independent testing",
+            "best protein powder Australia 2026 reviews whey isolate vegan third party tested",
+            "best protein powder Australia 2026 reviews whey isolate value protein per serve"
+          ]
+        },
+        "gemini": {
+          "runs": 2,
+          "targetHits": 1,
+          "vitacoHits": 1,
+          "brands": [
+            [
+              "Optimum Nutrition",
+              2
+            ],
+            [
+              "Musashi",
+              1
+            ],
+            [
+              "Bulk Nutrients",
+              1
+            ],
+            [
+              "True Protein",
+              1
+            ],
+            [
+              "Macro Mike",
+              1
+            ]
+          ],
+          "sources": [
+            "nutritionwarehouse.com.au",
+            "forbes.com",
+            "elitesupps.com.au"
+          ],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 1,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "VPA",
+              1
+            ],
+            [
+              "True Protein",
+              1
+            ]
+          ],
+          "sources": [
+            "vpa.com.au",
+            "trueprotein.com.au",
+            "proteinsuppliesaustralia.com.au",
+            "google.com"
+          ],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "Is creatine safe to take daily, and which creatine should I buy in Australia?",
+      "brand": "Musashi",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 3,
+          "targetHits": 1,
+          "vitacoHits": 1,
+          "brands": [
+            [
+              "Optimum Nutrition",
+              2
+            ],
+            [
+              "Bulk Nutrients",
+              2
+            ],
+            [
+              "Musashi",
+              1
+            ]
+          ],
+          "sources": [
+            "ausport.gov.au",
+            "sportintegrity.gov.au",
+            "hasta.org.au",
+            "chemistwarehouse.com.au",
+            "atpscience.com.au",
+            "optimizenutrition.com.au",
+            "womenshealthmag.com",
+            "ods.od.nih.gov",
+            "nccih.nih.gov",
+            "api.ods.od.nih.gov",
+            "eternalelixir.com.au",
+            "verifiedsupplementdata.com",
+            "ais.gov.au",
+            "pubmed.ncbi.nlm.nih.gov",
+            "supps247.com.au",
+            "dsld.od.nih.gov",
+            "cpgindex.com",
+            "optimumnutrition.com",
+            "stackhq.com.au",
+            "bulknutrients.com.au",
+            "musclenation.org",
+            "choice.com.au",
+            "pricely.app",
+            "momentvm.com.au",
+            "secure.bulknutrients.com.au",
+            "mayoclinic.org",
+            "pmc.ncbi.nlm.nih.gov",
+            "fda.gov",
+            "efsa.onlinelibrary.wiley.com"
+          ],
+          "fanOut": [
+            "creatine monohydrate daily safety healthy adults evidence NIH ODS fact sheet",
+            "best creatine monohydrate Australia third party tested products 2026",
+            "creatine monohydrate daily safety evidence Australian health advice kidney pregnancy 2025 2026",
+            "best creatine monohydrate Australia products price third party tested 2026",
+            "creatine monohydrate safety daily dose healthy adults evidence kidney creatinine position stand"
+          ]
+        },
+        "gemini": {
+          "runs": 2,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Bulk Nutrients",
+              2
+            ],
+            [
+              "True Protein",
+              2
+            ],
+            [
+              "Optimum Nutrition",
+              2
+            ],
+            [
+              "Body Science",
+              1
+            ]
+          ],
+          "sources": [
+            "urmc.rochester.edu",
+            "trueprotein.com.au",
+            "lovelifesupplements.co.uk",
+            "justcreatine.com.au",
+            "consensus.app",
+            "eternalelixir.com.au",
+            "naternalvitamins.com.au"
+          ],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 1,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Bulk Nutrients",
+              1
+            ],
+            [
+              "VPA",
+              1
+            ],
+            [
+              "True Protein",
+              1
+            ]
+          ],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's a good pre workout without caffeine in Australia?",
+      "brand": "Musashi",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 3,
+          "targetHits": 2,
+          "vitacoHits": 2,
+          "brands": [
+            [
+              "Musashi",
+              2
+            ],
+            [
+              "Bulk Nutrients",
+              1
+            ],
+            [
+              "True Protein",
+              1
+            ]
+          ],
+          "sources": [
+            "chemistwarehouse.com.au",
+            "supps247.com.au",
+            "alphafitsupplements.com.au",
+            "onepercentbetter.com.au",
+            "momentvm.com.au",
+            "thesuppsaver.com.au",
+            "elitesupps.com.au",
+            "remotecanteen.com",
+            "theworkoutmag.com",
+            "vpa.com.au",
+            "trueprotein.com.au",
+            "chatgpt.com",
+            "emraldlabs.com",
+            "menshealth.com",
+            "reddit.com"
+          ],
+          "fanOut": [
+            "best caffeine free pre workout Australia ingredients citrulline beta alanine 2026",
+            "best caffeine free pre workout Australia ingredients reviews 2026",
+            "best caffeine free pre workout Australia ingredients creatine citrulline beta alanine reviews"
+          ]
+        },
+        "gemini": {
+          "runs": 2,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [
+            "elitesupps.com.au",
+            "chemistwarehouse.com.au"
+          ],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 1,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [
+            "musclenation.org",
+            "bitumen2bush.com",
+            "australiansportsnutrition.com.au",
+            "nutritionwarehouse.com.au",
+            "elitesupps.com.au",
+            "google.com"
+          ],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's the best magnesium supplement for sleep in Australia?",
+      "brand": "Nutra-Life",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 3,
+          "targetHits": 1,
+          "vitacoHits": 1,
+          "brands": [
+            [
+              "Swisse",
+              2
+            ],
+            [
+              "Bulk Nutrients",
+              1
+            ],
+            [
+              "Ethical Nutrients",
+              1
+            ],
+            [
+              "Metagenics",
+              1
+            ],
+            [
+              "Nutra-Life",
+              1
+            ]
+          ],
+          "sources": [
+            "amazon.com.au",
+            "bulknutrients.com.au",
+            "pubmed.ncbi.nlm.nih.gov",
+            "nccih.nih.gov",
+            "ods.od.nih.gov",
+            "tga.gov.au",
+            "health.gov.au",
+            "nthhealth.com.au",
+            "chatgpt.com",
+            "whichmedicine.com.au",
+            "glow.com.au",
+            "ritua.com.au",
+            "suppup.com.au",
+            "safetyandquality.gov.au",
+            "google.com",
+            "tandfonline.com",
+            "healthdirect.gov.au"
+          ],
+          "fanOut": [
+            "best magnesium supplement sleep Australia evidence magnesium glycinate safety 2026",
+            "best magnesium supplement for sleep Australia evidence magnesium glycinate TGA safety",
+            "best evidence magnesium supplements sleep insomnia systematic review 2025 2026 Australia TGA magnesium supplements safety"
+          ]
+        },
+        "gemini": {
+          "runs": 2,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Swisse",
+              2
+            ],
+            [
+              "Blackmores",
+              2
+            ],
+            [
+              "Ethical Nutrients",
+              1
+            ]
+          ],
+          "sources": [
+            "gr8health.com.au",
+            "ecotraders.com.au",
+            "blackmores.com.au",
+            "healthline.com",
+            "swisse.com.au"
+          ],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 1,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Swisse",
+              1
+            ],
+            [
+              "Bioglan",
+              1
+            ],
+            [
+              "Metagenics",
+              1
+            ]
+          ],
+          "sources": [
+            "metagenics.com.au",
+            "naturesway.com.au",
+            "trueprotein.com.au",
+            "chemistwarehouse.com.au"
+          ],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's the best probiotic for gut health in Australia?",
+      "brand": "Nutra-Life",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 3,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Inner Health",
+              3
+            ],
+            [
+              "Swisse",
+              1
+            ],
+            [
+              "Metagenics",
+              1
+            ],
+            [
+              "Ethical Nutrients",
+              1
+            ]
+          ],
+          "sources": [
+            "tga.gov.au",
+            "chatgpt.com",
+            "pubmed.ncbi.nlm.nih.gov",
+            "healthdirect.gov.au",
+            "betterhealth.vic.gov.au",
+            "ausport.gov.au",
+            "choice.com.au",
+            "nccih.nih.gov",
+            "pmc.ncbi.nlm.nih.gov",
+            "mdpi.com",
+            "metagenics.com.au",
+            "whichmedicine.com.au",
+            "chemistwarehouse.com.au",
+            "google.com",
+            "doi.org",
+            "biomeguide.com",
+            "cghjournal.org",
+            "els-jbs-prod-cdn.jbs.elsevierhealth.com",
+            "australianvitamins.com",
+            "woolworths.com.au",
+            "greatearth.com",
+            "dalbyhealthfoods.com.au",
+            "australianprescriber.tg.org.au",
+            "dietitiansaustralia.org.au",
+            "worldgastroenterology.org"
+          ],
+          "fanOut": [
+            "best probiotic Australia evidence strains IBS constipation bloating 2026",
+            "best probiotic for gut health Australia evidence strain-specific probiotics IBS antibiotic-associated diarrhea 2026",
+            "best probiotic strains evidence IBS constipation diarrhoea Australia 2026 clinical guidelines"
+          ]
+        },
+        "gemini": {
+          "runs": 2,
+          "targetHits": 1,
+          "vitacoHits": 1,
+          "brands": [
+            [
+              "Life-Space",
+              2
+            ],
+            [
+              "Nutra-Life",
+              1
+            ],
+            [
+              "Blackmores",
+              1
+            ],
+            [
+              "Swisse",
+              1
+            ],
+            [
+              "Bioglan",
+              1
+            ],
+            [
+              "Inner Health",
+              1
+            ]
+          ],
+          "sources": [
+            "nanamall.com",
+            "hlthplus.com",
+            "google.com",
+            "tumme.com.au",
+            "chemistwarehouse.com.au"
+          ],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 1,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Blackmores",
+              1
+            ],
+            [
+              "Life-Space",
+              1
+            ],
+            [
+              "Inner Health",
+              1
+            ]
+          ],
+          "sources": [
+            "hlthplus.com",
+            "healthdirect.gov.au"
+          ],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's a good multivitamin for kids in Australia?",
+      "brand": "Healtheries",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 3,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Swisse",
+              1
+            ]
+          ],
+          "sources": [
+            "pentavite.com",
+            "chemistwarehouse.com.au",
+            "pregnancybirthbaby.org.au",
+            "healthdirect.gov.au",
+            "rch.org.au",
+            "tga.gov.au",
+            "australianprescriber.tg.org.au",
+            "chatgpt.com",
+            "qld.gov.au",
+            "swisse.com.au",
+            "naturesway.com.au",
+            "resources.schn.health.nsw.gov.au"
+          ],
+          "fanOut": [
+            "best children's multivitamins Australia 2026 evidence kids vitamins advice healthdirect Australia",
+            "Australian government advice children multivitamin supplements vitamin D iron kids 2026",
+            "best children's multivitamin Australia ingredients age recommendations healthdirect vitamin supplements kids Australia"
+          ]
+        },
+        "gemini": {
+          "runs": 2,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Swisse",
+              2
+            ],
+            [
+              "Blackmores",
+              2
+            ],
+            [
+              "Nature's Way",
+              1
+            ]
+          ],
+          "sources": [
+            "chempro.com.au",
+            "google.com",
+            "chemistaustralia.com.au"
+          ],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 1,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Swisse",
+              1
+            ],
+            [
+              "Blackmores",
+              1
+            ],
+            [
+              "Nature's Way",
+              1
+            ]
+          ],
+          "sources": [
+            "dailypowers.com.au",
+            "naturesway.com.au",
+            "chemistaustralia.com.au"
+          ],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's the healthiest protein bar to buy in Australia?",
+      "brand": "Aussie Bodies",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 3,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Body Science",
+              2
+            ],
+            [
+              "Bulk Nutrients",
+              1
+            ]
+          ],
+          "sources": [
+            "proteinscore.com.au",
+            "dietitiansaustralia.org.au",
+            "realsimple.com",
+            "verywellhealth.com",
+            "wearechief.com",
+            "wallabywellness.com.au",
+            "elitesupps.com.au",
+            "beckymay.com.au",
+            "heraldsun.com.au",
+            "raisednutrition.com",
+            "bigw.com.au",
+            "bluedinosaur.com.au",
+            "healthdirect.gov.au",
+            "foodstandards.gov.au",
+            "shelfstats.com.au"
+          ],
+          "fanOut": [
+            "healthiest protein bars Australia nutrition ingredients 2026 dietitian",
+            "healthiest protein bars Australia nutrition ingredients comparison 2026",
+            "healthiest protein bars to buy Australia nutrition ingredients comparison 2026"
+          ]
+        },
+        "gemini": {
+          "runs": 2,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "Bulk Nutrients",
+              2
+            ],
+            [
+              "True Protein",
+              2
+            ]
+          ],
+          "sources": [
+            "proteinscore.com.au",
+            "google.com",
+            "trueprotein.com.au",
+            "wallabywellness.com.au"
+          ],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 1,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [
+            [
+              "True Protein",
+              1
+            ],
+            [
+              "Body Science",
+              1
+            ],
+            [
+              "Quest",
+              1
+            ]
+          ],
+          "sources": [
+            "bodyandsoul.news.com.au",
+            "jessicacox.com.au",
+            "nine.com.au",
+            "google.com"
+          ],
+          "fanOut": []
+        }
+      }
+    }
+  ],
+  "organic": [
+    {
+      "keyword": "best protein powder australia",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "trueprotein.com.au",
+          "brand": "True Protein"
+        },
+        {
+          "rank": 2,
+          "domain": "uprotein.com.au",
+          "brand": null
+        },
+        {
+          "rank": 3,
+          "domain": "reddit.com",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "australiansportsnutrition.com.au",
+          "brand": null
+        },
+        {
+          "rank": 5,
+          "domain": "boldhealth.com.au",
+          "brand": null
+        },
+        {
+          "rank": 6,
+          "domain": "happyway.com.au",
+          "brand": null
+        },
+        {
+          "rank": 7,
+          "domain": "vegkit.com",
+          "brand": null
+        },
+        {
+          "rank": 8,
+          "domain": "fitness.edu.au",
+          "brand": null
+        },
+        {
+          "rank": 9,
+          "domain": "botanikablends.com.au",
+          "brand": null
+        }
+      ],
+      "aiOverview": {
+        "refs": [
+          "trueprotein.com.au",
+          "fitness.edu.au",
+          "evelynfaye.com.au",
+          "elitesupps.com.au",
+          "happyway.com.au",
+          "vegkit.com",
+          "proteinsuppliesaustralia.com.au",
+          "tiktok.com",
+          "instagram.com"
+        ],
+        "brands": [
+          "Bulk Nutrients",
+          "True Protein",
+          "Optimum Nutrition",
+          "Nutra Organics"
+        ]
+      },
+      "vitacoOrganic": []
+    },
+    {
+      "keyword": "is creatine safe to take daily",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "brand": null
+        },
+        {
+          "rank": 2,
+          "domain": "hartfordhospital.org",
+          "brand": null
+        },
+        {
+          "rank": 3,
+          "domain": "pmc.ncbi.nlm.nih.gov",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "webmd.com",
+          "brand": null
+        },
+        {
+          "rank": 5,
+          "domain": "compound.co",
+          "brand": null
+        },
+        {
+          "rank": 6,
+          "domain": "jinfiniti.com",
+          "brand": null
+        },
+        {
+          "rank": 7,
+          "domain": "theconversation.com",
+          "brand": null
+        },
+        {
+          "rank": 8,
+          "domain": "bswhealth.com",
+          "brand": null
+        }
+      ],
+      "aiOverview": {
+        "refs": [
+          "health.harvard.edu",
+          "my.clevelandclinic.org",
+          "health.com",
+          "urmc.rochester.edu",
+          "youtube.com",
+          "healthline.com",
+          "ausport.gov.au"
+        ],
+        "brands": []
+      },
+      "vitacoOrganic": []
+    },
+    {
+      "keyword": "pre workout without caffeine australia",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "nutritionwarehouse.com.au",
+          "brand": null
+        },
+        {
+          "rank": 2,
+          "domain": "australiansportsnutrition.com.au",
+          "brand": null
+        },
+        {
+          "rank": 3,
+          "domain": "elitesupps.com.au",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "trueprotein.com.au",
+          "brand": "True Protein"
+        },
+        {
+          "rank": 5,
+          "domain": "chemistwarehouse.com.au",
+          "brand": null
+        },
+        {
+          "rank": 6,
+          "domain": "supplementmart.com.au",
+          "brand": null
+        },
+        {
+          "rank": 7,
+          "domain": "au.iherb.com",
+          "brand": null
+        },
+        {
+          "rank": 8,
+          "domain": "fuzesupplements.com.au",
+          "brand": null
+        },
+        {
+          "rank": 9,
+          "domain": "bulknutrients.com.au",
+          "brand": "Bulk Nutrients"
+        },
+        {
+          "rank": 10,
+          "domain": "musashi.com",
+          "brand": "Musashi"
+        }
+      ],
+      "aiOverview": null,
+      "vitacoOrganic": [
+        {
+          "rank": 10,
+          "domain": "musashi.com",
+          "brand": "Musashi"
+        }
+      ]
+    },
+    {
+      "keyword": "best creatine australia",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "amazon.com.au",
+          "brand": null
+        },
+        {
+          "rank": 2,
+          "domain": "womenshealth.com.au",
+          "brand": null
+        },
+        {
+          "rank": 3,
+          "domain": "chemistwarehouse.com.au",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "gr8health.com.au",
+          "brand": null
+        },
+        {
+          "rank": 5,
+          "domain": "fitnutrition.com.au",
+          "brand": null
+        },
+        {
+          "rank": 6,
+          "domain": "amazon.com.au",
+          "brand": null
+        },
+        {
+          "rank": 7,
+          "domain": "youtube.com",
+          "brand": null
+        },
+        {
+          "rank": 8,
+          "domain": "healthline.com",
+          "brand": null
+        }
+      ],
+      "aiOverview": {
+        "refs": [
+          "vpa.com.au",
+          "naternalvitamins.com.au",
+          "justcreatine.com.au",
+          "trueprotein.com.au",
+          "nutritionwarehouse.com.au",
+          "youtube.com"
+        ],
+        "brands": [
+          "Bulk Nutrients",
+          "VPA",
+          "True Protein",
+          "Optimum Nutrition"
+        ]
+      },
+      "vitacoOrganic": []
+    },
+    {
+      "keyword": "best magnesium for sleep australia",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "bbcgoodfood.com",
+          "brand": null
+        },
+        {
+          "rank": 2,
+          "domain": "metagenics.com.au",
+          "brand": "Metagenics"
+        },
+        {
+          "rank": 3,
+          "domain": "sleepmaker.com.au",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "gr8health.com.au",
+          "brand": null
+        },
+        {
+          "rank": 5,
+          "domain": "fatburnersonly.com.au",
+          "brand": null
+        },
+        {
+          "rank": 6,
+          "domain": "foryouth.co",
+          "brand": null
+        },
+        {
+          "rank": 7,
+          "domain": "aussiehealthproducts.com.au",
+          "brand": null
+        },
+        {
+          "rank": 8,
+          "domain": "metagenics.com.au",
+          "brand": "Metagenics"
+        },
+        {
+          "rank": 9,
+          "domain": "healthline.com",
+          "brand": null
+        }
+      ],
+      "aiOverview": {
+        "refs": [
+          "naturesway.com.au",
+          "gr8health.com.au",
+          "swisse.com.au",
+          "blackmores.com.au",
+          "amazon.com.au",
+          "youtube.com",
+          "trueprotein.com.au"
+        ],
+        "brands": [
+          "True Protein",
+          "Swisse",
+          "Blackmores"
+        ]
+      },
+      "vitacoOrganic": []
+    },
+    {
+      "keyword": "best probiotic australia",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "metagenics.com.au",
+          "brand": "Metagenics"
+        },
+        {
+          "rank": 2,
+          "domain": "drjochen.com.au",
+          "brand": null
+        },
+        {
+          "rank": 3,
+          "domain": "priceline.com.au",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "healthline.com",
+          "brand": null
+        },
+        {
+          "rank": 5,
+          "domain": "nanamall.com",
+          "brand": null
+        },
+        {
+          "rank": 6,
+          "domain": "healthylife.com.au",
+          "brand": null
+        },
+        {
+          "rank": 7,
+          "domain": "healthylife.com.au",
+          "brand": null
+        },
+        {
+          "rank": 8,
+          "domain": "au.iherb.com",
+          "brand": null
+        },
+        {
+          "rank": 9,
+          "domain": "reddit.com",
+          "brand": null
+        }
+      ],
+      "aiOverview": {
+        "refs": [
+          "healthylife.com.au",
+          "elitesupps.com.au",
+          "metagenics.com.au",
+          "advancedfunctionalmedicine.com.au",
+          "eternalelixir.com.au",
+          "govita.com.au"
+        ],
+        "brands": [
+          "Swisse",
+          "Blackmores",
+          "Bioglan",
+          "Life-Space",
+          "Inner Health",
+          "Metagenics"
+        ]
+      },
+      "vitacoOrganic": []
+    },
+    {
+      "keyword": "kids multivitamin australia",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "chemistwarehouse.com.au",
+          "brand": null
+        },
+        {
+          "rank": 2,
+          "domain": "swisse.com.au",
+          "brand": "Swisse"
+        },
+        {
+          "rank": 3,
+          "domain": "basekids.com.au",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "naturesway.com.au",
+          "brand": null
+        },
+        {
+          "rank": 5,
+          "domain": "metagenics.com.au",
+          "brand": "Metagenics"
+        },
+        {
+          "rank": 6,
+          "domain": "nutraorganics.com.au",
+          "brand": "Nutra Organics"
+        },
+        {
+          "rank": 7,
+          "domain": "blackmores.com.au",
+          "brand": "Blackmores"
+        },
+        {
+          "rank": 8,
+          "domain": "vegetology.com",
+          "brand": null
+        },
+        {
+          "rank": 9,
+          "domain": "amway.com.au",
+          "brand": null
+        }
+      ],
+      "aiOverview": {
+        "refs": [
+          "chemistwarehouse.com.au",
+          "swisse.com.au",
+          "naturesway.com.au",
+          "blackmores.com.au",
+          "chempro.com.au",
+          "wholeearthsea.com.au"
+        ],
+        "brands": [
+          "Swisse",
+          "Blackmores",
+          "Nature's Way"
+        ]
+      },
+      "vitacoOrganic": []
+    },
+    {
+      "keyword": "best protein bars australia",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "nine.com.au",
+          "brand": null
+        },
+        {
+          "rank": 2,
+          "domain": "wearechief.com",
+          "brand": null
+        },
+        {
+          "rank": 3,
+          "domain": "reddit.com",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "australiansportsnutrition.com.au",
+          "brand": null
+        },
+        {
+          "rank": 5,
+          "domain": "jessicacox.com.au",
+          "brand": null
+        },
+        {
+          "rank": 6,
+          "domain": "raisednutrition.com",
+          "brand": null
+        },
+        {
+          "rank": 7,
+          "domain": "amazon.com.au",
+          "brand": null
+        },
+        {
+          "rank": 8,
+          "domain": "trueprotein.com.au",
+          "brand": "True Protein"
+        },
+        {
+          "rank": 9,
+          "domain": "proteinscore.com.au",
+          "brand": null
+        }
+      ],
+      "aiOverview": {
+        "refs": [
+          "wearechief.com",
+          "jessicacox.com.au",
+          "raisednutrition.com",
+          "bulknutrients.com.au",
+          "trueprotein.com.au",
+          "google.com"
+        ],
+        "brands": [
+          "Musashi",
+          "Bulk Nutrients",
+          "True Protein",
+          "Quest"
+        ]
+      },
+      "vitacoOrganic": []
+    },
+    {
+      "keyword": "best pre workout australia",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "elitesupps.com.au",
+          "brand": null
+        },
+        {
+          "rank": 2,
+          "domain": "australiansportsnutrition.com.au",
+          "brand": null
+        },
+        {
+          "rank": 3,
+          "domain": "nutritionwarehouse.com.au",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "mrsupplement.com.au",
+          "brand": null
+        },
+        {
+          "rank": 5,
+          "domain": "reddit.com",
+          "brand": null
+        },
+        {
+          "rank": 6,
+          "domain": "vpa.com.au",
+          "brand": "VPA"
+        },
+        {
+          "rank": 7,
+          "domain": "proteinsuppliesaustralia.com.au",
+          "brand": null
+        },
+        {
+          "rank": 8,
+          "domain": "forbes.com",
+          "brand": null
+        },
+        {
+          "rank": 9,
+          "domain": "nutripeak.com.au",
+          "brand": null
+        }
+      ],
+      "aiOverview": {
+        "refs": [
+          "amazon.com.au",
+          "elitesupps.com.au",
+          "australiansportsnutrition.com.au",
+          "nutritionwarehouse.com.au",
+          "forbes.com",
+          "mrsupplement.com.au",
+          "ehplabs.com.au",
+          "youtube.com"
+        ],
+        "brands": [
+          "Optimum Nutrition",
+          "EHP Labs",
+          "Body Science"
+        ]
+      },
+      "vitacoOrganic": []
+    },
+    {
+      "keyword": "high protein snacks australia",
+      "error": null,
+      "top": [
+        {
+          "rank": 1,
+          "domain": "trueprotein.com.au",
+          "brand": "True Protein"
+        },
+        {
+          "rank": 2,
+          "domain": "stayshredded.com.au",
+          "brand": null
+        },
+        {
+          "rank": 3,
+          "domain": "wefeedyou.com.au",
+          "brand": null
+        },
+        {
+          "rank": 4,
+          "domain": "taste.com.au",
+          "brand": null
+        },
+        {
+          "rank": 5,
+          "domain": "mithrasnutrition.com",
+          "brand": null
+        },
+        {
+          "rank": 6,
+          "domain": "workoutmeals.com.au",
+          "brand": null
+        },
+        {
+          "rank": 7,
+          "domain": "thenutandgrainstore.com",
+          "brand": null
+        },
+        {
+          "rank": 8,
+          "domain": "themanshake.com.au",
+          "brand": null
+        },
+        {
+          "rank": 9,
+          "domain": "healthline.com",
+          "brand": null
+        }
+      ],
+      "aiOverview": {
+        "refs": [],
+        "brands": [
+          "True Protein"
+        ]
+      },
+      "vitacoOrganic": []
+    }
+  ],
+  "mentions": [],
+  "topSources": [
+    [
+      "trueprotein.com.au",
+      11
+    ],
+    [
+      "elitesupps.com.au",
+      10
+    ],
+    [
+      "google.com",
+      10
+    ],
+    [
+      "chemistwarehouse.com.au",
+      8
+    ],
+    [
+      "healthdirect.gov.au",
+      6
+    ],
+    [
+      "bulknutrients.com.au",
+      5
+    ],
+    [
+      "chatgpt.com",
+      5
+    ],
+    [
+      "nutritionwarehouse.com.au",
+      5
+    ],
+    [
+      "naturesway.com.au",
+      5
+    ],
+    [
+      "ausport.gov.au",
+      4
+    ],
+    [
+      "whichmedicine.com.au",
+      4
+    ],
+    [
+      "supps247.com.au",
+      4
+    ],
+    [
+      "proteinscore.com.au",
+      4
+    ],
+    [
+      "proteinsuppliesaustralia.com.au",
+      4
+    ],
+    [
+      "swisse.com.au",
+      4
+    ],
+    [
+      "youtube.com",
+      4
+    ],
+    [
+      "dietitiansaustralia.org.au",
+      3
+    ],
+    [
+      "onepercentbetter.com.au",
+      3
+    ],
+    [
+      "womenshealthmag.com",
+      3
+    ],
+    [
+      "hlthplus.com",
+      3
+    ],
+    [
+      "forbes.com",
+      3
+    ],
+    [
+      "vpa.com.au",
+      3
+    ],
+    [
+      "nccih.nih.gov",
+      3
+    ],
+    [
+      "eternalelixir.com.au",
+      3
+    ],
+    [
+      "pubmed.ncbi.nlm.nih.gov",
+      3
+    ]
+  ],
+  "errors": []
+}

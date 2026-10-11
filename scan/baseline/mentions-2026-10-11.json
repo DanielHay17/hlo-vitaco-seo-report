@@ -1,0 +1,313 @@
+{
+  "ranAt": "2026-10-11T05:17:03.134Z",
+  "spent": 0.11,
+  "runs": 3,
+  "geminiRuns": 2,
+  "ai": [
+    {
+      "q": "What protein powder should I use?",
+      "brand": "Musashi",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "gemini": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's the best protein powder in Australia?",
+      "brand": "Musashi",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "gemini": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "Is creatine safe to take daily, and which creatine should I buy in Australia?",
+      "brand": "Musashi",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "gemini": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's a good pre workout without caffeine in Australia?",
+      "brand": "Musashi",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "gemini": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's the best magnesium supplement for sleep in Australia?",
+      "brand": "Nutra-Life",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "gemini": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's the best probiotic for gut health in Australia?",
+      "brand": "Nutra-Life",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "gemini": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's a good multivitamin for kids in Australia?",
+      "brand": "Healtheries",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "gemini": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    },
+    {
+      "q": "What's the healthiest protein bar to buy in Australia?",
+      "brand": "Aussie Bodies",
+      "bySurface": {
+        "chatgpt": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "gemini": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        },
+        "ai_mode": {
+          "runs": 0,
+          "targetHits": 0,
+          "vitacoHits": 0,
+          "brands": [],
+          "sources": [],
+          "fanOut": []
+        }
+      }
+    }
+  ],
+  "organic": [],
+  "mentions": [
+    {
+      "key": "Musashi",
+      "domain": "musashi.com",
+      "mentions": 472,
+      "aiSearchVolume": 356270
+    },
+    {
+      "key": "Nutra-Life",
+      "domain": "nutralife.com.au",
+      "mentions": 298,
+      "aiSearchVolume": 90290
+    },
+    {
+      "key": "Healtheries",
+      "domain": "healtheries.com.au",
+      "mentions": 14,
+      "aiSearchVolume": 1860
+    },
+    {
+      "key": "Aussie Bodies",
+      "domain": "aussiebodies.com",
+      "mentions": 14,
+      "aiSearchVolume": 1130
+    },
+    {
+      "key": "Bulk Nutrients",
+      "domain": "bulknutrients.com.au",
+      "mentions": 3695,
+      "aiSearchVolume": 1887470
+    },
+    {
+      "key": "VPA",
+      "domain": "vpa.com.au",
+      "mentions": 3009,
+      "aiSearchVolume": 1527180
+    },
+    {
+      "key": "True Protein",
+      "domain": "trueprotein.com.au",
+      "mentions": 2275,
+      "aiSearchVolume": 1112980
+    },
+    {
+      "key": "Swisse",
+      "domain": "swisse.com.au",
+      "mentions": 4778,
+      "aiSearchVolume": 2481420
+    },
+    {
+      "key": "Blackmores",
+      "domain": "blackmores.com.au",
+      "mentions": 3873,
+      "aiSearchVolume": 1566920
+    },
+    {
+      "key": "EHP Labs",
+      "domain": "ehplabs.com.au",
+      "mentions": 256,
+      "aiSearchVolume": 123660
+    }
+  ],
+  "topSources": [],
+  "errors": []
+}
