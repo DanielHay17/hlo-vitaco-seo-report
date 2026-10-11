@@ -1,0 +1,191 @@
+{
+ "creatine": {
+  "vitaco": [],
+  "top5": [
+   [
+    1,
+    "chemistwarehouse.com.au"
+   ],
+   [
+    2,
+    "en.wikipedia.org"
+   ],
+   [
+    3,
+    "health.harvard.edu"
+   ],
+   [
+    4,
+    "ausport.gov.au"
+   ],
+   [
+    5,
+    "mayoclinic.org"
+   ]
+  ],
+  "n": 96
+ },
+ "protein powder": {
+  "vitaco": [],
+  "top5": [
+   [
+    1,
+    "bulkpowders.com.au"
+   ],
+   [
+    2,
+    "rateable.com.au"
+   ]
+  ],
+  "n": 2
+ },
+ "creatine monohydrate": {
+  "vitaco": [],
+  "top5": [
+   [
+    1,
+    "chemistwarehouse.com.au"
+   ],
+   [
+    2,
+    "amazon.com.au"
+   ],
+   [
+    3,
+    "ausport.gov.au"
+   ],
+   [
+    4,
+    "pure-product.com"
+   ],
+   [
+    5,
+    "bulknutrients.com.au"
+   ]
+  ],
+  "n": 94
+ },
+ "pre workout": {
+  "vitaco": [],
+  "top5": [
+   [
+    1,
+    "bulkpowders.com.au"
+   ],
+   [
+    2,
+    "rateable.com.au"
+   ]
+  ],
+  "n": 2
+ },
+ "magnesium": {
+  "vitaco": [],
+  "top5": [
+   [
+    1,
+    "ods.od.nih.gov"
+   ],
+   [
+    2,
+    "examine.com"
+   ],
+   [
+    3,
+    "healthdirect.gov.au"
+   ],
+   [
+    4,
+    "lpi.oregonstate.edu"
+   ],
+   [
+    5,
+    "healthline.com"
+   ]
+  ],
+  "n": 94
+ },
+ "probiotics": {
+  "vitaco": [
+   [
+    14,
+    "Nutra-Life"
+   ]
+  ],
+  "top5": [
+   [
+    1,
+    "mayoclinic.org"
+   ],
+   [
+    2,
+    "ods.od.nih.gov"
+   ],
+   [
+    3,
+    "lifespaceprobiotics.com"
+   ],
+   [
+    4,
+    "swisse.com.au"
+   ],
+   [
+    5,
+    "en.wikipedia.org"
+   ]
+  ],
+  "n": 94
+ },
+ "electrolytes": {
+  "vitaco": [],
+  "top5": [
+   [
+    1,
+    "lytes.com.au"
+   ],
+   [
+    2,
+    "wickednrg.com.au"
+   ],
+   [
+    3,
+    "chemistdirect.com.au"
+   ],
+   [
+    4,
+    "woolworths.com.au"
+   ],
+   [
+    5,
+    "quickkart.com.au"
+   ]
+  ],
+  "n": 6
+ },
+ "protein bar": {
+  "vitaco": [],
+  "top5": [
+   [
+    1,
+    "proteinscore.com.au"
+   ],
+   [
+    2,
+    "supplementmart.com.au"
+   ],
+   [
+    3,
+    "store.clubbunker.com.au"
+   ],
+   [
+    4,
+    "glenelghealthandwholefoods.com.au"
+   ],
+   [
+    5,
+    "amazon.com.au"
+   ]
+  ],
+  "n": 27
+ }
+}

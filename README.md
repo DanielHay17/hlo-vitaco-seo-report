@@ -11,6 +11,7 @@ scan/              the "Find" and "Re-check" steps of the loop
   agent-readiness.mjs  how easy each store is for an AI shopping agent (incl. Shopify /api/mcp), $0
   visibility.mjs       DataForSEO: consumer ChatGPT, Gemini, Google AI Mode, Google search, AIO citations
   llm-panel.mjs        OpenRouter: Claude, ChatGPT, Gemini, Grok x 10 natural questions x memory/web
+  seo-audit.mjs        DataForSEO: footprint, ranked keywords, keyword gap, search volume, backlinks
   ai-prompts.json      questions, searches and brand list
   baseline/            dated output from 11 Oct 2026, the "before" for the monthly re-check
 ```
@@ -70,7 +71,8 @@ Credentials come from `.env` (or real environment variables). Never commit them.
 
 Measured cost per call on this account (Oct 2026): ChatGPT scraper $0.004, Gemini scraper $0.004,
 Google AI Mode $0.004, Google organic $0.002, LLM Mentions multi-target $0.11. A full run is about
-$0.32. The whole report, including test calls, cost $0.875.
+$0.32. AI checks for the report, including test calls, cost $0.875; the SEO audit added $1.79
+(total DataForSEO spend $2.67).
 
 Guardrails, because the official MCP server (`dataforseo/mcp-server-typescript`, default branch
 `master`) exposes a generic `api_request` tool that will hit any endpoint with no allowlist:
@@ -96,3 +98,16 @@ node scan/llm-panel.mjs --confirm --budget 5              # key from .env
 80 calls (10 questions x 4 models x memory/web) cost $1.52 on 11 Oct 2026. Model IDs are pinned
 at the top of the script and in `functions/api/ask.js`; check https://openrouter.ai/api/v1/models
 before changing them. API answers can differ from the consumer apps, which `visibility.mjs` covers.
+
+## SEO audit
+
+```bash
+node scan/seo-audit.mjs                       # dry run
+node scan/seo-audit.mjs --confirm --budget 6  # keys from .env
+```
+
+31 calls (5 Vitaco + 5 competitor domains: overview, backlinks, ranked keywords; one search-volume
+task) cost $1.47 on 11 Oct 2026. Vitaco domains pull everything they rank for (top 1000 by
+volume); competitors pull only their top-10 rankings, which is what the keyword gap needs.
+Keyword-database positions can lag behind live Google, so any position quoted on the site as
+live was re-checked with a live SERP call (`scan/baseline/seo-*-check-2026-10-11.json`).

@@ -229,6 +229,18 @@
   .no { color: var(--dim); }
   tr.us td:first-child { font-weight: 600; color: var(--text); }
 
+  .foot td.num, .foot th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .gaps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .gap h3 { font-size: 19px; margin-bottom: 10px; }
+  .gaplist { list-style: none; margin: 0; padding: 0; }
+  .gaplist li { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+  .gaplist li:last-child { border-bottom: 0; }
+  .gaplist .kw { color: var(--text); font-weight: 600; }
+  .gaplist .vol { font: 400 13px var(--mono); color: var(--accent-ink); text-align: right; }
+  .gaplist .who { grid-column: 1 / -1; color: var(--muted); font-size: 13px; }
+  details.brief summary { grid-template-columns: 120px 1fr 20px; }
+  .outline { margin: 4px 0 0; padding-left: 20px; font-size: 14.5px; }
+  .outline li { margin-bottom: 3px; }
   /* live */
   #live { display: none; }
   #live.on { display: block; }
@@ -250,7 +262,7 @@
     nav ul { display: none; }
     .stats, .totals { grid-template-columns: repeat(2, 1fr); }
     .chat, .sources, .agents, .live-out { grid-template-columns: 1fr 1fr; }
-    .two, .loop-grid, .quote, .vs { grid-template-columns: 1fr; }
+    .two, .loop-grid, .quote, .vs, .gaps { grid-template-columns: 1fr; }
     .board, .lanes, .notes { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
@@ -264,6 +276,7 @@
     details.f summary { grid-template-columns: 1fr 20px; gap: 6px 10px; }
     details.f summary .id, details.f summary .t { grid-column: 1; }
     details.f summary .pill { grid-column: 1; justify-self: start; }
+    details.brief summary { grid-template-columns: 1fr 20px; }
     details.f summary .chev { grid-column: 2; grid-row: 1 / span 3; }
     nav { gap: 12px; padding-left: 16px; }
   }
@@ -279,7 +292,7 @@
       <li><a href="#models">Big four</a></li>
       <li><a href="#competitors">Competitors</a></li>
       <li><a href="#health">Site health</a></li>
-      <li><a href="#improve">Improve</a></li>
+      <li><a href="#search">Google search</a></li>
       <li><a href="#headless">Headless shopping</a></li>
     </ul>
     <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode" title="Switch theme"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
@@ -472,11 +485,137 @@
   </div>
 </section>
 
+<!-- ============ 05 GOOGLE SEARCH ============ -->
+<section id="search">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">05 · Google search</span>
+      <h2>On Google, Bulk Nutrients alone gets <span class="hl">2.8×</span> all of Vitaco.</h2>
+      <p class="lede">The same comparison in classic search: how many keywords each site ranks for in Australia, how many visits that brings, and how many sites link to it.</p>
+    </div>
+    <div class="two">
+      <div class="card chart" role="img" aria-label="Estimated monthly Google visits in Australia. Swisse 321,896; Bulk Nutrients 260,447; Blackmores 208,012; True Protein 183,106; VPA 129,142; Musashi 71,791; Nutra-Life 19,831; Healtheries 887; Aussie Bodies 227.">
+        <h3>Estimated Google visits per month</h3>
+        <span class="muted">Australia · organic search · all Vitaco sites combined: 93,350</span>
+        <div class="bar" data-tip="Swisse"><span class="n">Swisse</span><div class="t"><div class="f" style="width:100.0%"></div></div><span class="v">321,896</span></div>
+        <div class="bar" data-tip="Bulk Nutrients"><span class="n">Bulk Nutrients</span><div class="t"><div class="f" style="width:80.9%"></div></div><span class="v">260,447</span></div>
+        <div class="bar" data-tip="Blackmores"><span class="n">Blackmores</span><div class="t"><div class="f" style="width:64.6%"></div></div><span class="v">208,012</span></div>
+        <div class="bar" data-tip="True Protein"><span class="n">True Protein</span><div class="t"><div class="f" style="width:56.9%"></div></div><span class="v">183,106</span></div>
+        <div class="bar" data-tip="VPA"><span class="n">VPA</span><div class="t"><div class="f" style="width:40.1%"></div></div><span class="v">129,142</span></div>
+        <div class="bar us" data-tip="Musashi"><span class="n">Musashi</span><div class="t"><div class="f" style="width:22.3%"></div></div><span class="v">71,791</span></div>
+        <div class="bar us" data-tip="Nutra-Life"><span class="n">Nutra-Life</span><div class="t"><div class="f" style="width:6.2%"></div></div><span class="v">19,831</span></div>
+        <div class="bar us" data-tip="Healtheries"><span class="n">Healtheries</span><div class="t"><div class="f" style="width:0.3%"></div></div><span class="v">887</span></div>
+        <div class="bar us" data-tip="Aussie Bodies"><span class="n">Aussie Bodies</span><div class="t"><div class="f" style="width:0.3%"></div></div><span class="v">227</span></div>
+      </div>
+      <div class="card chart" role="img" aria-label="Monthly Google searches for each brand name in Australia. Bulk Nutrients 74,000; True Protein 33,100; Musashi 18,100; EHP Labs 12,100; Blackmores 9,900; Swisse 5,400; Nutra-Life 1,600; Healtheries 320; Aussie Bodies 140.">
+        <h3>People searching for the brand by name</h3>
+        <span class="muted">Monthly Google searches for the brand name · Australia</span>
+        <div class="bar" data-tip="74,000 searches a month for the brand name"><span class="n">Bulk Nutrients</span><div class="t"><div class="f" style="width:100.0%"></div></div><span class="v">74,000</span></div>
+        <div class="bar" data-tip="33,100 searches a month for the brand name"><span class="n">True Protein</span><div class="t"><div class="f" style="width:44.7%"></div></div><span class="v">33,100</span></div>
+        <div class="bar us" data-tip="18,100 searches a month for the brand name"><span class="n">Musashi</span><div class="t"><div class="f" style="width:24.5%"></div></div><span class="v">18,100</span></div>
+        <div class="bar" data-tip="12,100 searches a month for the brand name"><span class="n">EHP Labs</span><div class="t"><div class="f" style="width:16.4%"></div></div><span class="v">12,100</span></div>
+        <div class="bar" data-tip="9,900 searches a month for the brand name"><span class="n">Blackmores</span><div class="t"><div class="f" style="width:13.4%"></div></div><span class="v">9,900</span></div>
+        <div class="bar" data-tip="5,400 searches a month for the brand name"><span class="n">Swisse</span><div class="t"><div class="f" style="width:7.3%"></div></div><span class="v">5,400</span></div>
+        <div class="bar us" data-tip="1,600 searches a month for the brand name"><span class="n">Nutra-Life</span><div class="t"><div class="f" style="width:2.2%"></div></div><span class="v">1,600</span></div>
+        <div class="bar us" data-tip="320 searches a month for the brand name"><span class="n">Healtheries</span><div class="t"><div class="f" style="width:0.4%"></div></div><span class="v">320</span></div>
+        <div class="bar us" data-tip="140 searches a month for the brand name"><span class="n">Aussie Bodies</span><div class="t"><div class="f" style="width:0.3%"></div></div><span class="v">140</span></div>
+      </div>
+    </div>
+
+    <div class="card matrix" style="margin-top:16px" role="region" aria-label="Search footprint by site">
+      <h3 style="margin-bottom:4px">Search footprint</h3>
+      <span class="muted" style="display:block;margin-bottom:12px">Keywords each site ranks for in Google Australia's top 100, how many in the top 3 and top 10, estimated monthly visits, and the number of other sites linking to it.</span>
+      <table class="foot">
+        <thead><tr><th>Site</th><th class="num">Keywords</th><th class="num">Top 3</th><th class="num">Top 10</th><th class="num">Visits / mo</th><th class="num">Linking sites</th></tr></thead>
+        <tbody>
+          <tr class="us"><td>musashi.com</td><td class="num">967</td><td class="num">484</td><td class="num">663</td><td class="num">71,791</td><td class="num">1,647</td></tr>
+          <tr class="us"><td>nutralife.com.au</td><td class="num">2,202</td><td class="num">185</td><td class="num">451</td><td class="num">19,831</td><td class="num">236</td></tr>
+          <tr class="us"><td>healtheries.com.au</td><td class="num">243</td><td class="num">16</td><td class="num">32</td><td class="num">887</td><td class="num">60</td></tr>
+          <tr class="us"><td>healtheries.co.nz</td><td class="num">255</td><td class="num">8</td><td class="num">40</td><td class="num">614</td><td class="num">537</td></tr>
+          <tr class="us"><td>aussiebodies.com</td><td class="num">56</td><td class="num">7</td><td class="num">14</td><td class="num">227</td><td class="num">1,162</td></tr>
+          <tr class=""><td>bulknutrients.com.au</td><td class="num">12,867</td><td class="num">1,912</td><td class="num">4,340</td><td class="num">260,447</td><td class="num">1,706</td></tr>
+          <tr class=""><td>trueprotein.com.au</td><td class="num">7,518</td><td class="num">1,217</td><td class="num">2,730</td><td class="num">183,106</td><td class="num">1,144</td></tr>
+          <tr class=""><td>vpa.com.au</td><td class="num">11,195</td><td class="num">893</td><td class="num">3,960</td><td class="num">129,142</td><td class="num">998</td></tr>
+          <tr class=""><td>swisse.com.au</td><td class="num">8,781</td><td class="num">2,892</td><td class="num">5,420</td><td class="num">321,896</td><td class="num">1,082</td></tr>
+          <tr class=""><td>blackmores.com.au</td><td class="num">15,735</td><td class="num">1,681</td><td class="num">4,287</td><td class="num">208,012</td><td class="num">3,300</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="two" style="margin-top:16px">
+      <div class="card"><h3 style="margin-bottom:8px">It isn't a links problem</h3><p style="margin:0">Musashi has about as many sites linking to it as Bulk Nutrients (1,647 vs 1,706) but ranks for 13× fewer keywords. Aussie Bodies has 1,162 linking sites and ranks for 56 keywords. The authority is there. What's missing is pages that target the searches people make.</p></div>
+      <div class="card"><h3 style="margin-bottom:8px">Close to page one</h3><p style="margin:0 0 10px">Checked live on 11 October. These pages already rank and need targeted work, not new sites:</p>
+        <ul class="gaplist"><li><span class="kw">probiotics</span><span class="vol">33,100/mo</span><span class="who">Nutra-Life #14</span></li><li><span class="kw">protein bar</span><span class="vol">18,100/mo</span><span class="who">Musashi #14</span></li><li><span class="kw">digestive enzymes</span><span class="vol">9,900/mo</span><span class="who">Nutra-Life #17</span></li><li><span class="kw">magnesium for sleep</span><span class="vol">8,100/mo</span><span class="who">Nutra-Life #16</span></li></ul>
+        <p class="muted" style="margin:10px 0 0">Slipping: the keyword database had Nutra-Life at #11 for "magnesium glycinate" (110,000/mo) and Musashi at #5 for "protein shake" (27,100/mo). Neither is in today's top 30.</p></div>
+    </div>
+
+    <div class="head" style="margin:56px 0 20px"><h3>Where competitors win and Vitaco doesn't rank</h3><p class="muted" style="margin-top:6px">Competitors rank top 10 for 3,706 non-brand keywords where no Vitaco site is in the top 20. The biggest ones in each brand's own category:</p></div>
+    <div class="gaps">
+      <div class="card gap"><h3>Musashi</h3><ul class="gaplist"><li><span class="kw">creatine</span><span class="vol">135,000/mo</span><span class="who">VPA #7 · Musashi not in top 100</span></li><li><span class="kw">protein powder</span><span class="vol">74,000/mo</span><span class="who">True Protein #1 · VPA #4</span></li><li><span class="kw">creatine monohydrate</span><span class="vol">49,500/mo</span><span class="who">Bulk #4 · VPA #5 · Musashi not in top 100</span></li><li><span class="kw">whey protein</span><span class="vol">27,100/mo</span><span class="who">VPA #4</span></li><li><span class="kw">pre workout</span><span class="vol">22,200/mo</span><span class="who">VPA #9</span></li></ul><p class="muted" style="margin:10px 0 0">Musashi sells all of these. "Not in top 100" was confirmed with a live Google check.</p></div>
+      <div class="card gap"><h3>Nutra-Life</h3><ul class="gaplist"><li><span class="kw">magnesium</span><span class="vol">60,500/mo</span><span class="who">Swisse #9 · Nutra-Life not in top 100</span></li><li><span class="kw">probiotics</span><span class="vol">33,100/mo</span><span class="who">Swisse #3 · Nutra-Life #14</span></li><li><span class="kw">vitamin B12 supplements</span><span class="vol">33,100/mo</span><span class="who">Swisse #2 · Nutra-Life #28</span></li><li><span class="kw">magnesium supplement</span><span class="vol">22,200/mo</span><span class="who">Swisse #5</span></li><li><span class="kw">kids probiotic</span><span class="vol">2,400/mo</span><span class="who">Blackmores #6</span></li></ul><p class="muted" style="margin:10px 0 0">Probiotics at #14 is the closest to page one.</p></div>
+      <div class="card gap"><h3>Healtheries</h3><ul class="gaplist"><li><span class="kw">healthy snacks for kids</span><span class="vol">2,900/mo</span><span class="who">Blackmores #8 (article)</span></li><li><span class="kw">kids multivitamin</span><span class="vol">1,600/mo</span><span class="who">Swisse #1</span></li><li><span class="kw">kids vitamins</span><span class="vol">1,000/mo</span><span class="who">Swisse #3</span></li><li><span class="kw">vitamins for kids</span><span class="vol">720/mo</span><span class="who">Swisse #5</span></li><li><span class="kw">best multivitamin for kids</span><span class="vol">480/mo</span><span class="who">Swisse #4</span></li></ul><p class="muted" style="margin:10px 0 0">Healtheries isn't in the top 30 for any of these. Its Australian sitemap points to NZ (HLTH-01).</p></div>
+      <div class="card gap"><h3>Aussie Bodies</h3><ul class="gaplist"><li><span class="kw">protein bar</span><span class="vol">18,100/mo</span><span class="who">Woolworths #1 · Musashi #14</span></li><li><span class="kw">protein bars</span><span class="vol">18,100/mo</span><span class="who">VPA #10 (recipe article)</span></li><li><span class="kw">high protein snacks</span><span class="vol">50/mo</span><span class="who">True Protein, Bulk</span></li></ul><p class="muted" style="margin:10px 0 0">56 keywords in total, even though 1,162 sites link to aussiebodies.com.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 CONTENT PLAN ============ -->
+<section id="content" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">06 · Content plan</span>
+      <h2>Eight articles worth <span class="hl">writing</span>.</h2>
+      <p class="lede">Each one targets a search that a competitor's article wins today, and each is built on Vitaco's own product facts. Open any brief to see its outline.</p>
+    </div>
+    <details class="f brief"><summary><span class="id">Musashi</span><span class="t">What is creatine, and is it safe to take every day?</span><span class="chev">›</span></summary><div class="body">
+      <p><span class="muted">Targets:</span> <b>what is creatine</b> 12,100/mo · <b>creatine</b> 135,000/mo</p>
+      <p><span class="muted">Winning now:</span> VPA's blog (#9). Musashi isn't in the top 100 for "creatine".</p>
+      <p><span class="muted">Why this one:</span> The same question we put to the AI assistants, where Musashi was named in 1 of 6 answers. ChatGPT's own searches asked for "evidence" and "safety position stand".</p>
+      <ol class="outline"><li>What creatine is and what it does</li><li>What the evidence says about daily use, citing the AIS and TGA</li><li>Dose: 3–5 g a day, no loading needed</li><li>Who should check with a doctor first</li><li>Musashi Creatine Monohydrate: facts from the label</li></ol></div></details>
+    <details class="f brief"><summary><span class="id">Musashi</span><span class="t">Whey concentrate vs isolate: which should you buy?</span><span class="chev">›</span></summary><div class="body">
+      <p><span class="muted">Targets:</span> <b>whey protein and whey protein isolate</b> 18,100/mo · <b>whey protein</b> 27,100/mo</p>
+      <p><span class="muted">Winning now:</span> True Protein (#1) and Bulk Nutrients (#8).</p>
+      <p><span class="muted">Why this one:</span> Answers the "protein per serve" and "value" questions ChatGPT searched for before recommending True Protein and Bulk Nutrients.</p>
+      <ol class="outline"><li>Concentrate vs isolate in plain terms</li><li>Protein per serve, lactose and price compared</li><li>Who each suits</li><li>Musashi range: protein per serve from the label</li></ol></div></details>
+    <details class="f brief"><summary><span class="id">Musashi</span><span class="t">Pre-workout without caffeine: what actually works?</span><span class="chev">›</span></summary><div class="body">
+      <p><span class="muted">Targets:</span> <b>pre workout</b> 22,200/mo · <b>pre workout without caffeine</b> AI question</p>
+      <p><span class="muted">Winning now:</span> VPA (#9).</p>
+      <p><span class="muted">Why this one:</span> The one AI question where Musashi already shows up (2 of 6). A page Google can rank backs that up.</p>
+      <ol class="outline"><li>Why people want caffeine-free</li><li>Ingredients with evidence: citrulline, beta-alanine, creatine</li><li>How to read a label</li><li>Musashi caffeine-free option: facts from the label</li></ol></div></details>
+    <details class="f brief"><summary><span class="id">Nutra-Life</span><span class="t">Magnesium glycinate vs citrate vs oxide</span><span class="chev">›</span></summary><div class="body">
+      <p><span class="muted">Targets:</span> <b>magnesium glycinate</b> 110,000/mo · <b>magnesium oxide</b> 5,400/mo · <b>magnesium glycinate vs citrate</b> 3,600/mo</p>
+      <p><span class="muted">Winning now:</span> Blackmores' Health Hub article (#3 for "glycinate vs citrate").</p>
+      <p><span class="muted">Why this one:</span> Nutra-Life used to sit at #11 for "magnesium glycinate" and has slipped out of the top 30. A comparison page protects its biggest search.</p>
+      <ol class="outline"><li>How the three forms differ</li><li>Absorption and gut tolerance</li><li>Which suits sleep, muscles or general use</li><li>Nutra-Life Magnesium Sleep and glycinate range: facts from the label</li></ol></div></details>
+    <details class="f brief"><summary><span class="id">Nutra-Life</span><span class="t">Foods high in magnesium, and when a supplement helps</span><span class="chev">›</span></summary><div class="body">
+      <p><span class="muted">Targets:</span> <b>magnesium rich foods</b> 8,100/mo · <b>magnesium in food</b> 8,100/mo · <b>magnesium</b> 60,500/mo</p>
+      <p><span class="muted">Winning now:</span> Swisse's blog (#4–9 across the group) and True Protein's "25 foods" list.</p>
+      <p><span class="muted">Why this one:</span> Swisse's single article ranks across a cluster of magnesium-food searches. Nutra-Life isn't in the top 100 for "magnesium".</p>
+      <ol class="outline"><li>Top magnesium foods with amounts per serve</li><li>Daily needs by age, from NHMRC guidelines</li><li>Signs you may not be getting enough</li><li>When a supplement makes sense</li></ol></div></details>
+    <details class="f brief"><summary><span class="id">Nutra-Life</span><span class="t">Which probiotic for which gut problem?</span><span class="chev">›</span></summary><div class="body">
+      <p><span class="muted">Targets:</span> <b>probiotics</b> 33,100/mo · <b>kids probiotic</b> 2,400/mo</p>
+      <p><span class="muted">Winning now:</span> Swisse (#3) and Blackmores (#9). Nutra-Life is #14.</p>
+      <p><span class="muted">Why this one:</span> The closest Vitaco page to page one for a big search. ChatGPT searched "evidence strains IBS constipation bloating" before answering.</p>
+      <ol class="outline"><li>Strains and what the evidence supports</li><li>Matching a strain to bloating, IBS or constipation</li><li>Daily vs travel vs kids</li><li>Nutra-Life Probiotica range: strains from the label</li></ol></div></details>
+    <details class="f brief"><summary><span class="id">Healtheries</span><span class="t">Healthy lunchbox snacks kids will actually eat</span><span class="chev">›</span></summary><div class="body">
+      <p><span class="muted">Targets:</span> <b>healthy snacks for kids</b> 2,900/mo · <b>school snacks for kids</b> 480/mo</p>
+      <p><span class="muted">Winning now:</span> Blackmores' Health Hub article (#8).</p>
+      <p><span class="muted">Why this one:</span> A natural fit for Healtheries Kidscare snacks, and a search Swisse and Blackmores are winning with articles.</p>
+      <ol class="outline"><li>What makes a lunchbox snack healthy</li><li>10 ideas with sugar and salt per serve</li><li>Allergy-aware options for school</li><li>Healtheries Kidscare: facts from the label</li></ol></div></details>
+    <details class="f brief"><summary><span class="id">Aussie Bodies</span><span class="t">How to choose a protein bar: sugar, protein and fibre</span><span class="chev">›</span></summary><div class="body">
+      <p><span class="muted">Targets:</span> <b>protein bars</b> 18,100/mo · <b>protein bar</b> 18,100/mo</p>
+      <p><span class="muted">Winning now:</span> VPA's homemade protein bar recipe (#10). Woolworths holds #1.</p>
+      <p><span class="muted">Why this one:</span> Matches ChatGPT's search for "healthiest protein bars ingredients comparison". Aussie Bodies isn't named in any AI answer today.</p>
+      <ol class="outline"><li>What to look for per bar: protein, sugar, fibre</li><li>Low sugar vs low carb, explained</li><li>Bars for snacks vs bars for training</li><li>Aussie Bodies range compared on the label</li></ol></div></details>
+    <p class="muted" style="margin-top:14px">Every article goes through the same loop: published, then re-checked a month later on Google and in the AI answers.</p>
+  </div>
+</section>
+
 <!-- ============ 05 SITE HEALTH ============ -->
 <section id="health">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">05 · Site health</span>
+      <span class="eyebrow">07 · Site health</span>
       <h2>Five sites are fine. <span class="hl">One is on fire.</span></h2>
       <p class="lede">Google and AI assistants read the same pages. Open any finding to see the command that proves it.</p>
     </div>
@@ -534,7 +673,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 <section id="improve" class="loop-bg">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">06 · How we improve it</span>
+      <span class="eyebrow">08 · How we improve it</span>
       <h2>Find. <span class="hl">Fix.</span> Prove it moved.</h2>
       <p class="lede">Each month we re-ask the same questions across every AI and re-scan all six sites. What we change in between is measured against that baseline.</p>
     </div>
@@ -582,7 +721,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 <section id="plan">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">07 · What we'd do first</span>
+      <span class="eyebrow">09 · What we'd do first</span>
       <h2>Small, fast, <span class="hl">measured</span>.</h2>
       <p class="lede">A fixed scope with numbers agreed up front. Technical fixes show up in 30 days. AI share of voice moves more slowly, so we track it monthly from today's baseline.</p>
     </div>
@@ -601,13 +740,17 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
           <tr><td>Big four model answers naming a Vitaco brand</td><td class="now">11 / 80</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
           <tr><td>Vitaco sites cited as a source in AI answers</td><td class="now">0</td><td class="goal">&gt; 0</td><td class="when">monthly</td></tr>
           <tr><td>musashi.com citations in Google AI Overviews</td><td class="now">472</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
+          <tr class="group"><td colspan="4">Google search</td></tr>
+          <tr><td>Estimated Google visits per month, all Vitaco sites</td><td class="now">93,350</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
+          <tr><td>Musashi position for "creatine" (135,000/mo)</td><td class="now">not in top 100</td><td class="goal">top 20</td><td class="when">90 days</td></tr>
+          <tr><td>Nutra-Life position for "probiotics" (33,100/mo)</td><td class="now">#14</td><td class="goal">page one</td><td class="when">90 days</td></tr>
         </tbody>
       </table>
     </div>
     <div class="notes">
-      <div class="card"><h3>Not AI-written content</h3><p>You ruled it out. Everything here makes your existing products and facts readable and findable.</p></div>
+      <div class="card"><h3>Built on your facts</h3><p>Fixes and articles use Vitaco's own product facts, and your team reviews every article before it goes live.</p></div>
       <div class="card"><h3>Auditable</h3><p>Every change is a logged diff with a before/after measurement, and it can be rolled back.</p></div>
-      <div class="card"><h3>Cheap to run</h3><p>This report used $0.88 of search data and $1.52 of model calls. Site scans are free. Every run has a hard spending cap.</p></div>
+      <div class="card"><h3>Cheap to run</h3><p>This report used $2.67 of search data and $1.62 of model calls. Site scans are free. Every run has a hard spending cap.</p></div>
     </div>
   </div>
 </section>
@@ -616,7 +759,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 <section id="headless" class="loop-bg">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">08 · What's next</span>
+      <span class="eyebrow">10 · What's next</span>
       <h2>Headless <span class="hl">shopping</span>.</h2>
       <p class="lede">The next shopper may not visit the website at all. Their agent will: it compares products, asks the store questions and checks out on their behalf. Whatever the agent can't read, it can't buy.</p>
     </div>
@@ -672,7 +815,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 
 <section style="padding:48px 0 24px">
   <div class="wrap">
-    <p class="muted" style="max-width:900px"><b style="color:var(--text-2)">Method.</b> All data collected 11 October 2026. Consumer AI answers came from DataForSEO's ChatGPT and Gemini scrapers and Google AI Mode, asked from Australia. Big four answers came from the model APIs via OpenRouter (Claude Sonnet 5.5, GPT-6.1, Gemini 3.1 Pro, Grok 4.7), told the user is in Sydney. API answers can differ from the consumer apps. Google results are desktop organic, top 10. AI Overview citations come from DataForSEO's LLM Mentions database. Site and agent checks are plain HTTP requests, including Shopify's public <code>/api/mcp</code> endpoint. AI answers vary between runs, so treat small differences as noise. We didn't have Search Console or sales data. Agent launch details come from public reporting and are US-first.</p>
+    <p class="muted" style="max-width:900px"><b style="color:var(--text-2)">Method.</b> All data collected 11 October 2026. Consumer AI answers came from DataForSEO's ChatGPT and Gemini scrapers and Google AI Mode, asked from Australia. Big four answers came from the model APIs via OpenRouter (Claude Sonnet 5.5, GPT-6.1, Gemini 3.1 Pro, Grok 4.7), told the user is in Sydney. API answers can differ from the consumer apps. Google results are desktop organic, top 10. SEO footprint, keyword rankings, search volumes and linking sites come from DataForSEO Labs, Keywords Data and Backlinks (Australia). Keyword-database positions can lag, so the positions quoted as live were re-checked on Google on 11 October. AI Overview citations come from DataForSEO's LLM Mentions database. Site and agent checks are plain HTTP requests, including Shopify's public <code>/api/mcp</code> endpoint. AI answers vary between runs, so treat small differences as noise. We didn't have Search Console or sales data. Agent launch details come from public reporting and are US-first.</p>
   </div>
 </section>
 

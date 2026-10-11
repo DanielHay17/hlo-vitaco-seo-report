@@ -1,0 +1,101 @@
+{
+ "magnesium glycinate": {
+  "n": 29,
+  "vitaco": [],
+  "top3": [
+   "michaelschemist.com.au",
+   "ebay.com.au",
+   "optimoz.com.au"
+  ]
+ },
+ "ashwagandha": {
+  "n": 28,
+  "vitaco": [],
+  "top3": [
+   "nourishedlife.com.au",
+   "au.myprotein.com",
+   "priceline.com.au"
+  ]
+ },
+ "l theanine": {
+  "n": 28,
+  "vitaco": [],
+  "top3": [
+   "amazon.com.au",
+   "amazon.com.au",
+   "bioceuticals.com.au"
+  ]
+ },
+ "protein shake": {
+  "n": 26,
+  "vitaco": [],
+  "top3": [
+   "freshmonkee.com",
+   "isowhey.com.au",
+   "reddit.com"
+  ]
+ },
+ "protein bar": {
+  "n": 28,
+  "vitaco": [
+   [
+    14,
+    "Musashi",
+    "/products/high-protein-bar-90g?srsltid=AU7gw4VQNgJ"
+   ]
+  ],
+  "top3": [
+   "woolworths.com.au",
+   "healthlab.com.au",
+   "bscsupplements.com"
+  ]
+ },
+ "magnesium for sleep": {
+  "n": 29,
+  "vitaco": [
+   [
+    16,
+    "Nutra-Life",
+    ".au/products/magnesium-sleep?srsltid=AU7gw4X0uTJHJ"
+   ]
+  ],
+  "top3": [
+   "pmc.ncbi.nlm.nih.gov",
+   "mcpress.mayoclinic.org",
+   "sleepfoundation.org"
+  ]
+ },
+ "digestive enzymes": {
+  "n": 28,
+  "vitaco": [
+   [
+    17,
+    "Nutra-Life",
+    ".au/products/digestive-enzymes?srsltid=AU7gw4UOTqH"
+   ]
+  ],
+  "top3": [
+   "hopkinsmedicine.org",
+   "bioceuticals.com.au",
+   "chemistwarehouse.com.au"
+  ]
+ },
+ "kids multivitamin": {
+  "n": 27,
+  "vitaco": [],
+  "top3": [
+   "dailypowers.com.au",
+   "chemistdirect.com.au",
+   "mrvitamins.com.au"
+  ]
+ },
+ "vitamins for kids": {
+  "n": 29,
+  "vitaco": [],
+  "top3": [
+   "centrum.net.au",
+   "naturesway.com.au",
+   "govita.com.au"
+  ]
+ }
+}
