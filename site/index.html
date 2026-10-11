@@ -1,59 +1,81 @@
 <!doctype html>
-<html lang="en-AU">
+<html lang="en-AU" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vitaco Search Visibility · Phlo</title>
-<meta name="description" content="How Vitaco's brands show up in Google and AI assistants, compared with competitors. Prepared by Phlo for Dhiren Dunraj.">
+<title>Vitaco AI Visibility · Phlo</title>
+<meta name="description" content="How Vitaco's brands show up when Australians ask AI assistants and Google what to buy, compared with competitors. Prepared by Phlo for Dhiren Dunraj.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/phlo-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap" rel="stylesheet">
+<script>
+  // White by default; the toggle remembers a viewer's choice when storage is available.
+  try { const t = localStorage.getItem('phlo-theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 <style>
-  :root {
-    --bg: #000000; --bg-near: #050505; --surface: #171717; --surface-2: #202020;
-    --accent: #11EDC5; --accent-mid: #34BBC7; --accent-dark: #33C6AA;
-    --text: #FFFFFF; --text-2: #AFAFAF; --muted: #919191; --dim: #626262;
-    --line: #2a2a2a; --btn: #DEDEDE; --other: #6B6B6B;
-    --crit: #FF6B5E; --warn: #F5B83D;
-    --display: 'Satoshi', 'Manrope', sans-serif; --body: 'Manrope', sans-serif; --mono: 'Roboto Mono', ui-monospace, monospace;
+  :root, :root[data-theme="light"] {
+    --bg: #FFFFFF; --bg-near: #F6F7F7; --surface: #FFFFFF; --surface-2: #F1F3F3; --border: #E4E7E7;
+    --accent: #0BA88C; --accent-ink: #08806B; --accent-soft: rgba(11,168,140,0.10);
+    --grad: linear-gradient(90deg, #0BA88C, #1A8FA0, #08806B);
+    --text: #0A0A0A; --text-2: #3D3D3D; --muted: #6E6E6E; --dim: #9A9A9A; --line: #E9ECEC;
+    --btn-bg: #FFFFFF; --btn-text: #1A1A1A; --btn-border: #D5D9D9;
+    --other: #CFCFCF; --dot-empty: #C7CBCB;
+    --crit: #C0392B; --crit-soft: rgba(192,57,43,0.09); --warn: #9A6700; --warn-soft: rgba(154,103,0,0.10);
+    --grid-dot: rgba(0,0,0,0.055); --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px -16px rgba(0,0,0,0.18);
+    --term-bg: #0B0D0D; --term-text: #C9CDCD; --term-cmd: #11EDC5; --term-out: #FFFFFF; --term-dim: #7A7F7F;
   }
+  :root[data-theme="dark"] {
+    --bg: #000000; --bg-near: #050505; --surface: #171717; --surface-2: #202020; --border: #262626;
+    --accent: #11EDC5; --accent-ink: #11EDC5; --accent-soft: rgba(17,237,197,0.10);
+    --grad: linear-gradient(90deg, #11EDC5, #34BBC7, #33C6AA);
+    --text: #FFFFFF; --text-2: #AFAFAF; --muted: #919191; --dim: #626262; --line: #2a2a2a;
+    --btn-bg: #202020; --btn-text: #DEDEDE; --btn-border: #3a3a3a;
+    --other: #6B6B6B; --dot-empty: #4a4a4a;
+    --crit: #FF6B5E; --crit-soft: rgba(255,107,94,0.12); --warn: #F5B83D; --warn-soft: rgba(245,184,61,0.12);
+    --grid-dot: rgba(255,255,255,0.07); --shadow: none;
+    --term-bg: #050505; --term-text: #AFAFAF; --term-cmd: #11EDC5; --term-out: #FFFFFF; --term-dim: #626262;
+  }
+  :root { --display: 'Satoshi', 'Manrope', sans-serif; --body: 'Manrope', sans-serif; --mono: 'Roboto Mono', ui-monospace, monospace; }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0; background: var(--bg);
-    background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 22px 22px;
+    background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px); background-size: 22px 22px;
     color: var(--text-2); font: 400 16px/1.6 var(--body); -webkit-font-smoothing: antialiased;
+    transition: background-color .2s, color .2s;
   }
-  a { color: var(--accent); text-decoration: none; }
+  a { color: var(--accent-ink); text-decoration: none; }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
   h1, h2, h3 { font-family: var(--display); font-weight: 500; color: var(--text); margin: 0; letter-spacing: -0.01em; }
   h1 { font-size: clamp(38px, 6.4vw, 72px); line-height: 1.1; }
   h2 { font-size: clamp(30px, 4.6vw, 52px); line-height: 1.12; }
-  h3 { font-size: clamp(20px, 2.2vw, 24px); line-height: 1.3; }
-  .hl { color: var(--accent); }
-  .grad { background: linear-gradient(90deg, var(--accent), var(--accent-mid), var(--accent-dark)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  h3 { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.3; }
+  .hl { color: var(--accent-ink); }
+  .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .star { color: var(--accent); font-size: 0.55em; vertical-align: 0.4em; margin-left: 0.12em; }
   .eyebrow { font: 600 13px/1.4 var(--body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; }
   p { margin: 0 0 1em; }
-  .lede { font-size: 18px; max-width: 680px; }
+  b, strong { color: var(--text); font-weight: 600; }
+  .lede { font-size: 18px; max-width: 700px; }
   code, pre { font-family: var(--mono); font-size: 13.5px; }
   code { color: var(--text); background: var(--surface-2); padding: 1px 6px; border-radius: 5px; word-break: break-word; }
-  .card { background: var(--surface); border: 1px solid #1f1f1f; border-radius: 14px; padding: 26px; min-width: 0; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 26px; min-width: 0; box-shadow: var(--shadow); }
   .muted { color: var(--muted); font-size: 14px; }
 
   /* nav */
   .nav-shell { position: sticky; top: 14px; z-index: 10; display: flex; justify-content: center; padding: 0 16px; }
-  nav { display: flex; align-items: center; gap: 26px; background: var(--bg-near); border: 1px solid var(--line); border-radius: 40px; padding: 8px 8px 8px 22px; max-width: 100%; }
+  nav { display: flex; align-items: center; gap: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 40px; padding: 8px 8px 8px 22px; max-width: 100%; box-shadow: var(--shadow); }
   .logo img { height: 26px; width: auto; display: block; }
-  nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; }
-  nav ul a { color: var(--text-2); font-size: 15px; }
+  nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+  nav ul a { color: var(--text-2); font-size: 14.5px; white-space: nowrap; }
   nav ul a:hover { color: var(--text); }
-  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--surface-2); color: var(--btn); border: 1px solid #3a3a3a; border-radius: 7px; padding: 10px 18px; font: 400 15px/1 var(--body); white-space: nowrap; }
-  .btn:hover { border-color: var(--btn); }
-  .btn.ghost { background: transparent; padding: 15px 27px; }
+  .theme-btn { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--btn-border); background: var(--btn-bg); color: var(--btn-text); cursor: pointer; font-size: 17px; line-height: 1; display: grid; place-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--btn-text); border: 1px solid var(--btn-border); border-radius: 7px; padding: 15px 27px; font: 400 15px/1 var(--body); white-space: nowrap; cursor: pointer; }
+  .btn:hover { border-color: var(--text); }
+  .btn.solid { background: var(--text); color: var(--bg); border-color: var(--text); padding: 13px 22px; }
 
   section { padding: 88px 0; }
   .head { margin-bottom: 40px; max-width: 800px; }
@@ -61,42 +83,52 @@
   .head h2 { margin-bottom: 16px; }
 
   /* hero */
-  .hero { padding: 112px 0 64px; text-align: center; }
+  .hero { padding: 108px 0 60px; text-align: center; }
   .hero .eyebrow { margin-bottom: 22px; }
   .hero h1 { max-width: 980px; margin: 0 auto 24px; }
   .hero .lede { margin: 0 auto 36px; }
   .ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 64px; text-align: left; }
-  .stat .num { font: 500 46px/1 var(--display); color: var(--accent); margin-bottom: 12px; white-space: nowrap; }
-  .stat .num small { font-size: 22px; color: var(--accent-dark); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 60px; text-align: left; }
+  .stat .num { font: 500 46px/1 var(--display); color: var(--accent-ink); margin-bottom: 12px; white-space: nowrap; }
+  .stat .num small { font-size: 22px; opacity: .75; }
   .stat p { margin: 0; color: var(--text); font-size: 15px; line-height: 1.45; }
+
+  .pill { font: 600 11.5px/1 var(--body); letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 10px; border-radius: 20px; white-space: nowrap; }
+  .pill.ok { color: var(--accent-ink); background: var(--accent-soft); }
+  .pill.warn { color: var(--warn); background: var(--warn-soft); }
+  .pill.crit { color: var(--crit); background: var(--crit-soft); }
 
   /* chat demo */
   .chat { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
-  .ask { grid-column: 1 / -1; justify-self: end; background: var(--surface-2); color: var(--text); border-radius: 18px 18px 4px 18px; padding: 14px 20px; font-size: 18px; max-width: 520px; }
+  .ask { grid-column: 1 / -1; justify-self: end; background: var(--text); color: var(--bg); border-radius: 18px 18px 4px 18px; padding: 14px 20px; font-size: 18px; max-width: 560px; }
   .answer h3 { font-size: 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px; }
   .answer ol { margin: 0; padding-left: 20px; color: var(--text); }
   .answer li { margin-bottom: 4px; }
   .answer .miss { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; color: var(--crit); }
-  .pill { font: 600 11.5px/1 var(--body); letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 10px; border-radius: 20px; white-space: nowrap; }
-  .pill.ok { color: var(--accent); background: rgba(17,237,197,0.1); }
-  .pill.warn { color: var(--warn); background: rgba(245,184,61,0.12); }
-  .pill.crit { color: var(--crit); background: rgba(255,107,94,0.12); }
 
-  /* dot matrix */
+  /* dot matrices */
   .matrix { margin-top: 16px; overflow-x: auto; }
-  .matrix table { width: 100%; border-collapse: collapse; min-width: 640px; }
-  .matrix th, .matrix td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: left; font-size: 14.5px; }
+  .matrix table { width: 100%; border-collapse: collapse; min-width: 660px; }
+  .matrix th, .matrix td { padding: 11px 10px; border-bottom: 1px solid var(--line); text-align: left; font-size: 14.5px; vertical-align: middle; }
   .matrix th { font: 600 11.5px/1.3 var(--body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .matrix th small { display: block; font-weight: 400; letter-spacing: 0.04em; text-transform: none; }
   .matrix td.q { color: var(--text); }
   .matrix td.q small { display: block; color: var(--muted); font-size: 12.5px; }
+  .matrix tr:last-child td { border-bottom: 0; }
   .dots { display: flex; gap: 6px; }
-  .dot { width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid #4a4a4a; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--dot-empty); display: inline-block; flex: none; }
   .dot.hit { background: var(--accent); border-color: var(--accent); }
+  .dot.other { background: var(--other); border-color: var(--other); }
   .matrix td.score { font: 400 14px var(--mono); color: var(--text); white-space: nowrap; }
   .matrix td.instead { color: var(--text-2); font-size: 13.5px; }
   .legend { display: flex; gap: 18px; align-items: center; margin-top: 14px; font-size: 13.5px; color: var(--muted); flex-wrap: wrap; }
   .legend span { display: inline-flex; gap: 8px; align-items: center; }
+  .totals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+  .total { padding: 18px 20px; }
+  .total .m { font: 500 17px var(--display); color: var(--text); }
+  .total .v { font: 500 32px/1.1 var(--display); color: var(--accent-ink); margin: 6px 0 2px; }
+  .total .v small { font-size: 16px; color: var(--muted); }
+  .total p { margin: 0; font-size: 13.5px; color: var(--muted); }
 
   /* bars */
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -109,29 +141,29 @@
   .bar .v { font: 400 13.5px var(--mono); color: var(--text); text-align: right; }
   .bar.us .n { color: var(--text); font-weight: 600; }
   .bar.us .f { background: var(--accent); }
-  .bar:hover .f { filter: brightness(1.25); }
-  .bar[data-tip]:hover::after { content: attr(data-tip); position: absolute; left: 130px; top: -30px; background: var(--surface-2); color: var(--text); border: 1px solid #3a3a3a; padding: 4px 10px; border-radius: 6px; font-size: 12.5px; white-space: nowrap; z-index: 2; }
+  .bar[data-tip]:hover::after { content: attr(data-tip); position: absolute; left: 130px; top: -30px; background: var(--text); color: var(--bg); padding: 4px 10px; border-radius: 6px; font-size: 12.5px; white-space: nowrap; z-index: 2; }
   .note { border-left: 2px solid var(--accent); padding: 2px 0 2px 16px; margin-top: 20px; color: var(--text); font-size: 15px; }
 
   /* sources */
   .sources { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .sources h3 { font-size: 17px; margin-bottom: 12px; }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { font: 400 12.5px/1 var(--mono); color: var(--text); background: var(--bg-near); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; }
-  .chip b { color: var(--accent); font-weight: 400; margin-left: 4px; }
+  .chip { font: 400 12.5px/1 var(--mono); color: var(--text); background: var(--bg-near); border: 1px solid var(--border); border-radius: 6px; padding: 7px 9px; }
+  .chip b { color: var(--accent-ink); font-weight: 400; margin-left: 4px; }
   .looks { margin-top: 16px; }
-  .looks .chips .chip { font-size: 13px; }
   .quote { margin-top: 16px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px; align-items: center; }
-  pre.term { background: var(--bg-near); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin: 0; overflow-x: auto; color: var(--text-2); line-height: 1.6; }
-  pre.term .c { color: var(--accent); } pre.term .o { color: var(--text); } pre.term .k { color: var(--dim); }
+  pre.term { background: var(--term-bg); border: 1px solid #1d1f1f; border-radius: 10px; padding: 14px 16px; margin: 0; overflow-x: auto; color: var(--term-text); line-height: 1.6; }
+  pre.term .c { color: var(--term-cmd); } pre.term .o { color: var(--term-out); } pre.term .k { color: var(--term-dim); }
+  blockquote.said { margin: 16px 0 0; padding: 18px 22px; border-radius: 12px; background: var(--bg-near); border: 1px solid var(--border); color: var(--text); font-size: 15.5px; }
+  blockquote.said cite { display: block; margin-top: 8px; font-style: normal; color: var(--muted); font-size: 13px; }
 
   /* board + findings */
   .board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
   .prop { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 18px 20px; }
   .prop .d { color: var(--text); font: 500 17px/1.2 var(--display); }
   .prop .p { display: block; font: 400 12px var(--mono); color: var(--muted); margin-top: 4px; }
-  .prop.crit { border-color: rgba(255,107,94,0.45); }
-  details.f { background: var(--surface); border: 1px solid #1f1f1f; border-radius: 12px; margin-bottom: 10px; }
+  .prop.crit { border-color: var(--crit); }
+  details.f { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; }
   details.f summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 76px 1fr auto 20px; gap: 14px; align-items: center; padding: 16px 20px; }
   details.f summary::-webkit-details-marker { display: none; }
   details.f summary .id { font: 400 12.5px var(--mono); color: var(--muted); }
@@ -140,15 +172,24 @@
   details.f[open] summary .chev { transform: rotate(90deg); }
   details.f .body { padding: 0 20px 20px; display: grid; gap: 12px; }
   details.f .body p { margin: 0; font-size: 14.5px; }
-  details.f .body b { color: var(--text); font-weight: 600; }
 
   /* loop */
-  .loop-bg { background: linear-gradient(180deg, transparent, rgba(17,237,197,0.04) 30%, rgba(17,237,197,0.04) 70%, transparent); }
+  .loop-bg { background: linear-gradient(180deg, transparent, var(--accent-soft) 30%, var(--accent-soft) 70%, transparent); }
   .loop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
   .loop-svg { width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto; }
+  .loop-svg .ring { fill: none; stroke: var(--line); }
+  .loop-svg .arc { fill: none; stroke: var(--accent); stroke-width: 2.5; }
+  .loop-svg .head { fill: var(--accent); }
+  .loop-svg .node { fill: var(--surface); stroke: var(--accent); stroke-width: 1.5; }
+  .loop-svg .num { fill: var(--accent-ink); font: 400 14px var(--mono); }
+  .loop-svg .lbl { fill: var(--text); font: 500 24px var(--display); }
+  .loop-svg .sub { fill: var(--text-2); font: 400 13px var(--body); }
+  .loop-svg .cap { fill: var(--muted); font: 400 14px var(--body); letter-spacing: 2px; }
+  .loop-svg .big { fill: var(--text); font: 500 22px var(--display); }
+  .loop-svg .glow-stop { stop-color: var(--accent); }
   .levers { display: grid; gap: 12px; }
   .lever { display: grid; grid-template-columns: 40px 1fr; gap: 12px; padding: 18px 20px; }
-  .lever .n { font: 500 24px/1 var(--display); color: var(--accent); }
+  .lever .n { font: 500 24px/1 var(--display); color: var(--accent-ink); }
   .lever h3 { font-size: 18px; margin-bottom: 4px; }
   .lever p { margin: 0; font-size: 14.5px; }
   .slogan { text-align: center; margin: 64px auto 28px; }
@@ -158,15 +199,15 @@
   .lane h3 { font-size: 20px; margin-bottom: 2px; }
   .lane .who { font: 400 12.5px/1.5 var(--mono); color: var(--muted); margin-bottom: 12px; }
   .lane p { margin: 0; font-size: 14.5px; }
-  .lane.auto { border-color: rgba(17,237,197,0.4); }
+  .lane.auto { border-color: var(--accent); }
 
   /* plan */
-  .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid #1f1f1f; }
-  .plan { width: 100%; border-collapse: collapse; background: var(--surface); font-size: 14.5px; min-width: 620px; }
+  .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--border); background: var(--surface); }
+  .plan { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 620px; }
   .plan th, .plan td { text-align: left; padding: 13px 18px; border-bottom: 1px solid var(--line); }
   .plan th { font: 600 11.5px/1.4 var(--body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); background: var(--surface-2); }
   .plan td.now { color: var(--crit); font: 400 13.5px var(--mono); }
-  .plan td.goal { color: var(--accent); font: 400 13.5px var(--mono); }
+  .plan td.goal { color: var(--accent-ink); font: 400 13.5px var(--mono); }
   .plan td.when { color: var(--muted); font: 400 13px var(--mono); white-space: nowrap; }
   .plan tr:last-child td { border-bottom: 0; }
   .plan tr.group td { background: var(--bg-near); color: var(--muted); font: 600 11.5px var(--body); letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 18px; }
@@ -174,30 +215,54 @@
   .notes h3 { font-size: 18px; margin-bottom: 6px; }
   .notes p { margin: 0; font-size: 14.5px; }
 
-  .about { display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px; align-items: start; }
-  .about p { font-size: 16.5px; }
+  /* headless */
+  .agents { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .agents h3 { font-size: 19px; margin-bottom: 6px; }
+  .agents p { margin: 0; font-size: 14.5px; }
+  .agents .when { font: 400 12.5px var(--mono); color: var(--accent-ink); display: block; margin-bottom: 10px; }
+  .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .vs h3 { font-size: 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .score { font: 500 15px var(--mono); color: var(--text); }
+  .matrix td.score.hi { color: var(--accent-ink); font-weight: 600; }
+  .matrix td.score.lo { color: var(--crit); font-weight: 600; }
+  .yes { color: var(--accent-ink); font-weight: 600; }
+  .no { color: var(--dim); }
+  tr.us td:first-child { font-weight: 600; color: var(--text); }
+
+  /* live */
+  #live { display: none; }
+  #live.on { display: block; }
+  .live-form { display: grid; grid-template-columns: 1fr 160px auto; gap: 10px; }
+  .live-form input { font: 400 16px var(--body); padding: 13px 16px; border-radius: 8px; border: 1px solid var(--btn-border); background: var(--surface); color: var(--text); min-width: 0; }
+  .live-out { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+  .live-out .card { padding: 18px; font-size: 14px; }
+  .live-out h3 { font-size: 17px; margin-bottom: 8px; display: flex; justify-content: space-between; gap: 8px; }
+  .live-out .txt { max-height: 260px; overflow: auto; white-space: pre-wrap; color: var(--text-2); margin-top: 10px; font-size: 13.5px; }
+  .live-out mark { background: var(--accent-soft); color: var(--accent-ink); font-weight: 600; padding: 0 2px; border-radius: 3px; }
+  .live-out mark.o { background: var(--surface-2); color: var(--text); }
+
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   footer { border-top: 1px solid var(--line); padding: 36px 0 52px; }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; font-size: 13.5px; color: var(--muted); }
   footer img { height: 22px; }
 
   @media (max-width: 960px) {
     nav ul { display: none; }
-    .stats { grid-template-columns: repeat(2, 1fr); }
-    .chat, .sources { grid-template-columns: 1fr 1fr; }
-    .two, .loop-grid, .about, .quote { grid-template-columns: 1fr; }
+    .stats, .totals { grid-template-columns: repeat(2, 1fr); }
+    .chat, .sources, .agents, .live-out { grid-template-columns: 1fr 1fr; }
+    .two, .loop-grid, .quote, .vs { grid-template-columns: 1fr; }
     .board, .lanes, .notes { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
     .wrap { padding: 0 16px; }
     section { padding: 60px 0; }
     .hero { padding: 72px 0 44px; }
-    .stats, .chat, .sources, .board, .lanes, .notes { grid-template-columns: 1fr; }
+    .stats, .chat, .sources, .board, .lanes, .notes, .agents, .live-out, .live-form { grid-template-columns: 1fr; }
     .stat .num { font-size: 40px; }
     .card { padding: 20px 18px; }
     .bar { grid-template-columns: 98px 1fr 46px; gap: 8px; }
     details.f summary { grid-template-columns: 1fr 20px; gap: 6px 10px; }
-    details.f summary .id { grid-column: 1; }
-    details.f summary .t { grid-column: 1; }
+    details.f summary .id, details.f summary .t { grid-column: 1; }
     details.f summary .pill { grid-column: 1; justify-self: start; }
     details.f summary .chev { grid-column: 2; grid-row: 1 / span 3; }
     nav { gap: 12px; padding-left: 16px; }
@@ -208,15 +273,16 @@
 
 <div class="nav-shell">
   <nav aria-label="Report sections">
-    <a href="#top" class="logo"><img src="assets/phlo-logo.png" alt="Phlo" width="267" height="104"></a>
+    <a href="#top" class="logo"><img src="assets/phlo-logo.png" alt="Phlo" height="26"></a>
     <ul>
       <li><a href="#ai">AI answers</a></li>
+      <li><a href="#models">Big four</a></li>
       <li><a href="#competitors">Competitors</a></li>
       <li><a href="#health">Site health</a></li>
-      <li><a href="#improve">How we improve</a></li>
-      <li><a href="#plan">First 30 days</a></li>
+      <li><a href="#improve">Improve</a></li>
+      <li><a href="#headless">Headless shopping</a></li>
     </ul>
-    <a class="btn" href="https://phloing.com" target="_blank" rel="noopener">Let's Talk <span aria-hidden="true">↗</span></a>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode" title="Switch theme"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
   </nav>
 </div>
 
@@ -224,49 +290,36 @@
   <div class="wrap">
     <span class="eyebrow">Prepared for Dhiren Dunraj · Vitaco Health · 14 October 2026</span>
     <h1>Ask AI which protein powder to buy. <span class="grad">It doesn't say Musashi.</span><span class="star" aria-hidden="true">✦</span></h1>
-    <p class="lede">We asked ChatGPT, Gemini and Google 8 questions Australian shoppers ask before they buy, then compared Vitaco's brands against the competitors that get recommended instead.</p>
+    <p class="lede">We asked ChatGPT, Gemini, Claude, Grok and Google the questions Australian shoppers ask before they buy, then compared Vitaco's brands against the competitors they recommend instead.</p>
     <div class="ctas">
-      <a class="btn ghost" href="#ai">See the answers <span aria-hidden="true">↘</span></a>
-      <a class="btn ghost" href="#improve">How we improve it <span aria-hidden="true">↘</span></a>
+      <a class="btn" href="#ai">See the answers <span aria-hidden="true">↘</span></a>
+      <a class="btn" href="#headless">What's next <span aria-hidden="true">↘</span></a>
     </div>
     <div class="stats">
-      <div class="card stat"><div class="num">6<small>/48</small></div><p>AI answers that name the right Vitaco brand</p></div>
-      <div class="card stat"><div class="num">16<small>/48</small></div><p>AI answers that name Bulk Nutrients</p></div>
+      <div class="card stat"><div class="num">6<small>/48</small></div><p>ChatGPT, Gemini and Google AI Mode answers that name the right Vitaco brand</p></div>
+      <div class="card stat"><div class="num">11<small>/80</small></div><p>answers from Claude, ChatGPT, Gemini and Grok that name any Vitaco brand</p></div>
       <div class="card stat"><div class="num">7.8×</div><p>more Google AI Overview citations for bulknutrients.com.au than musashi.com</p></div>
-      <div class="card stat"><div class="num">1<small>/10</small></div><p>high-intent Google searches where any Vitaco brand reaches page one</p></div>
+      <div class="card stat"><div class="num">0<small>/6</small></div><p>shopper questions answered by Musashi's built-in AI shopping endpoint</p></div>
     </div>
   </div>
 </header>
 
-<!-- ============ AI ANSWERS ============ -->
+<!-- ============ 01 AI ANSWERS ============ -->
 <section id="ai">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">01 · The AI test</span>
       <h2>Ask it like a <span class="hl">shopper</span> would.</h2>
-      <p class="lede">The same question, asked from Australia on 11 October 2026.</p>
+      <p class="lede">The same question, asked from Australia in the consumer apps on 11 October 2026.</p>
     </div>
-
     <div class="chat">
       <div class="ask">What protein powder should I use?</div>
-      <div class="card answer">
-        <h3>ChatGPT <span class="pill crit">0 of 3 runs</span></h3>
-        <ol><li>True Protein</li><li>Bulk Nutrients</li><li>Macro Mike</li></ol>
-        <div class="miss">Musashi not mentioned</div>
-      </div>
-      <div class="card answer">
-        <h3>Gemini <span class="pill crit">0 of 2 runs</span></h3>
-        <ol><li>Bulk Nutrients</li><li>Optimum Nutrition</li></ol>
-        <div class="miss">Musashi not mentioned</div>
-      </div>
-      <div class="card answer">
-        <h3>Google AI Mode <span class="pill crit">0 of 1</span></h3>
-        <ol><li>No brands. Generic advice on whey vs plant protein</li></ol>
-        <div class="miss">Musashi not mentioned</div>
-      </div>
+      <div class="card answer"><h3>ChatGPT <span class="pill crit">0 of 3 runs</span></h3><ol><li>True Protein</li><li>Bulk Nutrients</li><li>Macro Mike</li></ol><div class="miss">Musashi not mentioned</div></div>
+      <div class="card answer"><h3>Gemini <span class="pill crit">0 of 2 runs</span></h3><ol><li>Bulk Nutrients</li><li>Optimum Nutrition</li></ol><div class="miss">Musashi not mentioned</div></div>
+      <div class="card answer"><h3>Google AI Mode <span class="pill crit">0 of 1</span></h3><ol><li>No brands. Generic advice on whey vs plant protein</li></ol><div class="miss">Musashi not mentioned</div></div>
     </div>
 
-    <div class="card matrix" role="region" aria-label="Brand mentions across all eight questions">
+    <div class="card matrix" role="region" aria-label="Brand mentions across all eight questions in consumer AI apps">
       <table>
         <thead><tr><th>Question</th><th>ChatGPT</th><th>Gemini</th><th>AI Mode</th><th>Named</th><th>Recommended instead</th></tr></thead>
         <tbody>
@@ -285,17 +338,79 @@
   </div>
 </section>
 
-<!-- ============ COMPETITORS ============ -->
+<!-- ============ 02 BIG FOUR ============ -->
+<section id="models" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">02 · The big four models</span>
+      <h2>Claude, ChatGPT, Gemini, <span class="hl">Grok</span>.</h2>
+      <p class="lede">Ten questions, phrased the way people actually type them. Each model answered twice: once from memory, and once after searching the web.</p>
+    </div>
+    <div class="card matrix" role="region" aria-label="Which brands the four models named, per question">
+      <table>
+        <thead><tr><th>Question</th><th>Claude<small>memory · web</small></th><th>ChatGPT<small>memory · web</small></th><th>Gemini<small>memory · web</small></th><th>Grok<small>memory · web</small></th></tr></thead>
+        <tbody>
+          <tr><td class="q">I&#x27;m training a few times a week, what pre workout should I buy?</td><td><div class="dots"><i class="dot hit" title="Claude (memory): Optimum Nutrition, Musashi, Muscle Nation"></i><i class="dot other" title="Claude (web): Optimum Nutrition, Muscle Nation"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Optimum Nutrition, Ghost, Faction Labs, EHP Labs"></i><i class="dot other" title="Gemini (web): Optimum Nutrition, C4, Ghost, Faction Labs"></i></div></td><td><div class="dots"><i class="dot other" title="Grok (memory): Bulk Nutrients"></i><i class="dot other" title="Grok (web): Optimum Nutrition, C4"></i></div></td></tr>
+          <tr><td class="q">I want to gain muscle, what should I take?</td><td><div class="dots"><i class="dot" title="Claude (memory): no brands named"></i><i class="dot" title="Claude (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Optimum Nutrition, Bulk Nutrients, True Protein, VPA"></i><i class="dot" title="Gemini (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
+          <tr><td class="q">What protein powder should I buy?</td><td><div class="dots"><i class="dot hit" title="Claude (memory): Bulk Nutrients, Aussie Bodies, Optimum Nutrition, Macro Mike"></i><i class="dot hit" title="Claude (web): Bulk Nutrients, Optimum Nutrition, Aussie Bodies, Musashi"></i></div></td><td><div class="dots"><i class="dot other" title="ChatGPT (memory): Bulk Nutrients, True Protein, Optimum Nutrition"></i><i class="dot other" title="ChatGPT (web): Bulk Nutrients"></i></div></td><td><div class="dots"><i class="dot hit" title="Gemini (memory): Bulk Nutrients, True Protein, Optimum Nutrition, Macro Mike"></i><i class="dot other" title="Gemini (web): Optimum Nutrition, Bulk Nutrients, True Protein, VPA"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot hit" title="Grok (web): Bulk Nutrients, True Protein, Musashi, Optimum Nutrition"></i></div></td></tr>
+          <tr><td class="q">Should I take creatine? Which one should I get?</td><td><div class="dots"><i class="dot other" title="Claude (memory): Optimum Nutrition, Myprotein, Bulk Nutrients"></i><i class="dot hit" title="Claude (web): Optimum Nutrition, Musashi, Bulk Nutrients"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot other" title="ChatGPT (web): Bulk Nutrients, True Protein"></i></div></td><td><div class="dots"><i class="dot hit" title="Gemini (memory): Bulk Nutrients, VPA, Musashi, Optimum Nutrition"></i><i class="dot hit" title="Gemini (web): Bulk Nutrients, VPA, Optimum Nutrition, EHP Labs"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot other" title="Grok (web): Optimum Nutrition, True Protein"></i></div></td></tr>
+          <tr><td class="q">I&#x27;m cutting weight but want to keep my muscle, what supplements help?</td><td><div class="dots"><i class="dot" title="Claude (memory): no brands named"></i><i class="dot" title="Claude (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Bulk Nutrients, VPA, Optimum Nutrition, EHP Labs"></i><i class="dot" title="Gemini (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
+          <tr><td class="q">What&#x27;s a good recovery drink after training?</td><td><div class="dots"><i class="dot other" title="Claude (memory): Up&amp;Go, Gatorade"></i><i class="dot other" title="Claude (web): Up&amp;Go, Sustagen, Gatorade"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Up&amp;Go, Myprotein"></i><i class="dot other" title="Gemini (web): Gatorade"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
+          <tr><td class="q">I&#x27;m not sleeping well, what magnesium should I take?</td><td><div class="dots"><i class="dot" title="Claude (memory): no brands named"></i><i class="dot" title="Claude (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Ethical Nutrients"></i><i class="dot" title="Gemini (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
+          <tr><td class="q">What&#x27;s a good probiotic for gut health?</td><td><div class="dots"><i class="dot other" title="Claude (memory): Blackmores, Inner Health, Ethical Nutrients, Life-Space"></i><i class="dot other" title="Claude (web): Ethical Nutrients, Blackmores, Inner Health"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Life-Space, Inner Health, Ethical Nutrients"></i><i class="dot other" title="Gemini (web): Inner Health, Ethical Nutrients, Life-Space, Metagenics"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
+          <tr><td class="q">What vitamins should I give my kids?</td><td><div class="dots"><i class="dot" title="Claude (memory): no brands named"></i><i class="dot" title="Claude (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Gemini (memory): no brands named"></i><i class="dot" title="Gemini (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
+          <tr><td class="q">What&#x27;s a healthy protein bar I can grab on the go?</td><td><div class="dots"><i class="dot hit" title="Claude (memory): Up&amp;Go, Barebells, Aussie Bodies"></i><i class="dot hit" title="Claude (web): Aussie Bodies, Barebells"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Body Science"></i><i class="dot hit" title="Gemini (web): Aussie Bodies"></i></div></td><td><div class="dots"><i class="dot other" title="Grok (memory): Fulfil"></i><i class="dot other" title="Grok (web): Quest"></i></div></td></tr>
+        </tbody>
+      </table>
+      <div class="legend"><span><i class="dot hit"></i> Vitaco brand named</span><span><i class="dot other"></i> Other brands only</span><span><i class="dot"></i> No brands named</span><span>Hover a dot for the brands.</span></div>
+    </div>
+    <div class="totals">
+      <div class="card total"><div class="m">Claude</div><div class="v">6<small> / 20</small></div><p>answers name Vitaco · 12 name any brand</p></div>
+      <div class="card total"><div class="m">ChatGPT</div><div class="v">0<small> / 20</small></div><p>answers name Vitaco · 3 name any brand</p></div>
+      <div class="card total"><div class="m">Gemini</div><div class="v">4<small> / 20</small></div><p>answers name Vitaco · 15 name any brand</p></div>
+      <div class="card total"><div class="m">Grok</div><div class="v">1<small> / 20</small></div><p>answers name Vitaco · 6 name any brand</p></div>
+    </div>
+    <div class="two" style="margin-top:16px">
+      <div class="card">
+        <h3 style="margin-bottom:8px">Half the answers name no brand at all</h3>
+        <p style="margin:0">44 of 80 answers gave generic advice ("take creatine monohydrate, 3–5 g a day"). Of the 36 that did name brands, Optimum Nutrition appeared in 18, Bulk Nutrients in 15 and Vitaco in 11. Protein and protein bars are where Vitaco shows up. Magnesium, probiotics, recovery and kids' vitamins are where it doesn't.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:8px">When Musashi is named, it's for the price</h3>
+        <blockquote class="said" style="margin-top:0">"You can often find brands like <b>Musashi</b> or Optimum Nutrition (ON) on half-price sale here."<cite>Gemini, on where to buy creatine (Chemist Warehouse)</cite></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE (shown only when the Cloudflare function is configured) ============ -->
+<section id="live" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Live</span>
+      <h2>Ask your own <span class="hl">question</span>.</h2>
+      <p class="lede">Type anything a customer might ask. All four models answer live, with Vitaco brands highlighted.</p>
+    </div>
+    <form class="live-form card" id="liveForm">
+      <input id="liveQ" maxlength="300" placeholder="e.g. I'm training for a half marathon, what should I take?" required aria-label="Question">
+      <input id="liveP" type="password" placeholder="Passcode" required aria-label="Passcode">
+      <button class="btn solid" type="submit" id="liveBtn">Ask all four</button>
+    </form>
+    <p class="muted" id="liveStatus" style="margin-top:10px"></p>
+    <div class="live-out" id="liveOut"></div>
+  </div>
+</section>
+
+<!-- ============ 03 COMPETITORS ============ -->
 <section id="competitors">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">02 · Competitors</span>
+      <span class="eyebrow">03 · Competitors</span>
       <h2>Who AI <span class="hl">recommends</span> instead.</h2>
     </div>
-
     <div class="two">
-      <div class="card chart" role="img" aria-label="Share of 48 AI answers naming each brand. Bulk Nutrients 16, True Protein 14, Swisse 11, Optimum Nutrition 10, Blackmores 7, Inner Health 5, Musashi 4, Nutra-Life 2, Healtheries 0, Aussie Bodies 0.">
-        <h3>AI answers naming each brand</h3>
+      <div class="card chart" role="img" aria-label="Consumer AI answers naming each brand, out of 48. Bulk Nutrients 16, True Protein 14, Swisse 11, Optimum Nutrition 10, Blackmores 7, Inner Health 5, Musashi 4, Nutra-Life 2, Healtheries 0, Aussie Bodies 0.">
+        <h3>Consumer AI answers naming each brand</h3>
         <span class="muted">48 answers · ChatGPT, Gemini, Google AI Mode</span>
         <div class="bar" data-tip="16 of 48 answers"><span class="n">Bulk Nutrients</span><div class="t"><div class="f" style="width:100%"></div></div><span class="v">16</span></div>
         <div class="bar" data-tip="14 of 48 answers"><span class="n">True Protein</span><div class="t"><div class="f" style="width:87.5%"></div></div><span class="v">14</span></div>
@@ -308,7 +423,6 @@
         <div class="bar us" data-tip="0 of 48 answers"><span class="n">Healtheries</span><div class="t"><div class="f" style="width:0"></div></div><span class="v">0</span></div>
         <div class="bar us" data-tip="0 of 48 answers"><span class="n">Aussie Bodies</span><div class="t"><div class="f" style="width:0"></div></div><span class="v">0</span></div>
       </div>
-
       <div class="card chart" role="img" aria-label="Times each site is cited in Google AI Overviews in Australia. Swisse 4778, Blackmores 3873, Bulk Nutrients 3695, VPA 3009, True Protein 2275, Musashi 472, Nutra-Life 298, Healtheries 14, Aussie Bodies 14.">
         <h3>Google AI Overview citations</h3>
         <span class="muted">Times each brand's site is cited · Australia · all topics</span>
@@ -323,21 +437,20 @@
         <div class="bar us" data-tip="aussiebodies.com"><span class="n">Aussie Bodies</span><div class="t"><div class="f" style="width:0.3%"></div></div><span class="v">14</span></div>
       </div>
     </div>
-
     <div class="card" style="margin-top:16px">
       <h3 style="margin-bottom:6px">Classic Google search: same pattern</h3>
-      <p style="margin:0">Across 10 high-intent Australian searches, a Vitaco brand reached page one <b style="color:var(--text)">once</b>, at #9 or #10, and the brand changed between runs. True Protein held page one on 4 of 10. Google showed an AI Overview on 9 of the 10.</p>
+      <p style="margin:0">Across 10 high-intent Australian searches, a Vitaco brand reached page one <b>once</b>, at #9 or #10, and the brand changed between runs. True Protein held page one on 4 of 10. Google showed an AI Overview on 9 of the 10.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ WHY ============ -->
+<!-- ============ 04 WHY ============ -->
 <section id="why" style="padding-top:0">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">03 · Why</span>
+      <span class="eyebrow">04 · Why</span>
       <h2>AI recommends what it <span class="hl">reads</span>.</h2>
-      <p class="lede">These are the sites cited in the AI answers and Google's AI Overviews. Vitaco's six sites were cited <b style="color:var(--text)">0 times</b>. trueprotein.com.au was cited 11 times.</p>
+      <p class="lede">These are the sites cited in the AI answers and Google's AI Overviews. Vitaco's six sites were cited <b>0 times</b>. trueprotein.com.au was cited 11 times.</p>
     </div>
     <div class="sources">
       <div class="card"><h3>Retailers</h3><div class="chips"><span class="chip">elitesupps.com.au<b>10</b></span><span class="chip">chemistwarehouse.com.au<b>8</b></span><span class="chip">nutritionwarehouse.com.au<b>5</b></span><span class="chip">supps247.com.au<b>4</b></span></div></div>
@@ -345,13 +458,11 @@
       <div class="card"><h3>Health authorities</h3><div class="chips"><span class="chip">healthdirect.gov.au<b>6</b></span><span class="chip">ausport.gov.au<b>4</b></span><span class="chip">dietitiansaustralia.org.au<b>3</b></span><span class="chip">tga.gov.au<b>3</b></span></div></div>
       <div class="card"><h3>Competitor sites</h3><div class="chips"><span class="chip">trueprotein.com.au<b>11</b></span><span class="chip">bulknutrients.com.au<b>5</b></span><span class="chip">naturesway.com.au<b>5</b></span><span class="chip">swisse.com.au<b>4</b></span></div></div>
     </div>
-
     <div class="card looks">
       <h3 style="margin-bottom:12px">What ChatGPT searched for before answering</h3>
       <div class="chips"><span class="chip">third party tested</span><span class="chip">protein per serve</span><span class="chip">value · price</span><span class="chip">evidence · systematic review</span><span class="chip">TGA safety</span><span class="chip">independent reviews</span><span class="chip">ingredients comparison</span><span class="chip">2026</span></div>
       <p class="muted" style="margin:12px 0 0">These terms come from ChatGPT's own background searches. A product page that states these facts clearly, in a form a machine can read, is a page AI can quote.</p>
     </div>
-
     <div class="quote">
       <div><h3>Competitors are doing this on purpose.</h3><p class="muted" style="margin-top:8px">True Protein's robots.txt welcomes every AI crawler by name. It's also the single most-cited site in these answers. That doesn't prove one caused the other, but it shows they're paying attention.</p></div>
       <pre class="term"><span class="c">$ curl -s https://www.trueprotein.com.au/robots.txt | head -2</span>
@@ -361,15 +472,14 @@
   </div>
 </section>
 
-<!-- ============ SITE HEALTH ============ -->
+<!-- ============ 05 SITE HEALTH ============ -->
 <section id="health">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">04 · Site health</span>
+      <span class="eyebrow">05 · Site health</span>
       <h2>Five sites are fine. <span class="hl">One is on fire.</span></h2>
       <p class="lede">Google and AI assistants read the same pages. Open any finding to see the command that proves it.</p>
     </div>
-
     <div class="board">
       <div class="card prop"><div><span class="d">musashi.com</span><span class="p">Shopify</span></div><span class="pill ok">Healthy</span></div>
       <div class="card prop"><div><span class="d">aussiebodies.com</span><span class="p">WooCommerce</span></div><span class="pill ok">Healthy</span></div>
@@ -383,42 +493,35 @@
 <pre class="term"><span class="c">$ curl -sL https://healtheries.com.au/sitemap.xml | grep -o '&lt;loc&gt;https://[^/]*' | sort | uniq -c</span>
 <span class="o">    286 &lt;loc&gt;https://healtheries.co.nz</span></pre>
       <p><b>Fix:</b> generate one sitemap per domain. The likely cause is the generator reading the NZ site URL from shared config.</p></div></details>
-
     <details class="f"><summary><span class="id">HLTH-02</span><span class="t">Pages that don't exist return HTTP 200 (soft 404)</span><span class="pill crit">High</span><span class="chev">›</span></summary><div class="body">
 <pre class="term"><span class="c">$ curl -sL -o /dev/null -w '%{http_code}\n' https://healtheries.com.au/any-made-up-path</span>
 <span class="o">200</span>   <span class="k"># page title: "Page Not Found"</span></pre>
       <p><b>Fix:</b> return a real 404 with <code>notFound()</code> (App Router) or <code>{ notFound: true }</code> (Pages Router).</p></div></details>
-
     <details class="f"><summary><span class="id">HLTH-03</span><span class="t">74 of 167 product URLs return HTTP 500</span><span class="pill crit">High</span><span class="chev">›</span></summary><div class="body">
 <pre class="term"><span class="c">$ curl -sL https://healtheries.co.nz/sitemap.xml | grep -o '&lt;loc&gt;[^&lt;]*/product/[^&lt;]*' \
     | sed 's/&lt;loc&gt;//' | xargs -P 8 -I{} curl -s -o /dev/null -w '%{http_code}\n' {} | sort | uniq -c</span>
 <span class="o">     93 200
      74 500</span></pre>
       <p><b>Fix:</b> a removed product should return 404 or 301, never 500. The work order lists all 74 URLs.</p></div></details>
-
     <details class="f"><summary><span class="id">HLTH-04</span><span class="t">Homepage &lt;title&gt; is "Home". WordPress already has the right one.</span><span class="pill crit">High</span><span class="chev">›</span></summary><div class="body">
 <pre class="term"><span class="c">$ curl -sL https://healtheries.com.au/ | grep -oE '&lt;title&gt;[^&lt;]*|og:title" content="[^"]*'</span>
 <span class="o">&lt;title&gt;Home
 og:title" content="Home - Healtheries</span></pre>
       <p><b>Fix:</b> build <code>&lt;title&gt;</code> from the same Yoast field the front end already uses for <code>og:title</code>.</p></div></details>
-
     <details class="f"><summary><span class="id">HLTH-05</span><span class="t">Structured data exists in the CMS but never reaches the page</span><span class="pill crit">High</span><span class="chev">›</span></summary><div class="body">
 <pre class="term"><span class="c">$ curl -sL https://healtheries.com.au/ | grep -c '&lt;script type="application/ld+json"'</span>
 <span class="o">0</span>   <span class="k"># Yoast's schema graph is in the payload as escaped text, with URLs on api.healtheries.au.production.beingbui.lt</span></pre>
       <p><b>Fix:</b> render the Yoast schema as a JSON-LD tag with the public host, and add Product schema. This is how AI and Google read price, ingredients and availability.</p></div></details>
-
     <details class="f"><summary><span class="id">HLTH-06</span><span class="t">No canonical tags, no hreflang between AU and NZ</span><span class="pill crit">High</span><span class="chev">›</span></summary><div class="body">
 <pre class="term"><span class="c">$ curl -sL https://healtheries.com.au/ | grep -cE 'rel="canonical"|hreflang'</span>
 <span class="o">0</span></pre>
       <p><b>Fix:</b> add a self-referencing canonical, plus reciprocal <code>en-AU</code> / <code>en-NZ</code> hreflang between matching pages.</p></div></details>
-
     <details class="f"><summary><span class="id">NL-01</span><span class="t">Nutra-Life AU and NZ each point only to themselves</span><span class="pill warn">High</span><span class="chev">›</span></summary><div class="body">
 <pre class="term"><span class="c">$ curl -sL -A "Mozilla/5.0" https://nutralife.com.au/ | grep -o 'hreflang="[^"]*" href="[^"]*"'</span>
 <span class="o">hreflang="x-default" href="https://nutralife.com.au/"
 hreflang="en" href="https://nutralife.com.au/"
 hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
       <p><b>Why:</b> they share products (Gut Relief, Magnesium Sleep, Probiotica) and compete with each other for the same searches. <b>Fix:</b> reciprocal <code>en-AU</code> ↔ <code>en-NZ</code> hreflang on both sites.</p></div></details>
-
     <details class="f"><summary><span class="id">NL-02</span><span class="t">The NZ site declares itself Australian</span><span class="pill warn">Medium</span><span class="chev">›</span></summary><div class="body">
 <pre class="term"><span class="c">$ curl -sL https://www.nutralife.co.nz/ | grep -oE '&lt;html[^&gt;]*lang="[^"]*"|"inLanguage":"[^"]*"'</span>
 <span class="o">&lt;html lang="en-AU"
@@ -427,57 +530,45 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
   </div>
 </section>
 
-<!-- ============ IMPROVE ============ -->
+<!-- ============ 06 IMPROVE ============ -->
 <section id="improve" class="loop-bg">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">05 · How we improve it</span>
+      <span class="eyebrow">06 · How we improve it</span>
       <h2>Find. <span class="hl">Fix.</span> Prove it moved.</h2>
-      <p class="lede">Each month we re-ask the same 48 questions and re-scan all six sites. What we change in between is measured against that baseline.</p>
+      <p class="lede">Each month we re-ask the same questions across every AI and re-scan all six sites. What we change in between is measured against that baseline.</p>
     </div>
-
     <div class="loop-grid">
       <svg class="loop-svg" viewBox="0 10 560 470" role="img" aria-labelledby="loopTitle loopDesc">
         <title id="loopTitle">The Find, Fix, Re-check loop</title>
         <desc id="loopDesc">A monthly cycle. Find: scan sites and ask AI the buyer questions. Fix: through MCP to the site builder, or a work order. Re-check: 30 days later, measuring what moved.</desc>
         <defs>
-          <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11EDC5"/></marker>
-          <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#11EDC5" stop-opacity="0.16"/><stop offset="100%" stop-color="#11EDC5" stop-opacity="0"/></radialGradient>
+          <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" class="glow-stop" stop-opacity="0.14"/><stop offset="100%" class="glow-stop" stop-opacity="0"/></radialGradient>
         </defs>
         <circle cx="280" cy="280" r="150" fill="url(#glow)"/>
-        <circle cx="280" cy="280" r="190" fill="none" stroke="#2a2a2a"/>
-        <g fill="none" stroke="#11EDC5" stroke-width="2.5" marker-end="url(#arrow)">
-          <path d="M357.3,106.4 A190,190 0 0 1 469.0,299.9"/>
-          <path d="M391.7,433.7 A190,190 0 0 1 168.3,433.7"/>
-          <path d="M91.0,299.9 A190,190 0 0 1 202.7,106.4"/>
+        <circle class="ring" cx="280" cy="280" r="190"/>
+        <g class="arc" marker-end="url(#arrow)">
+          <path class="arc" d="M357.3,106.4 A190,190 0 0 1 469.0,299.9"/>
+          <path class="arc" d="M391.7,433.7 A190,190 0 0 1 168.3,433.7"/>
+          <path class="arc" d="M91.0,299.9 A190,190 0 0 1 202.7,106.4"/>
         </g>
-        <g font-family="Manrope, sans-serif" text-anchor="middle">
-          <text x="280" y="266" fill="#919191" font-size="14" letter-spacing="2">EVERY MONTH</text>
-          <text x="280" y="296" fill="#FFFFFF" font-size="22" font-family="Satoshi, Manrope, sans-serif">Under $1 of data</text>
-          <text x="280" y="320" fill="#919191" font-size="14">per full run</text>
-          <circle cx="280" cy="90" r="64" fill="#171717" stroke="#11EDC5" stroke-width="1.5"/>
-          <text x="280" y="72" fill="#11EDC5" font-size="14" font-family="Roboto Mono, monospace">01</text>
-          <text x="280" y="98" fill="#FFFFFF" font-size="24" font-family="Satoshi, Manrope, sans-serif">Find</text>
-          <text x="280" y="120" fill="#AFAFAF" font-size="13">scan + ask AI</text>
-          <circle cx="444.5" cy="375" r="64" fill="#171717" stroke="#11EDC5" stroke-width="1.5"/>
-          <text x="444.5" y="357" fill="#11EDC5" font-size="14" font-family="Roboto Mono, monospace">02</text>
-          <text x="444.5" y="383" fill="#FFFFFF" font-size="24" font-family="Satoshi, Manrope, sans-serif">Fix</text>
-          <text x="444.5" y="405" fill="#AFAFAF" font-size="13">via MCP</text>
-          <circle cx="115.5" cy="375" r="64" fill="#171717" stroke="#11EDC5" stroke-width="1.5"/>
-          <text x="115.5" y="357" fill="#11EDC5" font-size="14" font-family="Roboto Mono, monospace">03</text>
-          <text x="115.5" y="383" fill="#FFFFFF" font-size="24" font-family="Satoshi, Manrope, sans-serif">Re-check</text>
-          <text x="115.5" y="405" fill="#AFAFAF" font-size="13">30 days later</text>
+        <g text-anchor="middle">
+          <text class="cap" x="280" y="266">EVERY MONTH</text>
+          <text class="big" x="280" y="296">About $2 of data</text>
+          <text class="cap" x="280" y="320" style="letter-spacing:0">per full run</text>
+          <circle class="node" cx="280" cy="90" r="64"/><text class="num" x="280" y="72">01</text><text class="lbl" x="280" y="98">Find</text><text class="sub" x="280" y="120">scan + ask AI</text>
+          <circle class="node" cx="444.5" cy="375" r="64"/><text class="num" x="444.5" y="357">02</text><text class="lbl" x="444.5" y="383">Fix</text><text class="sub" x="444.5" y="405">via MCP</text>
+          <circle class="node" cx="115.5" cy="375" r="64"/><text class="num" x="115.5" y="357">03</text><text class="lbl" x="115.5" y="383">Re-check</text><text class="sub" x="115.5" y="405">30 days later</text>
         </g>
       </svg>
-
       <div class="levers">
         <div class="card lever"><span class="n">1</span><div><h3>Fix what's broken</h3><p>Healtheries and the Nutra-Life AU/NZ conflict. If a crawler can't read a page, AI can't recommend the product.</p></div></div>
-        <div class="card lever"><span class="n">2</span><div><h3>Publish the facts AI looks for</h3><p>Protein per serve, third-party testing, ingredients and price, as structured data on every product page. These are facts from the label, not AI-written copy.</p></div></div>
+        <div class="card lever"><span class="n">2</span><div><h3>Publish the facts AI looks for</h3><p>Protein per serve, third-party testing, ingredients and price, as structured data and store answers. These are facts from the label, not AI-written copy.</p></div></div>
         <div class="card lever"><span class="n">3</span><div><h3>Be on the pages AI reads</h3><p>Complete listings at the retailers it cites, and products submitted to the comparison sites. The cited-sources data becomes the to-do list.</p></div></div>
-        <div class="card lever"><span class="n">4</span><div><h3>Measure it monthly</h3><p>The same 48 questions every month. Share of AI answers is the number that matters.</p></div></div>
+        <div class="card lever"><span class="n">4</span><div><h3>Measure it monthly</h3><p>The same questions, every model, every month. Share of AI answers is the number that matters.</p></div></div>
       </div>
     </div>
-
     <div class="slogan"><h3>Everyone sells <span style="color:var(--muted)">find</span>. Almost nobody sells <span class="hl">fix</span>.</h3></div>
     <div class="lanes">
       <div class="card lane auto"><span class="pill ok">Closes automatically</span><h3>Shopify</h3><div class="who">musashi.com · nutralife.com.au</div><p>The agent drafts the change through the Shopify Admin API, a person approves it, and it's applied and logged with before/after. Every change can be rolled back.</p></div>
@@ -487,11 +578,11 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
   </div>
 </section>
 
-<!-- ============ PLAN ============ -->
+<!-- ============ 07 PLAN ============ -->
 <section id="plan">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">06 · What I'd do first</span>
+      <span class="eyebrow">07 · What we'd do first</span>
       <h2>Small, fast, <span class="hl">measured</span>.</h2>
       <p class="lede">A fixed scope with numbers agreed up front. Technical fixes show up in 30 days. AI share of voice moves more slowly, so we track it monthly from today's baseline.</p>
     </div>
@@ -504,46 +595,157 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
           <tr><td>Healtheries product URLs returning 500</td><td class="now">74 / 167</td><td class="goal">0</td><td class="when">day 30</td></tr>
           <tr><td>Rendered JSON-LD on Healtheries pages</td><td class="now">0</td><td class="goal">Product + Org</td><td class="when">day 30</td></tr>
           <tr><td>Nutra-Life shared products with AU/NZ hreflang</td><td class="now">0</td><td class="goal">all shared</td><td class="when">day 30</td></tr>
-          <tr class="group"><td colspan="4">AI &amp; search visibility</td></tr>
-          <tr><td>AI answers naming the right Vitaco brand</td><td class="now">6 / 48</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
+          <tr class="group"><td colspan="4">AI &amp; agent visibility</td></tr>
+          <tr><td>Musashi shopping-endpoint questions answered</td><td class="now">0 / 6</td><td class="goal">6 / 6</td><td class="when">day 30</td></tr>
+          <tr><td>Consumer AI answers naming the right Vitaco brand</td><td class="now">6 / 48</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
+          <tr><td>Big four model answers naming a Vitaco brand</td><td class="now">11 / 80</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
           <tr><td>Vitaco sites cited as a source in AI answers</td><td class="now">0</td><td class="goal">&gt; 0</td><td class="when">monthly</td></tr>
           <tr><td>musashi.com citations in Google AI Overviews</td><td class="now">472</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
-          <tr><td>Page-one Google results, 10 buyer searches</td><td class="now">1 / 10</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
         </tbody>
       </table>
     </div>
     <div class="notes">
       <div class="card"><h3>Not AI-written content</h3><p>You ruled it out. Everything here makes your existing products and facts readable and findable.</p></div>
       <div class="card"><h3>Auditable</h3><p>Every change is a logged diff with a before/after measurement, and it can be rolled back.</p></div>
-      <div class="card"><h3>Cheap to run</h3><p>This whole report cost $0.88 in DataForSEO data. Site scans are free. Every run has a hard spending cap.</p></div>
+      <div class="card"><h3>Cheap to run</h3><p>This report used $0.88 of search data and $1.52 of model calls. Site scans are free. Every run has a hard spending cap.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section id="about" style="padding-top:20px">
-  <div class="wrap about">
-    <div><span class="eyebrow" style="margin-bottom:12px">Who's writing this</span><h2>Daniel Hay<span class="hl">.</span></h2></div>
-    <div>
-      <p>I studied finance at UTS and moved into AI implementation, mostly in finance and operations. Marketing is newer ground for me, so everything here comes with data or a command you can check yourself. I'm also a Musashi customer, which is how this started.</p>
-      <p class="muted">Phlo · phloing.com · Chatswood. I also write The Rollout and run free system sprints.</p>
-      <a class="btn" href="https://phloing.com" target="_blank" rel="noopener">Book A Call <span aria-hidden="true">↗</span></a>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0">
+<!-- ============ 08 HEADLESS SHOPPING ============ -->
+<section id="headless" class="loop-bg">
   <div class="wrap">
-    <p class="muted" style="max-width:860px"><b style="color:var(--text-2)">Method.</b> All data collected 11 October 2026 from Australia. AI answers came from DataForSEO's ChatGPT and Gemini scrapers and Google AI Mode. Google results are desktop organic, top 10. AI Overview citations come from DataForSEO's LLM Mentions database. Site checks are plain HTTP requests. AI answers vary between runs, so treat small differences as noise. We didn't have Search Console or sales data.</p>
+    <div class="head">
+      <span class="eyebrow">08 · What's next</span>
+      <h2>Headless <span class="hl">shopping</span>.</h2>
+      <p class="lede">The next shopper may not visit the website at all. Their agent will: it compares products, asks the store questions and checks out on their behalf. Whatever the agent can't read, it can't buy.</p>
+    </div>
+    <div class="agents">
+      <div class="card"><span class="when">Sep 2026 · US first</span><h3>Meta Muse</h3><p>A personal agent that browses stores and completes a purchase through Stripe Link once the user approves the amount.</p></div>
+      <div class="card"><span class="when">2026 · via text message</span><h3>Instinct</h3><p>A personal agent that lives in your messages and uses the apps and accounts you already have to get things done, including buying.</p></div>
+      <div class="card"><span class="when">Jan 2026 · Shopify + Google</span><h3>Checkout inside AI</h3><p>Google and Shopify's Universal Commerce Protocol lets agents check out in AI Mode and Gemini. OpenAI's equivalent powers checkout inside ChatGPT.</p></div>
+    </div>
+
+    <div class="vs">
+      <div class="card">
+        <h3>musashi.com <span class="pill crit">empty</span></h3>
+        <pre class="term"><span class="c">$ curl -s -X POST https://musashi.com/api/mcp -H 'content-type: application/json' -d \
+ '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"search_shop_policies_and_faqs",
+   "arguments":{"query":"How much protein per serve, and is it third party tested?"}}}'</span>
+<span class="o">{"result":{"content":[{"type":"text","text":"[]"}]}}</span></pre>
+        <p class="muted" style="margin:12px 0 0">Shopify stores have an endpoint where AI agents can ask the store questions. Musashi's returned nothing on all six shopper questions we asked.</p>
+      </div>
+      <div class="card">
+        <h3>trueprotein.com.au <span class="pill ok">answers</span></h3>
+        <blockquote class="said" style="margin-top:0">"It depends on your priorities. True Protein is consistently rated among Australia's best for taste, quality, and clean ingredients. Our WPI 90 uses NZ grass-fed whey with 90%+ protein content and all-natural flavouring. We're rated 4.8/5 on ProductReview.com.au from 270+ reviews."<cite>True Protein's store endpoint, replying to an agent's protein question with its stored answer to "What's the best protein powder in Australia?"</cite></blockquote>
+        <p class="muted" style="margin:12px 0 0">Same platform, same endpoint. True Protein has loaded its knowledge base. On Shopify this is a fix the loop can close automatically.</p>
+      </div>
+    </div>
+
+    <div class="card matrix" style="margin-top:16px" role="region" aria-label="Agent readiness scorecard">
+      <h3 style="margin-bottom:4px">How easy is each store for an AI agent?</h3>
+      <span class="muted" style="display:block;margin-bottom:12px">Six checks, scanned 11 October 2026. Three products sampled per store, and agent questions asked three times each.</span>
+      <table>
+        <thead><tr><th>Store</th><th>Product data<small>price + stock</small></th><th>Barcodes<small>GTIN</small></th><th>Catalogue<small>machine-readable</small></th><th>Agent endpoint<small>Shopify MCP</small></th><th>Agent answers<small>store questions</small></th><th>llms.txt</th><th>Score</th></tr></thead>
+        <tbody>
+          <tr class="us"><td>Musashi</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
+          <tr class="us"><td>Nutra-Life AU</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
+          <tr class="us"><td>Nutra-Life NZ</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+          <tr class="us"><td>Healtheries AU</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+          <tr class="us"><td>Healtheries NZ</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+          <tr class="us"><td>Aussie Bodies</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+          <tr class=""><td>True Protein</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span> <span class="muted">1/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">6/6</td></tr>
+          <tr class=""><td>Bulk Nutrients</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">2/6</td></tr>
+          <tr class=""><td>VPA</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
+          <tr class=""><td>Swisse</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
+          <tr class=""><td>Blackmores</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="two" style="margin-top:16px">
+      <div class="card"><h3 style="margin-bottom:8px">Shopify stores: nearly there</h3><p style="margin:0">Musashi and Nutra-Life AU score 5 of 6. The gap is the store's knowledge base: load it with the facts from the label (protein per serve, testing, dosage, who it's for) and agents get an answer instead of an empty reply. After that, turn on Shopify's agentic checkout channels as they reach Australia.</p></div>
+      <div class="card"><h3 style="margin-bottom:8px">Everything else: start with product data</h3><p style="margin:0">Healtheries, Aussie Bodies and Nutra-Life NZ score 1 of 6. An agent can find their product URLs but can't reliably read a price, stock level or barcode from them. Structured product data comes first, and for Healtheries it's the same work order as HLTH-05.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:48px 0 24px">
+  <div class="wrap">
+    <p class="muted" style="max-width:900px"><b style="color:var(--text-2)">Method.</b> All data collected 11 October 2026. Consumer AI answers came from DataForSEO's ChatGPT and Gemini scrapers and Google AI Mode, asked from Australia. Big four answers came from the model APIs via OpenRouter (Claude Sonnet 5.5, GPT-6.1, Gemini 3.1 Pro, Grok 4.7), told the user is in Sydney. API answers can differ from the consumer apps. Google results are desktop organic, top 10. AI Overview citations come from DataForSEO's LLM Mentions database. Site and agent checks are plain HTTP requests, including Shopify's public <code>/api/mcp</code> endpoint. AI answers vary between runs, so treat small differences as noise. We didn't have Search Console or sales data. Agent launch details come from public reporting and are US-first.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <img src="assets/phlo-logo.png" alt="Phlo">
-    <span>Prepared for Vitaco Health. Confidential.</span>
+    <span>Prepared by Daniel Hay for Vitaco Health. Confidential.</span>
     <span>© 2026 PHLOING PTY LTD. All rights reserved.</span>
   </div>
 </footer>
+
+<script>
+  // Theme toggle
+  (function () {
+    const root = document.documentElement, btn = document.getElementById('themeBtn');
+    const label = () => btn.setAttribute('aria-label', root.dataset.theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    label();
+    btn.addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem('phlo-theme', root.dataset.theme); } catch (e) {}
+      label();
+    });
+  })();
+
+  // Live panel: only appears when the Cloudflare function has a key and passcode configured.
+  (function () {
+    const section = document.getElementById('live');
+    fetch('/api/ask').then((r) => r.ok ? r.json() : null).then((j) => { if (j && j.enabled) section.classList.add('on'); }).catch(() => {});
+    const form = document.getElementById('liveForm'), out = document.getElementById('liveOut'), status = document.getElementById('liveStatus'), btn = document.getElementById('liveBtn');
+    // Highlight brand names without injecting model output as HTML.
+    function highlighted(text, brands) {
+      const frag = document.createDocumentFragment();
+      const names = brands.map((b) => b.match).filter(Boolean);
+      if (!names.length) { frag.append(text); return frag; }
+      const re = new RegExp('(' + names.map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'gi');
+      let last = 0;
+      text.replace(re, (m, _g, i) => {
+        frag.append(text.slice(last, i));
+        const mark = document.createElement('mark');
+        const b = brands.find((x) => x.match && x.match.toLowerCase() === m.toLowerCase());
+        if (!(b && b.vitaco)) mark.className = 'o';
+        mark.textContent = m; frag.append(mark); last = i + m.length; return m;
+      });
+      frag.append(text.slice(last));
+      return frag;
+    }
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btn.disabled = true; out.textContent = ''; status.textContent = 'Asking Claude, ChatGPT, Gemini and Grok… (up to a minute)';
+      try {
+        const r = await fetch('/api/ask', { method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ question: document.getElementById('liveQ').value, passcode: document.getElementById('liveP').value }) });
+        const j = await r.json();
+        if (!r.ok) { status.textContent = j.error || 'Something went wrong.'; return; }
+        status.textContent = '';
+        for (const m of j.results) {
+          const card = document.createElement('div'); card.className = 'card';
+          const h = document.createElement('h3'); h.textContent = m.model;
+          const pill = document.createElement('span');
+          const v = m.brands.filter((b) => b.vitaco).map((b) => b.name);
+          pill.className = 'pill ' + (v.length ? 'ok' : 'crit'); pill.textContent = v.length ? v.join(', ') : 'No Vitaco';
+          h.append(pill); card.append(h);
+          const others = m.brands.filter((b) => !b.vitaco).map((b) => b.name);
+          const p = document.createElement('p'); p.className = 'muted'; p.style.margin = '0';
+          p.textContent = m.error ? m.error : (others.length ? 'Also named: ' + others.join(', ') : 'No other brands named');
+          card.append(p);
+          if (m.text) { const t = document.createElement('div'); t.className = 'txt'; t.append(highlighted(m.text, m.brands)); card.append(t); }
+          out.append(card);
+        }
+      } catch (err) { status.textContent = 'Could not reach the live service.'; }
+      finally { btn.disabled = false; }
+    });
+  })();
+</script>
 </body>
 </html>

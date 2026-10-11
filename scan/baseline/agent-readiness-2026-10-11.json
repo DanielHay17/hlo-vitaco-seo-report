@@ -1,0 +1,402 @@
+{
+  "ranAt": "2026-10-11T05:55:56.069Z",
+  "tries": 3,
+  "results": [
+    {
+      "name": "Musashi",
+      "base": "https://musashi.com",
+      "vitaco": true,
+      "q": "protein",
+      "productUrls": [
+        "https://musashi.com/products/magnesium-muscle-recovery",
+        "https://musashi.com/products/high-protein-creatine-bar",
+        "https://musashi.com/products/protein-crisp-creatine"
+      ],
+      "catalogue": "products.json",
+      "schema": {
+        "sampled": 3,
+        "product": true,
+        "gtin": true,
+        "rating": true
+      },
+      "tools": [
+        "search_shop_policies_and_faqs"
+      ],
+      "faq": {
+        "asked": 6,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": true,
+        "gtin": true,
+        "catalogue": true,
+        "agentEndpoint": true,
+        "agentAnswers": false,
+        "llmsTxt": true
+      },
+      "score": 5,
+      "of": 6
+    },
+    {
+      "name": "Nutra-Life AU",
+      "base": "https://nutralife.com.au",
+      "vitaco": true,
+      "q": "magnesium",
+      "productUrls": [
+        "https://nutralife.com.au/products/magnesium-glycinate-electrolytes",
+        "https://nutralife.com.au/products/k2-d3-magnesium-glycinate",
+        "https://nutralife.com.au/products/ashwagandha"
+      ],
+      "catalogue": "products.json",
+      "schema": {
+        "sampled": 3,
+        "product": true,
+        "gtin": true,
+        "rating": false
+      },
+      "tools": [
+        "search_shop_policies_and_faqs"
+      ],
+      "faq": {
+        "asked": 6,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": true,
+        "gtin": true,
+        "catalogue": true,
+        "agentEndpoint": true,
+        "agentAnswers": false,
+        "llmsTxt": true
+      },
+      "score": 5,
+      "of": 6
+    },
+    {
+      "name": "Nutra-Life NZ",
+      "base": "https://www.nutralife.co.nz",
+      "vitaco": true,
+      "q": "magnesium",
+      "productUrls": [
+        "https://www.nutralife.co.nz/products/gut-health-2/",
+        "https://www.nutralife.co.nz/products/high-strength-vit-c-1200mg-plus-vit-d-plus-zinc-2-2-2-2/",
+        "https://www.nutralife.co.nz/products/magnesium-sleep-plus-2/"
+      ],
+      "catalogue": "sitemap",
+      "schema": {
+        "sampled": 3,
+        "product": false,
+        "gtin": false,
+        "rating": false
+      },
+      "tools": [],
+      "faq": {
+        "asked": 0,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": false,
+        "gtin": false,
+        "catalogue": true,
+        "agentEndpoint": false,
+        "agentAnswers": false,
+        "llmsTxt": false
+      },
+      "score": 1,
+      "of": 6
+    },
+    {
+      "name": "Healtheries AU",
+      "base": "https://healtheries.com.au",
+      "vitaco": true,
+      "q": "kids",
+      "productUrls": [
+        "https://healtheries.co.nz/product/kidscare-potato-stix-roast-potato",
+        "https://healtheries.co.nz/product/kidscare-potato-stix-chicken",
+        "https://healtheries.co.nz/product/vit-c-gummies-for-adults"
+      ],
+      "catalogue": "sitemap",
+      "schema": {
+        "sampled": 3,
+        "product": false,
+        "gtin": false,
+        "rating": false
+      },
+      "tools": [],
+      "faq": {
+        "asked": 0,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": false,
+        "gtin": false,
+        "catalogue": true,
+        "agentEndpoint": false,
+        "agentAnswers": false,
+        "llmsTxt": false
+      },
+      "score": 1,
+      "of": 6
+    },
+    {
+      "name": "Healtheries NZ",
+      "base": "https://healtheries.co.nz",
+      "vitaco": true,
+      "q": "kids",
+      "productUrls": [
+        "https://healtheries.co.nz/product/kidscare-potato-stix-roast-potato",
+        "https://healtheries.co.nz/product/kidscare-potato-stix-chicken",
+        "https://healtheries.co.nz/product/vit-c-gummies-for-adults"
+      ],
+      "catalogue": "sitemap",
+      "schema": {
+        "sampled": 3,
+        "product": false,
+        "gtin": false,
+        "rating": false
+      },
+      "tools": [],
+      "faq": {
+        "asked": 0,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": false,
+        "gtin": false,
+        "catalogue": true,
+        "agentEndpoint": false,
+        "agentAnswers": false,
+        "llmsTxt": false
+      },
+      "score": 1,
+      "of": 6
+    },
+    {
+      "name": "Aussie Bodies",
+      "base": "https://aussiebodies.com",
+      "vitaco": true,
+      "q": "bar",
+      "productUrls": [
+        "https://aussiebodies.com/product/lo-sugar-crunch-almond-caramel-33g/",
+        "https://aussiebodies.com/product/lo-carb-chocolate-salted-caramel-crisp-90g/",
+        "https://aussiebodies.com/product/lo-carb-chocolate-milk-crisp-90g/"
+      ],
+      "catalogue": "sitemap",
+      "schema": {
+        "sampled": 3,
+        "product": false,
+        "gtin": false,
+        "rating": false
+      },
+      "tools": [],
+      "faq": {
+        "asked": 0,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": false,
+        "gtin": false,
+        "catalogue": true,
+        "agentEndpoint": false,
+        "agentAnswers": false,
+        "llmsTxt": false
+      },
+      "score": 1,
+      "of": 6
+    },
+    {
+      "name": "True Protein",
+      "base": "https://www.trueprotein.com.au",
+      "q": "protein",
+      "productUrls": [
+        "https://www.trueprotein.com.au/products/protein-bar-mixed-box",
+        "https://www.trueprotein.com.au/products/sleep",
+        "https://www.trueprotein.com.au/products/creatine-powder"
+      ],
+      "catalogue": "products.json",
+      "schema": {
+        "sampled": 3,
+        "product": true,
+        "gtin": true,
+        "rating": true
+      },
+      "tools": [
+        "search_shop_policies_and_faqs"
+      ],
+      "faq": {
+        "asked": 6,
+        "answered": 1,
+        "sample": {
+          "q": "What's the best protein powder for muscle recovery?",
+          "a": {
+            "question": "What's the best protein powder for women?",
+            "answer": "There's no biological difference in how men and women digest protein — the 'best' protein depends on your goals, not your gender. Our WPI 90 is our most popular option across all customers. For weight loss, try Pro Define (with L-Carnitine and green tea extract). For plant-based, our Plant Protein with probiotics and digestive enzymes. We have a dedicated guide at trueprotein.com.au/pages/best-protein-for-women."
+          }
+        }
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": true,
+        "gtin": true,
+        "catalogue": true,
+        "agentEndpoint": true,
+        "agentAnswers": true,
+        "llmsTxt": true
+      },
+      "score": 6,
+      "of": 6
+    },
+    {
+      "name": "Bulk Nutrients",
+      "base": "https://www.bulknutrients.com.au",
+      "q": "protein",
+      "productUrls": [
+        "https://www.bulknutrients.com.au/products/joint-complex",
+        "https://www.bulknutrients.com.au/products/joint-support-capsules",
+        "https://www.bulknutrients.com.au/products/l-arginine"
+      ],
+      "catalogue": "sitemap",
+      "schema": {
+        "sampled": 3,
+        "product": true,
+        "gtin": false,
+        "rating": true
+      },
+      "tools": [],
+      "faq": {
+        "asked": 0,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": true,
+        "gtin": false,
+        "catalogue": true,
+        "agentEndpoint": false,
+        "agentAnswers": false,
+        "llmsTxt": false
+      },
+      "score": 2,
+      "of": 6
+    },
+    {
+      "name": "VPA",
+      "base": "https://www.vpa.com.au",
+      "q": "protein",
+      "productUrls": [
+        "https://www.vpa.com.au/products/melb-mara-shakeout-run",
+        "https://www.vpa.com.au/products/vpa-removable-panels-new-year-new-you",
+        "https://www.vpa.com.au/products/vpa-removable-panels-elevate-your-training"
+      ],
+      "catalogue": "products.json",
+      "schema": {
+        "sampled": 3,
+        "product": true,
+        "gtin": true,
+        "rating": false
+      },
+      "tools": [
+        "search_shop_policies_and_faqs"
+      ],
+      "faq": {
+        "asked": 6,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": true,
+        "gtin": true,
+        "catalogue": true,
+        "agentEndpoint": true,
+        "agentAnswers": false,
+        "llmsTxt": true
+      },
+      "score": 5,
+      "of": 6
+    },
+    {
+      "name": "Swisse",
+      "base": "https://www.swisse.com.au",
+      "q": "magnesium",
+      "productUrls": [
+        "https://www.swisse.com.au/products/swisse-ultiboost-vaginal-health-probiotic-gummies",
+        "https://www.swisse.com.au/products/omega-wild-fish-oil-easier-to-swallow",
+        "https://www.swisse.com.au/products/calcium-magnesium-easier-to-swallow"
+      ],
+      "catalogue": "products.json",
+      "schema": {
+        "sampled": 3,
+        "product": true,
+        "gtin": true,
+        "rating": false
+      },
+      "tools": [
+        "search_shop_policies_and_faqs"
+      ],
+      "faq": {
+        "asked": 6,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": true,
+        "gtin": true,
+        "catalogue": true,
+        "agentEndpoint": true,
+        "agentAnswers": false,
+        "llmsTxt": true
+      },
+      "score": 5,
+      "of": 6
+    },
+    {
+      "name": "Blackmores",
+      "base": "https://www.blackmores.com.au",
+      "q": "magnesium",
+      "productUrls": [
+        "https://www.blackmores.com.au/products/calcium-vitamin-d3-k2",
+        "https://www.blackmores.com.au/products/gut-immune-biotic",
+        "https://www.blackmores.com.au/products/peri-menopause-balance"
+      ],
+      "catalogue": "sitemap",
+      "schema": {
+        "sampled": 3,
+        "product": false,
+        "gtin": false,
+        "rating": false
+      },
+      "tools": [],
+      "faq": {
+        "asked": 0,
+        "answered": 0,
+        "sample": null
+      },
+      "robots": 200,
+      "checks": {
+        "productSchema": false,
+        "gtin": false,
+        "catalogue": true,
+        "agentEndpoint": false,
+        "agentAnswers": false,
+        "llmsTxt": false
+      },
+      "score": 1,
+      "of": 6
+    }
+  ]
+}

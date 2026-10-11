@@ -2,14 +2,38 @@
   "location_code": 2036,
   "language_code": "en",
   "prompts": [
-    { "q": "What protein powder should I use?", "brand": "Musashi" },
-    { "q": "What's the best protein powder in Australia?", "brand": "Musashi" },
-    { "q": "Is creatine safe to take daily, and which creatine should I buy in Australia?", "brand": "Musashi" },
-    { "q": "What's a good pre workout without caffeine in Australia?", "brand": "Musashi" },
-    { "q": "What's the best magnesium supplement for sleep in Australia?", "brand": "Nutra-Life" },
-    { "q": "What's the best probiotic for gut health in Australia?", "brand": "Nutra-Life" },
-    { "q": "What's a good multivitamin for kids in Australia?", "brand": "Healtheries" },
-    { "q": "What's the healthiest protein bar to buy in Australia?", "brand": "Aussie Bodies" }
+    {
+      "q": "What protein powder should I use?",
+      "brand": "Musashi"
+    },
+    {
+      "q": "What's the best protein powder in Australia?",
+      "brand": "Musashi"
+    },
+    {
+      "q": "Is creatine safe to take daily, and which creatine should I buy in Australia?",
+      "brand": "Musashi"
+    },
+    {
+      "q": "What's a good pre workout without caffeine in Australia?",
+      "brand": "Musashi"
+    },
+    {
+      "q": "What's the best magnesium supplement for sleep in Australia?",
+      "brand": "Nutra-Life"
+    },
+    {
+      "q": "What's the best probiotic for gut health in Australia?",
+      "brand": "Nutra-Life"
+    },
+    {
+      "q": "What's a good multivitamin for kids in Australia?",
+      "brand": "Healtheries"
+    },
+    {
+      "q": "What's the healthiest protein bar to buy in Australia?",
+      "brand": "Aussie Bodies"
+    }
   ],
   "keywords": [
     "best protein powder australia",
@@ -24,31 +48,342 @@
     "high protein snacks australia"
   ],
   "brands": {
-    "Musashi": { "vitaco": true, "aliases": ["musashi"], "domains": ["musashi.com", "musashi.com.au"] },
-    "Nutra-Life": { "vitaco": true, "aliases": ["nutra-life", "nutralife", "nutra life"], "domains": ["nutralife.com.au", "nutralife.co.nz"] },
-    "Healtheries": { "vitaco": true, "aliases": ["healtheries"], "domains": ["healtheries.com.au", "healtheries.co.nz"] },
-    "Aussie Bodies": { "vitaco": true, "aliases": ["aussie bodies"], "domains": ["aussiebodies.com", "aussiebodies.com.au"] },
-    "Bulk Nutrients": { "aliases": ["bulk nutrients"], "domains": ["bulknutrients.com.au"] },
-    "VPA": { "aliases": ["vpa"], "domains": ["vpa.com.au"] },
-    "True Protein": { "aliases": ["true protein"], "domains": ["trueprotein.com.au"] },
-    "Optimum Nutrition": { "aliases": ["optimum nutrition", "gold standard whey"], "domains": ["optimumnutrition.com"] },
-    "EHP Labs": { "aliases": ["ehp labs", "oxywhey", "oxyshred"], "domains": ["ehplabs.com.au", "ehplabs.com"] },
-    "Macro Mike": { "aliases": ["macro mike"], "domains": ["macromike.com.au"] },
-    "Nutra Organics": { "aliases": ["nutra organics"], "domains": ["nutraorganics.com.au"] },
-    "Body Science": { "aliases": ["body science", "bsc"], "domains": ["bodyscience.com.au"] },
-    "Swisse": { "aliases": ["swisse"], "domains": ["swisse.com.au", "swisse.com"] },
-    "Blackmores": { "aliases": ["blackmores"], "domains": ["blackmores.com.au"] },
-    "Bioglan": { "aliases": ["bioglan"], "domains": ["bioglan.com.au"] },
-    "Life-Space": { "aliases": ["life-space", "life space"], "domains": ["lifespaceprobiotics.com"] },
-    "Inner Health": { "aliases": ["inner health"], "domains": ["innerhealth.com.au"] },
-    "Nature's Way": { "aliases": ["nature's way", "natures way"], "domains": ["natureswayvitamins.com.au"] },
-    "Ethical Nutrients": { "aliases": ["ethical nutrients"], "domains": ["ethicalnutrients.com.au"] },
-    "Metagenics": { "aliases": ["metagenics"], "domains": ["metagenics.com.au"] },
-    "Cenovis": { "aliases": ["cenovis"], "domains": ["cenovis.com.au"] },
-    "Barebells": { "aliases": ["barebells"], "domains": ["barebells.com"] },
-    "Quest": { "aliases": ["quest bar", "quest nutrition", "quest protein"], "domains": ["questnutrition.com"] },
-    "Fulfil": { "aliases": ["fulfil"], "domains": ["fulfil.com.au"] },
-    "Clif": { "aliases": ["clif bar", "clif builders"], "domains": ["clifbar.com"] }
+    "Musashi": {
+      "vitaco": true,
+      "aliases": [
+        "musashi"
+      ],
+      "domains": [
+        "musashi.com",
+        "musashi.com.au"
+      ]
+    },
+    "Nutra-Life": {
+      "vitaco": true,
+      "aliases": [
+        "nutra-life",
+        "nutralife",
+        "nutra life"
+      ],
+      "domains": [
+        "nutralife.com.au",
+        "nutralife.co.nz"
+      ]
+    },
+    "Healtheries": {
+      "vitaco": true,
+      "aliases": [
+        "healtheries"
+      ],
+      "domains": [
+        "healtheries.com.au",
+        "healtheries.co.nz"
+      ]
+    },
+    "Aussie Bodies": {
+      "vitaco": true,
+      "aliases": [
+        "aussie bodies"
+      ],
+      "domains": [
+        "aussiebodies.com",
+        "aussiebodies.com.au"
+      ]
+    },
+    "Bulk Nutrients": {
+      "aliases": [
+        "bulk nutrients"
+      ],
+      "domains": [
+        "bulknutrients.com.au"
+      ]
+    },
+    "VPA": {
+      "aliases": [
+        "vpa"
+      ],
+      "domains": [
+        "vpa.com.au"
+      ]
+    },
+    "True Protein": {
+      "aliases": [
+        "true protein"
+      ],
+      "domains": [
+        "trueprotein.com.au"
+      ]
+    },
+    "Optimum Nutrition": {
+      "aliases": [
+        "optimum nutrition",
+        "gold standard whey"
+      ],
+      "domains": [
+        "optimumnutrition.com"
+      ]
+    },
+    "EHP Labs": {
+      "aliases": [
+        "ehp labs",
+        "oxywhey",
+        "oxyshred"
+      ],
+      "domains": [
+        "ehplabs.com.au",
+        "ehplabs.com"
+      ]
+    },
+    "Macro Mike": {
+      "aliases": [
+        "macro mike"
+      ],
+      "domains": [
+        "macromike.com.au"
+      ]
+    },
+    "Nutra Organics": {
+      "aliases": [
+        "nutra organics"
+      ],
+      "domains": [
+        "nutraorganics.com.au"
+      ]
+    },
+    "Body Science": {
+      "aliases": [
+        "body science",
+        "bsc"
+      ],
+      "domains": [
+        "bodyscience.com.au"
+      ]
+    },
+    "Swisse": {
+      "aliases": [
+        "swisse"
+      ],
+      "domains": [
+        "swisse.com.au",
+        "swisse.com"
+      ]
+    },
+    "Blackmores": {
+      "aliases": [
+        "blackmores"
+      ],
+      "domains": [
+        "blackmores.com.au"
+      ]
+    },
+    "Bioglan": {
+      "aliases": [
+        "bioglan"
+      ],
+      "domains": [
+        "bioglan.com.au"
+      ]
+    },
+    "Life-Space": {
+      "aliases": [
+        "life-space",
+        "life space"
+      ],
+      "domains": [
+        "lifespaceprobiotics.com"
+      ]
+    },
+    "Inner Health": {
+      "aliases": [
+        "inner health"
+      ],
+      "domains": [
+        "innerhealth.com.au"
+      ]
+    },
+    "Nature's Way": {
+      "aliases": [
+        "nature's way",
+        "natures way"
+      ],
+      "domains": [
+        "natureswayvitamins.com.au"
+      ]
+    },
+    "Ethical Nutrients": {
+      "aliases": [
+        "ethical nutrients"
+      ],
+      "domains": [
+        "ethicalnutrients.com.au"
+      ]
+    },
+    "Metagenics": {
+      "aliases": [
+        "metagenics"
+      ],
+      "domains": [
+        "metagenics.com.au"
+      ]
+    },
+    "Cenovis": {
+      "aliases": [
+        "cenovis"
+      ],
+      "domains": [
+        "cenovis.com.au"
+      ]
+    },
+    "Barebells": {
+      "aliases": [
+        "barebells"
+      ],
+      "domains": [
+        "barebells.com"
+      ]
+    },
+    "Quest": {
+      "aliases": [
+        "quest bar",
+        "quest nutrition",
+        "quest protein"
+      ],
+      "domains": [
+        "questnutrition.com"
+      ]
+    },
+    "Fulfil": {
+      "aliases": [
+        "fulfil"
+      ],
+      "domains": [
+        "fulfil.com.au"
+      ]
+    },
+    "Clif": {
+      "aliases": [
+        "clif bar",
+        "clif builders"
+      ],
+      "domains": [
+        "clifbar.com"
+      ]
+    },
+    "Myprotein": {
+      "aliases": [
+        "myprotein"
+      ],
+      "domains": [
+        "au.myprotein.com"
+      ]
+    },
+    "Muscle Nation": {
+      "aliases": [
+        "muscle nation"
+      ],
+      "domains": [
+        "musclenation.com.au"
+      ]
+    },
+    "Ghost": {
+      "aliases": [
+        "ghost legend",
+        "ghost pre",
+        "ghost whey",
+        "ghost lifestyle"
+      ],
+      "domains": [
+        "ghostlifestyle.com"
+      ]
+    },
+    "C4": {
+      "aliases": [
+        "c4 original",
+        "c4 pre",
+        "cellucor"
+      ],
+      "domains": [
+        "cellucor.com"
+      ]
+    },
+    "Dymatize": {
+      "aliases": [
+        "dymatize"
+      ],
+      "domains": [
+        "dymatize.com"
+      ]
+    },
+    "Rule 1": {
+      "aliases": [
+        "rule 1",
+        "rule one proteins"
+      ],
+      "domains": [
+        "ruleoneproteins.com"
+      ]
+    },
+    "Thorne": {
+      "aliases": [
+        "thorne"
+      ],
+      "domains": [
+        "thorne.com"
+      ]
+    },
+    "Garden of Life": {
+      "aliases": [
+        "garden of life"
+      ],
+      "domains": [
+        "gardenoflife.com"
+      ]
+    },
+    "Faction Labs": {
+      "aliases": [
+        "faction labs"
+      ],
+      "domains": [
+        "factionlabs.com.au"
+      ]
+    },
+    "Gatorade": {
+      "aliases": [
+        "gatorade"
+      ],
+      "domains": [
+        "gatorade.com.au"
+      ]
+    },
+    "Sustagen": {
+      "aliases": [
+        "sustagen"
+      ],
+      "domains": [
+        "sustagen.com.au"
+      ]
+    },
+    "Up&Go": {
+      "aliases": [
+        "up&go",
+        "up & go",
+        "up and go"
+      ],
+      "domains": [
+        "sanitarium.com.au"
+      ]
+    }
   },
-  "mentions_targets": ["Musashi", "Nutra-Life", "Healtheries", "Aussie Bodies", "Bulk Nutrients", "VPA", "True Protein", "Swisse", "Blackmores", "EHP Labs"]
+  "mentions_targets": [
+    "Musashi",
+    "Nutra-Life",
+    "Healtheries",
+    "Aussie Bodies",
+    "Bulk Nutrients",
+    "VPA",
+    "True Protein",
+    "Swisse",
+    "Blackmores",
+    "EHP Labs"
+  ]
 }
