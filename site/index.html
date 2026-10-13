@@ -586,6 +586,16 @@
       <div class="card"><span class="when">Jan 2026 · Shopify + Google</span><h3>Checkout inside AI</h3><p>Google and Shopify's Universal Commerce Protocol lets agents check out in AI Mode and Gemini. OpenAI's equivalent powers checkout inside ChatGPT.</p></div>
     </div>
 
+    <div class="card" style="margin-top:16px">
+      <h3 style="margin-bottom:6px">How an AI agent asks a store</h3>
+      <p class="muted" style="margin:0 0 14px">Every Shopify store has a built-in endpoint that AI shopping agents can query. This is the request an agent sends, word for word, and what Musashi's store sends back:</p>
+      <pre class="term"><span class="c">$ curl -s -X POST https://musashi.com/api/mcp \
+    -H 'content-type: application/json' \
+    -d '{"jsonrpc":"2.0","id":1,"method":"tools/call",
+         "params":{"name":"search_shop_policies_and_faqs",
+                   "arguments":{"query":"How much protein per serve, and is it third party tested?"}}}'</span>
+<span class="o">{"result":{"content":[{"type":"text","text":"[]"}]}}</span>   <span class="k"># an empty list: the store has nothing to tell the agent</span></pre>
+    </div>
     <div class="vs">
       <div class="card">
         <h3>musashi.com <span class="pill crit">empty</span></h3>
