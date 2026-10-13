@@ -250,6 +250,23 @@
   details.brief summary { grid-template-columns: 120px 1fr 20px; }
   .outline { margin: 4px 0 0; padding-left: 20px; font-size: 14.5px; }
   .outline li { margin-bottom: 3px; }
+  .trend { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .trend-stats { display: grid; gap: 12px; }
+  .trend-stats .stat { padding: 18px 20px; }
+  .trend-stats .num { font-size: 34px; margin-bottom: 6px; }
+  .trend-stats .muted { display: block; margin-top: 6px; font-size: 12.5px; }
+  .div-chart { margin-top: 22px; }
+  .takeaway { margin: 14px 0 0; color: var(--text); font-size: 16px; }
+  .div-row { display: grid; grid-template-columns: 72px 1fr 54px; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .div-lbl { font-size: 14px; color: var(--text); }
+  .div-track { display: grid; grid-template-columns: 1fr 2px 1fr; align-items: center; height: 40px; }
+  .div-neg { background: var(--crit); border-radius: 6px 0 0 6px; height: 34px; justify-self: end; }
+  .div-pos { background: var(--accent); border-radius: 0 6px 6px 0; height: 34px; }
+  .div-mid { background: var(--text); height: 44px; }
+  .div-val { font: 500 15px var(--mono); text-align: right; }
+  .div-val.neg { color: var(--crit); } .div-val.pos { color: var(--accent-ink); }
+  .div-axis { display: grid; grid-template-columns: 72px 1fr 1fr 54px; gap: 0 12px; font-size: 12.5px; color: var(--muted); }
+  .div-axis span:first-child { grid-column: 2; text-align: left; } .div-axis span:last-child { grid-column: 3; text-align: right; }
   /* live */
   #live { display: none; }
   #live.on { display: block; }
@@ -271,7 +288,7 @@
     nav ul { display: none; }
     .stats, .totals, .totals.five { grid-template-columns: repeat(2, 1fr); }
     .chat, .sources, .agents, .live-out { grid-template-columns: 1fr 1fr; }
-    .two, .loop-grid, .quote, .vs, .gaps { grid-template-columns: 1fr; }
+    .two, .loop-grid, .quote, .vs, .gaps, .trend { grid-template-columns: 1fr; }
     .board, .lanes, .notes { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
@@ -299,9 +316,9 @@
     <ul>
       <li><a href="#ai">AI answers</a></li>
       <li><a href="#competitors">Competitors</a></li>
-      <li><a href="#health">Site health</a></li>
       <li><a href="#search">Google search</a></li>
       <li><a href="#headless">Headless shopping</a></li>
+      <li><a href="#health">Site health</a></li>
     </ul>
     <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode" title="Switch theme"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
   </nav>
@@ -535,11 +552,88 @@
   </div>
 </section>
 
+<!-- ============ 08 HEADLESS SHOPPING ============ -->
+<section id="headless" class="loop-bg">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">05 · Headless shopping</span>
+      <h2>Headless <span class="hl">shopping</span>.</h2>
+      <p class="lede">The next shopper may not visit the website at all. Their agent will: it compares products, asks the store questions and checks out on their behalf. Whatever the agent can't read, it can't buy. True Protein is already set up for this. Musashi isn't yet.</p>
+    </div>
+    <div class="trend">
+      <div class="card chart" role="img" aria-label="Conversion rate of visitors arriving from AI assistants compared with other traffic, US retail sites. March 2025: 38 percent worse. March 2026: 42 percent better.">
+        <h3>AI shoppers went from browsing to buying</h3>
+        <span class="muted">Conversion of visitors arriving from AI assistants vs all other traffic · US retail</span>
+        <p class="takeaway">From 38% worse to 42% better in twelve months. Shoppers arriving from AI now buy more often than other visitors.</p>
+        <div class="div-chart">
+          <div class="div-row"><span class="div-lbl">Mar 2025</span><div class="div-track"><div class="div-neg" style="width:76%"></div><div class="div-mid"></div><div class="div-pos-space"></div></div><span class="div-val neg">−38%</span></div>
+          <div class="div-row"><span class="div-lbl">Mar 2026</span><div class="div-track"><div class="div-neg-space"></div><div class="div-mid"></div><div class="div-pos" style="width:84%"></div></div><span class="div-val pos">+42%</span></div>
+          <div class="div-axis"><span>converts worse</span><span>converts better</span></div>
+        </div>
+        <p class="muted" style="margin:14px 0 0">Source: Adobe Analytics, over 1 trillion visits to US retail sites (reported April 2026).</p>
+      </div>
+      <div class="trend-stats">
+        <div class="card stat"><div class="num">+393%</div><p>AI-referred traffic to US retail sites, Q1 2026 vs Q1 2025</p><span class="muted">Adobe Analytics</span></div>
+        <div class="card stat"><div class="num">+37%</div><p>more revenue per visit from AI referrals than other traffic</p><span class="muted">Adobe Analytics, March 2026</span></div>
+        <div class="card stat"><div class="num">20%</div><p>of 2026 holiday e-commerce traffic forecast to come from AI agents</p><span class="muted">Salesforce forecast</span></div>
+      </div>
+    </div>
+    <p class="muted" style="margin:10px 0 28px">US figures. Australian equivalents aren't published yet, and the same assistants are available here.</p>
+
+    <div class="agents">
+      <div class="card"><span class="when">Sep 2026 · US first</span><h3>Meta Muse</h3><p>A personal agent that browses stores and completes a purchase through Stripe Link once the user approves the amount.</p></div>
+      <div class="card"><span class="when">2026 · via text message</span><h3>Instinct</h3><p>A personal agent that lives in your messages and uses the apps and accounts you already have to get things done, including buying.</p></div>
+      <div class="card"><span class="when">Jan 2026 · Shopify + Google</span><h3>Checkout inside AI</h3><p>Google and Shopify's Universal Commerce Protocol lets agents check out in AI Mode and Gemini. OpenAI's equivalent powers checkout inside ChatGPT.</p></div>
+    </div>
+
+    <div class="vs">
+      <div class="card">
+        <h3>musashi.com <span class="pill crit">empty</span></h3>
+        <blockquote class="said" style="margin-top:0;font-family:var(--mono);font-size:14px">
+          <span class="muted" style="font-family:var(--body)">Agent asks Musashi's store:</span><br>"How much protein per serve, and is it third party tested?"<br><br>
+          <span class="muted" style="font-family:var(--body)">Musashi's store replies:</span><br><b>[ ]</b> &nbsp;<span class="muted" style="font-family:var(--body)">(nothing)</span></blockquote>
+        <p class="muted" style="margin:12px 0 0">Shopify stores have an endpoint where AI agents can ask the store questions. Musashi's returned nothing on all six shopper questions we asked.</p>
+      </div>
+      <div class="card">
+        <h3>trueprotein.com.au <span class="pill ok">answers</span></h3>
+        <blockquote class="said" style="margin-top:0">"It depends on your priorities. True Protein is consistently rated among Australia's best for taste, quality, and clean ingredients. Our WPI 90 uses NZ grass-fed whey with 90%+ protein content and all-natural flavouring. We're rated 4.8/5 on ProductReview.com.au from 270+ reviews."<cite>True Protein's store endpoint, replying to an agent's protein question with its stored answer to "What's the best protein powder in Australia?"</cite></blockquote>
+        <p class="muted" style="margin:12px 0 0">Same platform, same endpoint. True Protein has loaded its knowledge base. It's content, not code, so your team can load Musashi's without a developer.</p>
+      </div>
+    </div>
+
+    <div class="card matrix" style="margin-top:16px" role="region" aria-label="Agent readiness scorecard">
+      <h3 style="margin-bottom:4px">How easy is each store for an AI agent?</h3>
+      <span class="muted" style="display:block;margin-bottom:12px">Six checks, scanned 11 October 2026. Three products sampled per store, and agent questions asked three times each.</span>
+      <table>
+        <thead><tr><th>Store</th><th>Product data<small>price + stock</small></th><th>Barcodes<small>GTIN</small></th><th>Catalogue<small>machine-readable</small></th><th>Agent endpoint<small>Shopify MCP</small></th><th>Agent answers<small>store questions</small></th><th>llms.txt</th><th>Score</th></tr></thead>
+        <tbody>
+          <tr class="us"><td>Musashi</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
+          <tr class="us"><td>Nutra-Life AU</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
+          <tr class="us"><td>Nutra-Life NZ</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+          <tr class="us"><td>Healtheries AU</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+          <tr class="us"><td>Healtheries NZ</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+          <tr class="us"><td>Aussie Bodies</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+          <tr class=""><td>True Protein</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span> <span class="muted">1/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">6/6</td></tr>
+          <tr class=""><td>Bulk Nutrients</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">2/6</td></tr>
+          <tr class=""><td>VPA</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
+          <tr class=""><td>Swisse</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
+          <tr class=""><td>Blackmores</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="two" style="margin-top:16px">
+      <div class="card"><h3 style="margin-bottom:8px">Shopify stores: nearly there</h3><p style="margin:0">Musashi and Nutra-Life AU score 5 of 6. The gap is the store's knowledge base: load it with the facts from the label (protein per serve, testing, dosage, who it's for) and agents get an answer instead of an empty reply. After that, turn on Shopify's agentic checkout channels as they reach Australia.</p></div>
+      <div class="card"><h3 style="margin-bottom:8px">Everything else: start with product data</h3><p style="margin:0">Healtheries, Aussie Bodies and Nutra-Life NZ score 1 of 6. An agent can find their product URLs but can't reliably read a price, stock level or barcode from them. Structured product data comes first, and for Healtheries it's the same work order as HLTH-05.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 06 CONTENT PLAN ============ -->
 <section id="content" style="padding-top:0">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">05 · Content plan</span>
+      <span class="eyebrow">06 · Content plan</span>
       <h2>Eight articles worth <span class="hl">writing</span>.</h2>
       <p class="lede">Each one targets a search that a competitor's article wins today, and each is built on Vitaco's own product facts. Open any brief to see its outline.</p>
     </div>
@@ -591,7 +685,7 @@
 <section id="health">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">06 · Site health</span>
+      <span class="eyebrow">07 · Site health</span>
       <h2>Five sites are fine. <span class="hl">One is on fire.</span></h2>
       <p class="lede">Google and AI assistants read the same pages. Open any finding to see the command that proves it.</p>
     </div>
@@ -649,7 +743,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 <section id="improve" class="loop-bg">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">07 · How it improves</span>
+      <span class="eyebrow">08 · How it improves</span>
       <h2>Find. <span class="hl">Fix.</span> Prove it moved.</h2>
       <p class="lede">Each month we re-ask the same questions across every AI, re-scan all six sites and re-run the Google audit, then give your team a ranked list of what to do next. Your team and agency make the changes. The next month's numbers show what worked.</p>
     </div>
@@ -696,7 +790,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 <section id="plan">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">08 · What we'd do first</span>
+      <span class="eyebrow">09 · What we'd do first</span>
       <h2>Small, fast, <span class="hl">measured</span>.</h2>
       <p class="lede">A fixed scope with numbers agreed up front. Technical fixes show up within a month of your team shipping them. AI share of voice moves more slowly, so we track it monthly from today's baseline.</p>
     </div>
@@ -729,62 +823,6 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
   </div>
 </section>
 
-<!-- ============ 08 HEADLESS SHOPPING ============ -->
-<section id="headless" class="loop-bg">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">09 · What's next</span>
-      <h2>Headless <span class="hl">shopping</span>.</h2>
-      <p class="lede">The next shopper may not visit the website at all. Their agent will: it compares products, asks the store questions and checks out on their behalf. Whatever the agent can't read, it can't buy.</p>
-    </div>
-    <div class="agents">
-      <div class="card"><span class="when">Sep 2026 · US first</span><h3>Meta Muse</h3><p>A personal agent that browses stores and completes a purchase through Stripe Link once the user approves the amount.</p></div>
-      <div class="card"><span class="when">2026 · via text message</span><h3>Instinct</h3><p>A personal agent that lives in your messages and uses the apps and accounts you already have to get things done, including buying.</p></div>
-      <div class="card"><span class="when">Jan 2026 · Shopify + Google</span><h3>Checkout inside AI</h3><p>Google and Shopify's Universal Commerce Protocol lets agents check out in AI Mode and Gemini. OpenAI's equivalent powers checkout inside ChatGPT.</p></div>
-    </div>
-
-    <div class="vs">
-      <div class="card">
-        <h3>musashi.com <span class="pill crit">empty</span></h3>
-        <blockquote class="said" style="margin-top:0;font-family:var(--mono);font-size:14px">
-          <span class="muted" style="font-family:var(--body)">Agent asks Musashi's store:</span><br>"How much protein per serve, and is it third party tested?"<br><br>
-          <span class="muted" style="font-family:var(--body)">Musashi's store replies:</span><br><b>[ ]</b> &nbsp;<span class="muted" style="font-family:var(--body)">(nothing)</span></blockquote>
-        <p class="muted" style="margin:12px 0 0">Shopify stores have an endpoint where AI agents can ask the store questions. Musashi's returned nothing on all six shopper questions we asked.</p>
-      </div>
-      <div class="card">
-        <h3>trueprotein.com.au <span class="pill ok">answers</span></h3>
-        <blockquote class="said" style="margin-top:0">"It depends on your priorities. True Protein is consistently rated among Australia's best for taste, quality, and clean ingredients. Our WPI 90 uses NZ grass-fed whey with 90%+ protein content and all-natural flavouring. We're rated 4.8/5 on ProductReview.com.au from 270+ reviews."<cite>True Protein's store endpoint, replying to an agent's protein question with its stored answer to "What's the best protein powder in Australia?"</cite></blockquote>
-        <p class="muted" style="margin:12px 0 0">Same platform, same endpoint. True Protein has loaded its knowledge base. It's content, not code, so your team can load Musashi's without a developer.</p>
-      </div>
-    </div>
-
-    <div class="card matrix" style="margin-top:16px" role="region" aria-label="Agent readiness scorecard">
-      <h3 style="margin-bottom:4px">How easy is each store for an AI agent?</h3>
-      <span class="muted" style="display:block;margin-bottom:12px">Six checks, scanned 11 October 2026. Three products sampled per store, and agent questions asked three times each.</span>
-      <table>
-        <thead><tr><th>Store</th><th>Product data<small>price + stock</small></th><th>Barcodes<small>GTIN</small></th><th>Catalogue<small>machine-readable</small></th><th>Agent endpoint<small>Shopify MCP</small></th><th>Agent answers<small>store questions</small></th><th>llms.txt</th><th>Score</th></tr></thead>
-        <tbody>
-          <tr class="us"><td>Musashi</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
-          <tr class="us"><td>Nutra-Life AU</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
-          <tr class="us"><td>Nutra-Life NZ</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
-          <tr class="us"><td>Healtheries AU</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
-          <tr class="us"><td>Healtheries NZ</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
-          <tr class="us"><td>Aussie Bodies</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
-          <tr class=""><td>True Protein</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span> <span class="muted">1/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">6/6</td></tr>
-          <tr class=""><td>Bulk Nutrients</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">2/6</td></tr>
-          <tr class=""><td>VPA</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
-          <tr class=""><td>Swisse</td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span> <span class="muted">0/6</span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td class="score hi">5/6</td></tr>
-          <tr class=""><td>Blackmores</td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="yes">✓<span class="sr"> yes</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td><span class="no">–<span class="sr"> no</span></span></td><td class="score lo">1/6</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="two" style="margin-top:16px">
-      <div class="card"><h3 style="margin-bottom:8px">Shopify stores: nearly there</h3><p style="margin:0">Musashi and Nutra-Life AU score 5 of 6. The gap is the store's knowledge base: load it with the facts from the label (protein per serve, testing, dosage, who it's for) and agents get an answer instead of an empty reply. After that, turn on Shopify's agentic checkout channels as they reach Australia.</p></div>
-      <div class="card"><h3 style="margin-bottom:8px">Everything else: start with product data</h3><p style="margin:0">Healtheries, Aussie Bodies and Nutra-Life NZ score 1 of 6. An agent can find their product URLs but can't reliably read a price, stock level or barcode from them. Structured product data comes first, and for Healtheries it's the same work order as HLTH-05.</p></div>
-    </div>
-  </div>
-</section>
 
 <section style="padding:48px 0 24px">
   <div class="wrap">
