@@ -6,7 +6,9 @@
 <title>Vitaco AI Visibility · Phlo</title>
 <meta name="description" content="How Vitaco's brands show up when Australians ask AI assistants and Google what to buy, compared with competitors. Prepared by Phlo for Dhiren Dunraj.">
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="assets/phlo-logo.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
@@ -123,6 +125,12 @@
   .matrix td.instead { color: var(--text-2); font-size: 13.5px; }
   .legend { display: flex; gap: 18px; align-items: center; margin-top: 14px; font-size: 13.5px; color: var(--muted); flex-wrap: wrap; }
   .legend span { display: inline-flex; gap: 8px; align-items: center; }
+  .totals.five { grid-template-columns: repeat(5, 1fr); }
+  .matrix table.ai { min-width: 880px; }
+  .matrix td.na { color: var(--dim); }
+  .matrix table.ai .dots { gap: 4px; flex-wrap: wrap; max-width: 150px; }
+  .matrix table.ai th { white-space: nowrap; }
+  .matrix table.ai .dot { width: 12px; height: 12px; }
   .totals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
   .total { padding: 18px 20px; }
   .total .m { font: 500 17px var(--display); color: var(--text); }
@@ -260,7 +268,7 @@
 
   @media (max-width: 960px) {
     nav ul { display: none; }
-    .stats, .totals { grid-template-columns: repeat(2, 1fr); }
+    .stats, .totals, .totals.five { grid-template-columns: repeat(2, 1fr); }
     .chat, .sources, .agents, .live-out { grid-template-columns: 1fr 1fr; }
     .two, .loop-grid, .quote, .vs, .gaps { grid-template-columns: 1fr; }
     .board, .lanes, .notes { grid-template-columns: 1fr 1fr; }
@@ -289,7 +297,6 @@
     <a href="#top" class="logo"><img src="assets/phlo-logo.png" alt="Phlo" height="26"></a>
     <ul>
       <li><a href="#ai">AI answers</a></li>
-      <li><a href="#models">Big four</a></li>
       <li><a href="#competitors">Competitors</a></li>
       <li><a href="#health">Site health</a></li>
       <li><a href="#search">Google search</a></li>
@@ -309,8 +316,8 @@
       <a class="btn" href="#headless">What's next <span aria-hidden="true">↘</span></a>
     </div>
     <div class="stats">
-      <div class="card stat"><div class="num">6<small>/48</small></div><p>ChatGPT, Gemini and Google AI Mode answers that name the right Vitaco brand</p></div>
-      <div class="card stat"><div class="num">11<small>/80</small></div><p>answers from Claude, ChatGPT, Gemini and Grok that name any Vitaco brand</p></div>
+      <div class="card stat"><div class="num">17<small>/128</small></div><p>AI answers that name any Vitaco brand, across ChatGPT, Gemini, Google AI Mode, Claude and Grok</p></div>
+      <div class="card stat"><div class="num">31<small>/128</small></div><p>AI answers that name Bulk Nutrients</p></div>
       <div class="card stat"><div class="num">7.8×</div><p>more Google AI Overview citations for bulknutrients.com.au than musashi.com</p></div>
       <div class="card stat"><div class="num">0<small>/6</small></div><p>shopper questions answered by Musashi's built-in AI shopping endpoint</p></div>
     </div>
@@ -323,7 +330,7 @@
     <div class="head">
       <span class="eyebrow">01 · The AI test</span>
       <h2>Ask it like a <span class="hl">shopper</span> would.</h2>
-      <p class="lede">The same question, asked from Australia in the consumer apps on 11 October 2026.</p>
+      <p class="lede">Ten questions shoppers actually ask, put to ChatGPT, Gemini, Google AI Mode, Claude and Grok from Australia on 11 October 2026. 128 answers in total. Here's one of them:</p>
     </div>
     <div class="chat">
       <div class="ask">What protein powder should I use?</div>
@@ -332,61 +339,29 @@
       <div class="card answer"><h3>Google AI Mode <span class="pill crit">0 of 1</span></h3><ol><li>No brands. Generic advice on whey vs plant protein</li></ol><div class="miss">Musashi not mentioned</div></div>
     </div>
 
-    <div class="card matrix" role="region" aria-label="Brand mentions across all eight questions in consumer AI apps">
-      <table>
-        <thead><tr><th>Question</th><th>ChatGPT</th><th>Gemini</th><th>AI Mode</th><th>Named</th><th>Recommended instead</th></tr></thead>
+    <div class="card matrix" role="region" aria-label="Whether each AI assistant named a Vitaco brand, per question">
+      <table class="ai">
+        <thead><tr><th>Question</th><th>ChatGPT</th><th>Gemini</th><th>AI Mode</th><th>Claude</th><th>Grok</th><th>Named</th><th>Recommended instead</th></tr></thead>
         <tbody>
-          <tr><td class="q">What protein powder should I use?<small>Musashi</small></td><td><div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i></div></td><td class="score">0/6</td><td class="instead">True Protein, Bulk Nutrients</td></tr>
-          <tr><td class="q">Best protein powder in Australia?<small>Musashi</small></td><td><div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot hit"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i></div></td><td class="score">1/6</td><td class="instead">True Protein, Optimum Nutrition, Bulk Nutrients</td></tr>
-          <tr><td class="q">Is creatine safe daily? Which to buy?<small>Musashi</small></td><td><div class="dots"><i class="dot hit"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i></div></td><td class="score">1/6</td><td class="instead">Bulk Nutrients, Optimum Nutrition</td></tr>
-          <tr><td class="q">Good pre workout without caffeine?<small>Musashi</small></td><td><div class="dots"><i class="dot hit"></i><i class="dot hit"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i></div></td><td class="score">2/6</td><td class="instead">Bulk Nutrients, True Protein</td></tr>
-          <tr><td class="q">Best magnesium for sleep?<small>Nutra-Life</small></td><td><div class="dots"><i class="dot hit"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i></div></td><td class="score">1/6</td><td class="instead">Swisse, Ethical Nutrients, Metagenics</td></tr>
-          <tr><td class="q">Best probiotic for gut health?<small>Nutra-Life</small></td><td><div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot hit"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i></div></td><td class="score">1/6</td><td class="instead">Inner Health, Life-Space, Swisse</td></tr>
-          <tr><td class="q">Good multivitamin for kids?<small>Healtheries</small></td><td><div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i></div></td><td class="score">0/6</td><td class="instead">Swisse, Blackmores, Nature's Way</td></tr>
-          <tr><td class="q">Healthiest protein bar to buy?<small>Aussie Bodies</small></td><td><div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots"><i class="dot"></i></div></td><td class="score">0/6</td><td class="instead">Body Science, Bulk Nutrients, True Protein</td></tr>
+          <tr><td class="q">What pre-workout should I buy?<small>Musashi</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 2 of 5"><i class="dot hit"></i><i class="dot hit"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 0 of 4"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="AI Mode: Vitaco named in 0 of 1"><i class="dot"></i></div></td><td><div class="dots" title="Claude: Vitaco named in 1 of 2"><i class="dot hit"></i><i class="dot"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="score">3/14</td><td class="instead">Optimum Nutrition, Bulk Nutrients, Muscle Nation</td></tr>
+          <tr><td class="q">What protein powder should I buy?<small>Musashi</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 0 of 8"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 2 of 6"><i class="dot hit"></i><i class="dot hit"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="AI Mode: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Claude: Vitaco named in 2 of 2"><i class="dot hit"></i><i class="dot hit"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 1 of 2"><i class="dot hit"></i><i class="dot"></i></div></td><td class="score">5/20</td><td class="instead">Bulk Nutrients, Optimum Nutrition, True Protein</td></tr>
+          <tr><td class="q">Should I take creatine? Which one?<small>Musashi</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 1 of 5"><i class="dot hit"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 2 of 4"><i class="dot hit"></i><i class="dot hit"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="AI Mode: Vitaco named in 0 of 1"><i class="dot"></i></div></td><td><div class="dots" title="Claude: Vitaco named in 1 of 2"><i class="dot hit"></i><i class="dot"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="score">4/14</td><td class="instead">Bulk Nutrients, Optimum Nutrition, True Protein</td></tr>
+          <tr><td class="q">I want to gain muscle, what should I take?<small>Musashi</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="na">–</td><td><div class="dots" title="Claude: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="score">0/8</td><td class="instead">VPA, True Protein, Bulk Nutrients</td></tr>
+          <tr><td class="q">Cutting weight but keeping muscle, what helps?<small>Musashi</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="na">–</td><td><div class="dots" title="Claude: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="score">0/8</td><td class="instead">EHP Labs, Optimum Nutrition, Muscle Nation</td></tr>
+          <tr><td class="q">Good recovery drink after training?<small>Musashi</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="na">–</td><td><div class="dots" title="Claude: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="score">0/8</td><td class="instead">Gatorade, Up&amp;Go, Sustagen</td></tr>
+          <tr><td class="q">Best magnesium for sleep?<small>Nutra-Life</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 1 of 5"><i class="dot hit"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 0 of 4"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="AI Mode: Vitaco named in 0 of 1"><i class="dot"></i></div></td><td><div class="dots" title="Claude: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="score">1/14</td><td class="instead">Swisse, Ethical Nutrients, Metagenics</td></tr>
+          <tr><td class="q">Best probiotic for gut health?<small>Nutra-Life</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 0 of 5"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 1 of 4"><i class="dot hit"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="AI Mode: Vitaco named in 0 of 1"><i class="dot"></i></div></td><td><div class="dots" title="Claude: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="score">1/14</td><td class="instead">Inner Health, Life-Space, Ethical Nutrients</td></tr>
+          <tr><td class="q">What vitamins should I give my kids?<small>Healtheries</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 0 of 5"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 0 of 4"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="AI Mode: Vitaco named in 0 of 1"><i class="dot"></i></div></td><td><div class="dots" title="Claude: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="score">0/14</td><td class="instead">Swisse, Blackmores, Nature&#x27;s Way</td></tr>
+          <tr><td class="q">Healthy protein bar on the go?<small>Aussie Bodies</small></td><td><div class="dots" title="ChatGPT: Vitaco named in 0 of 5"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="Gemini: Vitaco named in 1 of 4"><i class="dot hit"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></td><td><div class="dots" title="AI Mode: Vitaco named in 0 of 1"><i class="dot"></i></div></td><td><div class="dots" title="Claude: Vitaco named in 2 of 2"><i class="dot hit"></i><i class="dot hit"></i></div></td><td><div class="dots" title="Grok: Vitaco named in 0 of 2"><i class="dot"></i><i class="dot"></i></div></td><td class="score">3/14</td><td class="instead">Body Science, Bulk Nutrients, True Protein</td></tr>
         </tbody>
       </table>
-      <div class="legend"><span><i class="dot hit"></i> Vitaco brand named</span><span><i class="dot"></i> Not named</span><span>Each dot is one answer. AI answers vary, so ChatGPT was asked 3×, Gemini 2×.</span></div>
+      <div class="legend"><span><i class="dot hit"></i> Vitaco brand named</span><span><i class="dot"></i> Not named</span><span>Each dot is one answer. ChatGPT and Gemini were asked in their apps and through their APIs; Google AI Mode in the app; Claude and Grok through their APIs, from memory and after a web search.</span></div>
     </div>
-  </div>
-</section>
-
-<!-- ============ 02 BIG FOUR ============ -->
-<section id="models" style="padding-top:0">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">02 · The big four models</span>
-      <h2>Claude, ChatGPT, Gemini, <span class="hl">Grok</span>.</h2>
-      <p class="lede">Ten questions, phrased the way people actually type them. Each model answered twice: once from memory, and once after searching the web.</p>
-    </div>
-    <div class="card matrix" role="region" aria-label="Which brands the four models named, per question">
-      <table>
-        <thead><tr><th>Question</th><th>Claude<small>memory · web</small></th><th>ChatGPT<small>memory · web</small></th><th>Gemini<small>memory · web</small></th><th>Grok<small>memory · web</small></th></tr></thead>
-        <tbody>
-          <tr><td class="q">I&#x27;m training a few times a week, what pre workout should I buy?</td><td><div class="dots"><i class="dot hit" title="Claude (memory): Optimum Nutrition, Musashi, Muscle Nation"></i><i class="dot other" title="Claude (web): Optimum Nutrition, Muscle Nation"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Optimum Nutrition, Ghost, Faction Labs, EHP Labs"></i><i class="dot other" title="Gemini (web): Optimum Nutrition, C4, Ghost, Faction Labs"></i></div></td><td><div class="dots"><i class="dot other" title="Grok (memory): Bulk Nutrients"></i><i class="dot other" title="Grok (web): Optimum Nutrition, C4"></i></div></td></tr>
-          <tr><td class="q">I want to gain muscle, what should I take?</td><td><div class="dots"><i class="dot" title="Claude (memory): no brands named"></i><i class="dot" title="Claude (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Optimum Nutrition, Bulk Nutrients, True Protein, VPA"></i><i class="dot" title="Gemini (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
-          <tr><td class="q">What protein powder should I buy?</td><td><div class="dots"><i class="dot hit" title="Claude (memory): Bulk Nutrients, Aussie Bodies, Optimum Nutrition, Macro Mike"></i><i class="dot hit" title="Claude (web): Bulk Nutrients, Optimum Nutrition, Aussie Bodies, Musashi"></i></div></td><td><div class="dots"><i class="dot other" title="ChatGPT (memory): Bulk Nutrients, True Protein, Optimum Nutrition"></i><i class="dot other" title="ChatGPT (web): Bulk Nutrients"></i></div></td><td><div class="dots"><i class="dot hit" title="Gemini (memory): Bulk Nutrients, True Protein, Optimum Nutrition, Macro Mike"></i><i class="dot other" title="Gemini (web): Optimum Nutrition, Bulk Nutrients, True Protein, VPA"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot hit" title="Grok (web): Bulk Nutrients, True Protein, Musashi, Optimum Nutrition"></i></div></td></tr>
-          <tr><td class="q">Should I take creatine? Which one should I get?</td><td><div class="dots"><i class="dot other" title="Claude (memory): Optimum Nutrition, Myprotein, Bulk Nutrients"></i><i class="dot hit" title="Claude (web): Optimum Nutrition, Musashi, Bulk Nutrients"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot other" title="ChatGPT (web): Bulk Nutrients, True Protein"></i></div></td><td><div class="dots"><i class="dot hit" title="Gemini (memory): Bulk Nutrients, VPA, Musashi, Optimum Nutrition"></i><i class="dot hit" title="Gemini (web): Bulk Nutrients, VPA, Optimum Nutrition, EHP Labs"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot other" title="Grok (web): Optimum Nutrition, True Protein"></i></div></td></tr>
-          <tr><td class="q">I&#x27;m cutting weight but want to keep my muscle, what supplements help?</td><td><div class="dots"><i class="dot" title="Claude (memory): no brands named"></i><i class="dot" title="Claude (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Bulk Nutrients, VPA, Optimum Nutrition, EHP Labs"></i><i class="dot" title="Gemini (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
-          <tr><td class="q">What&#x27;s a good recovery drink after training?</td><td><div class="dots"><i class="dot other" title="Claude (memory): Up&amp;Go, Gatorade"></i><i class="dot other" title="Claude (web): Up&amp;Go, Sustagen, Gatorade"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Up&amp;Go, Myprotein"></i><i class="dot other" title="Gemini (web): Gatorade"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
-          <tr><td class="q">I&#x27;m not sleeping well, what magnesium should I take?</td><td><div class="dots"><i class="dot" title="Claude (memory): no brands named"></i><i class="dot" title="Claude (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Ethical Nutrients"></i><i class="dot" title="Gemini (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
-          <tr><td class="q">What&#x27;s a good probiotic for gut health?</td><td><div class="dots"><i class="dot other" title="Claude (memory): Blackmores, Inner Health, Ethical Nutrients, Life-Space"></i><i class="dot other" title="Claude (web): Ethical Nutrients, Blackmores, Inner Health"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Life-Space, Inner Health, Ethical Nutrients"></i><i class="dot other" title="Gemini (web): Inner Health, Ethical Nutrients, Life-Space, Metagenics"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
-          <tr><td class="q">What vitamins should I give my kids?</td><td><div class="dots"><i class="dot" title="Claude (memory): no brands named"></i><i class="dot" title="Claude (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Gemini (memory): no brands named"></i><i class="dot" title="Gemini (web): no brands named"></i></div></td><td><div class="dots"><i class="dot" title="Grok (memory): no brands named"></i><i class="dot" title="Grok (web): no brands named"></i></div></td></tr>
-          <tr><td class="q">What&#x27;s a healthy protein bar I can grab on the go?</td><td><div class="dots"><i class="dot hit" title="Claude (memory): Up&amp;Go, Barebells, Aussie Bodies"></i><i class="dot hit" title="Claude (web): Aussie Bodies, Barebells"></i></div></td><td><div class="dots"><i class="dot" title="ChatGPT (memory): no brands named"></i><i class="dot" title="ChatGPT (web): no brands named"></i></div></td><td><div class="dots"><i class="dot other" title="Gemini (memory): Body Science"></i><i class="dot hit" title="Gemini (web): Aussie Bodies"></i></div></td><td><div class="dots"><i class="dot other" title="Grok (memory): Fulfil"></i><i class="dot other" title="Grok (web): Quest"></i></div></td></tr>
-        </tbody>
-      </table>
-      <div class="legend"><span><i class="dot hit"></i> Vitaco brand named</span><span><i class="dot other"></i> Other brands only</span><span><i class="dot"></i> No brands named</span><span>Hover a dot for the brands.</span></div>
-    </div>
-    <div class="totals">
-      <div class="card total"><div class="m">Claude</div><div class="v">6<small> / 20</small></div><p>answers name Vitaco · 12 name any brand</p></div>
-      <div class="card total"><div class="m">ChatGPT</div><div class="v">0<small> / 20</small></div><p>answers name Vitaco · 3 name any brand</p></div>
-      <div class="card total"><div class="m">Gemini</div><div class="v">4<small> / 20</small></div><p>answers name Vitaco · 15 name any brand</p></div>
-      <div class="card total"><div class="m">Grok</div><div class="v">1<small> / 20</small></div><p>answers name Vitaco · 6 name any brand</p></div>
-    </div>
+    <div class="totals five"><div class="card total"><div class="m">ChatGPT</div><div class="v">4<small> / 44</small></div><p>answers name Vitaco</p></div><div class="card total"><div class="m">Gemini</div><div class="v">6<small> / 36</small></div><p>answers name Vitaco</p></div><div class="card total"><div class="m">Google AI Mode</div><div class="v">0<small> / 8</small></div><p>answers name Vitaco</p></div><div class="card total"><div class="m">Claude</div><div class="v">6<small> / 20</small></div><p>answers name Vitaco</p></div><div class="card total"><div class="m">Grok</div><div class="v">1<small> / 20</small></div><p>answers name Vitaco</p></div></div>
     <div class="two" style="margin-top:16px">
       <div class="card">
-        <h3 style="margin-bottom:8px">Half the answers name no brand at all</h3>
-        <p style="margin:0">44 of 80 answers gave generic advice ("take creatine monohydrate, 3–5 g a day"). Of the 36 that did name brands, Optimum Nutrition appeared in 18, Bulk Nutrients in 15 and Vitaco in 11. Protein and protein bars are where Vitaco shows up. Magnesium, probiotics, recovery and kids' vitamins are where it doesn't.</p>
+        <h3 style="margin-bottom:8px">Many answers name no brand at all</h3>
+        <p style="margin:0">Through the APIs, 44 of 80 answers gave generic advice ("take creatine monohydrate, 3–5 g a day"). When brands are named, Bulk Nutrients appears in 31 of the 128 answers, Optimum Nutrition in 28 and True Protein in 21. Vitaco shows up for protein, creatine, pre-workout and bars, and not at all for kids' vitamins, recovery drinks or "gain muscle".</p>
       </div>
       <div class="card">
         <h3 style="margin-bottom:8px">When Musashi is named, it's for the price</h3>
@@ -418,23 +393,23 @@
 <section id="competitors">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">03 · Competitors</span>
+      <span class="eyebrow">02 · Competitors</span>
       <h2>Who AI <span class="hl">recommends</span> instead.</h2>
     </div>
     <div class="two">
-      <div class="card chart" role="img" aria-label="Consumer AI answers naming each brand, out of 48. Bulk Nutrients 16, True Protein 14, Swisse 11, Optimum Nutrition 10, Blackmores 7, Inner Health 5, Musashi 4, Nutra-Life 2, Healtheries 0, Aussie Bodies 0.">
-        <h3>Consumer AI answers naming each brand</h3>
-        <span class="muted">48 answers · ChatGPT, Gemini, Google AI Mode</span>
-        <div class="bar" data-tip="16 of 48 answers"><span class="n">Bulk Nutrients</span><div class="t"><div class="f" style="width:100%"></div></div><span class="v">16</span></div>
-        <div class="bar" data-tip="14 of 48 answers"><span class="n">True Protein</span><div class="t"><div class="f" style="width:87.5%"></div></div><span class="v">14</span></div>
-        <div class="bar" data-tip="11 of 48 answers"><span class="n">Swisse</span><div class="t"><div class="f" style="width:68.75%"></div></div><span class="v">11</span></div>
-        <div class="bar" data-tip="10 of 48 answers"><span class="n">Optimum Nutr.</span><div class="t"><div class="f" style="width:62.5%"></div></div><span class="v">10</span></div>
-        <div class="bar" data-tip="7 of 48 answers"><span class="n">Blackmores</span><div class="t"><div class="f" style="width:43.75%"></div></div><span class="v">7</span></div>
-        <div class="bar" data-tip="5 of 48 answers"><span class="n">Inner Health</span><div class="t"><div class="f" style="width:31.25%"></div></div><span class="v">5</span></div>
-        <div class="bar us" data-tip="4 of 48 answers"><span class="n">Musashi</span><div class="t"><div class="f" style="width:25%"></div></div><span class="v">4</span></div>
-        <div class="bar us" data-tip="2 of 48 answers"><span class="n">Nutra-Life</span><div class="t"><div class="f" style="width:12.5%"></div></div><span class="v">2</span></div>
-        <div class="bar us" data-tip="0 of 48 answers"><span class="n">Healtheries</span><div class="t"><div class="f" style="width:0"></div></div><span class="v">0</span></div>
-        <div class="bar us" data-tip="0 of 48 answers"><span class="n">Aussie Bodies</span><div class="t"><div class="f" style="width:0"></div></div><span class="v">0</span></div>
+      <div class="card chart" role="img" aria-label="AI answers naming each brand, out of 128. Bulk Nutrients 31, Optimum Nutrition 28, True Protein 21, Musashi 11, Swisse 11, Blackmores 9, Inner Health 9, Aussie Bodies 5, Nutra-Life 2, Healtheries 0.">
+        <h3>AI answers naming each brand</h3>
+        <span class="muted">128 answers · ChatGPT, Gemini, Google AI Mode, Claude, Grok</span>
+        <div class="bar" data-tip="31 of 128 answers"><span class="n">Bulk Nutrients</span><div class="t"><div class="f" style="width:100.0%"></div></div><span class="v">31</span></div>
+        <div class="bar" data-tip="28 of 128 answers"><span class="n">Optimum Nutr.</span><div class="t"><div class="f" style="width:90.3%"></div></div><span class="v">28</span></div>
+        <div class="bar" data-tip="21 of 128 answers"><span class="n">True Protein</span><div class="t"><div class="f" style="width:67.7%"></div></div><span class="v">21</span></div>
+        <div class="bar us" data-tip="11 of 128 answers"><span class="n">Musashi</span><div class="t"><div class="f" style="width:35.5%"></div></div><span class="v">11</span></div>
+        <div class="bar" data-tip="11 of 128 answers"><span class="n">Swisse</span><div class="t"><div class="f" style="width:35.5%"></div></div><span class="v">11</span></div>
+        <div class="bar" data-tip="9 of 128 answers"><span class="n">Blackmores</span><div class="t"><div class="f" style="width:29.0%"></div></div><span class="v">9</span></div>
+        <div class="bar" data-tip="9 of 128 answers"><span class="n">Inner Health</span><div class="t"><div class="f" style="width:29.0%"></div></div><span class="v">9</span></div>
+        <div class="bar us" data-tip="5 of 128 answers"><span class="n">Aussie Bodies</span><div class="t"><div class="f" style="width:16.1%"></div></div><span class="v">5</span></div>
+        <div class="bar us" data-tip="2 of 128 answers"><span class="n">Nutra-Life</span><div class="t"><div class="f" style="width:6.5%"></div></div><span class="v">2</span></div>
+        <div class="bar us" data-tip="0 of 128 answers"><span class="n">Healtheries</span><div class="t"><div class="f" style="width:0.0%"></div></div><span class="v">0</span></div>
       </div>
       <div class="card chart" role="img" aria-label="Times each site is cited in Google AI Overviews in Australia. Swisse 4778, Blackmores 3873, Bulk Nutrients 3695, VPA 3009, True Protein 2275, Musashi 472, Nutra-Life 298, Healtheries 14, Aussie Bodies 14.">
         <h3>Google AI Overview citations</h3>
@@ -461,7 +436,7 @@
 <section id="why" style="padding-top:0">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">04 · Why</span>
+      <span class="eyebrow">03 · Why</span>
       <h2>AI recommends what it <span class="hl">reads</span>.</h2>
       <p class="lede">These are the sites cited in the AI answers and Google's AI Overviews. Vitaco's six sites were cited <b>0 times</b>. trueprotein.com.au was cited 11 times.</p>
     </div>
@@ -489,7 +464,7 @@
 <section id="search">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">05 · Google search</span>
+      <span class="eyebrow">04 · Google search</span>
       <h2>On Google, Bulk Nutrients alone gets <span class="hl">2.8×</span> all of Vitaco.</h2>
       <p class="lede">The same comparison in classic search: how many keywords each site ranks for in Australia, how many visits that brings, and how many sites link to it.</p>
     </div>
@@ -563,7 +538,7 @@
 <section id="content" style="padding-top:0">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">06 · Content plan</span>
+      <span class="eyebrow">05 · Content plan</span>
       <h2>Eight articles worth <span class="hl">writing</span>.</h2>
       <p class="lede">Each one targets a search that a competitor's article wins today, and each is built on Vitaco's own product facts. Open any brief to see its outline.</p>
     </div>
@@ -615,7 +590,7 @@
 <section id="health">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">07 · Site health</span>
+      <span class="eyebrow">06 · Site health</span>
       <h2>Five sites are fine. <span class="hl">One is on fire.</span></h2>
       <p class="lede">Google and AI assistants read the same pages. Open any finding to see the command that proves it.</p>
     </div>
@@ -673,7 +648,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 <section id="improve" class="loop-bg">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">08 · How it improves</span>
+      <span class="eyebrow">07 · How it improves</span>
       <h2>Find. <span class="hl">Fix.</span> Prove it moved.</h2>
       <p class="lede">Each month we re-ask the same questions across every AI, re-scan all six sites and re-run the Google audit, then give your team a ranked list of what to do next. Your team and agency make the changes. The next month's numbers show what worked.</p>
     </div>
@@ -721,7 +696,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 <section id="plan">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">09 · What we'd do first</span>
+      <span class="eyebrow">08 · What we'd do first</span>
       <h2>Small, fast, <span class="hl">measured</span>.</h2>
       <p class="lede">A fixed scope with numbers agreed up front. Technical fixes show up within a month of your team shipping them. AI share of voice moves more slowly, so we track it monthly from today's baseline.</p>
     </div>
@@ -736,8 +711,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
           <tr><td>Nutra-Life shared products with AU/NZ hreflang</td><td class="now">0</td><td class="goal">all shared</td><td class="when">day 30</td></tr>
           <tr class="group"><td colspan="4">AI &amp; agent visibility</td></tr>
           <tr><td>Musashi shopping-endpoint questions answered</td><td class="now">0 / 6</td><td class="goal">6 / 6</td><td class="when">day 30</td></tr>
-          <tr><td>Consumer AI answers naming the right Vitaco brand</td><td class="now">6 / 48</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
-          <tr><td>Big four model answers naming a Vitaco brand</td><td class="now">11 / 80</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
+          <tr><td>AI answers naming a Vitaco brand (5 assistants)</td><td class="now">17 / 128</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
           <tr><td>Vitaco sites cited as a source in AI answers</td><td class="now">0</td><td class="goal">&gt; 0</td><td class="when">monthly</td></tr>
           <tr><td>musashi.com citations in Google AI Overviews</td><td class="now">472</td><td class="goal">trending up</td><td class="when">monthly</td></tr>
           <tr class="group"><td colspan="4">Google search</td></tr>
@@ -759,7 +733,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 <section id="headless" class="loop-bg">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">10 · What's next</span>
+      <span class="eyebrow">09 · What's next</span>
       <h2>Headless <span class="hl">shopping</span>.</h2>
       <p class="lede">The next shopper may not visit the website at all. Their agent will: it compares products, asks the store questions and checks out on their behalf. Whatever the agent can't read, it can't buy.</p>
     </div>
@@ -815,7 +789,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
 
 <section style="padding:48px 0 24px">
   <div class="wrap">
-    <p class="muted" style="max-width:900px"><b style="color:var(--text-2)">Method.</b> All data collected 11 October 2026. Consumer AI answers came from DataForSEO's ChatGPT and Gemini scrapers and Google AI Mode, asked from Australia. Big four answers came from the model APIs via OpenRouter (Claude Sonnet 5.5, GPT-6.1, Gemini 3.1 Pro, Grok 4.7), told the user is in Sydney. API answers can differ from the consumer apps. Google results are desktop organic, top 10. SEO footprint, keyword rankings, search volumes and linking sites come from DataForSEO Labs, Keywords Data and Backlinks (Australia). Keyword-database positions can lag, so the positions quoted as live were re-checked on Google on 11 October. AI Overview citations come from DataForSEO's LLM Mentions database. Site and agent checks are plain HTTP requests, including Shopify's public <code>/api/mcp</code> endpoint. AI answers vary between runs, so treat small differences as noise. We didn't have Search Console or sales data. Agent launch details come from public reporting and are US-first.</p>
+    <p class="muted" style="max-width:900px"><b style="color:var(--text-2)">Method.</b> All data collected 11 October 2026. Consumer AI answers came from DataForSEO's ChatGPT and Gemini scrapers and Google AI Mode, asked from Australia. Claude, ChatGPT, Gemini and Grok API answers came via OpenRouter (Claude Sonnet 5.5, GPT-6.1, Gemini 3.1 Pro, Grok 4.7), told the user is in Sydney. API answers can differ from the consumer apps. Google results are desktop organic, top 10. SEO footprint, keyword rankings, search volumes and linking sites come from DataForSEO Labs, Keywords Data and Backlinks (Australia). Keyword-database positions can lag, so the positions quoted as live were re-checked on Google on 11 October. AI Overview citations come from DataForSEO's LLM Mentions database. Site and agent checks are plain HTTP requests, including Shopify's public <code>/api/mcp</code> endpoint. AI answers vary between runs, so treat small differences as noise. We didn't have Search Console or sales data. Agent launch details come from public reporting and are US-first.</p>
   </div>
 </section>
 
