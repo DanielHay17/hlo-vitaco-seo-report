@@ -279,7 +279,8 @@
   .live-out mark { background: var(--accent-soft); color: var(--accent-ink); font-weight: 600; padding: 0 2px; border-radius: 3px; }
   .live-out mark.o { background: var(--surface-2); color: var(--text); }
 
-  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .matrix, .table-wrap { position: relative; } /* keeps .sr labels inside the scroll box on phones */
   footer { border-top: 1px solid var(--line); padding: 36px 0 52px; }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; font-size: 13.5px; color: var(--muted); }
   footer img { height: 22px; }
@@ -607,7 +608,7 @@
       <div class="card">
         <h3>trueprotein.com.au <span class="pill ok">answers</span></h3>
         <blockquote class="said" style="margin-top:0">"It depends on your priorities. True Protein is consistently rated among Australia's best for taste, quality, and clean ingredients. Our WPI 90 uses NZ grass-fed whey with 90%+ protein content and all-natural flavouring. We're rated 4.8/5 on ProductReview.com.au from 270+ reviews."<cite>True Protein's store endpoint, replying to an agent's protein question with its stored answer to "What's the best protein powder in Australia?"</cite></blockquote>
-        <p class="muted" style="margin:12px 0 0">Same platform, same endpoint. True Protein has loaded its knowledge base. It's content, not code, so your team can load Musashi's without a developer.</p>
+        <p class="muted" style="margin:12px 0 0">Same platform, same endpoint. True Protein has filled in its store FAQs. That's a form in Shopify admin, not code, so your team can add Musashi's without a developer.</p>
       </div>
     </div>
 
@@ -633,7 +634,7 @@
     </div>
 
     <div class="two" style="margin-top:16px">
-      <div class="card"><h3 style="margin-bottom:8px">Shopify stores: nearly there</h3><p style="margin:0">Musashi and Nutra-Life AU score 5 of 6. The gap is the store's knowledge base: load it with the facts from the label (protein per serve, testing, dosage, who it's for) and agents get an answer instead of an empty reply. After that, turn on Shopify's agentic checkout channels as they reach Australia.</p></div>
+      <div class="card"><h3 style="margin-bottom:8px">Shopify stores: nearly there</h3><p style="margin:0">Musashi and Nutra-Life AU score 5 of 6. The gap is the store's FAQs in Shopify admin: fill them in with the facts from the label (protein per serve, testing, dosage, who it's for) and agents get an answer instead of an empty reply. After that, turn on Shopify's agentic checkout channels as they reach Australia.</p></div>
       <div class="card"><h3 style="margin-bottom:8px">Everything else: start with product data</h3><p style="margin:0">Healtheries, Aussie Bodies and Nutra-Life NZ score 1 of 6. An agent can find their product URLs but can't reliably read a price, stock level or barcode from them. Structured product data comes first, and for Healtheries it's the same work order as HLTH-05.</p></div>
     </div>
   </div>
@@ -645,13 +646,42 @@
     <div class="head">
       <span class="eyebrow">06 · Content plan</span>
       <h2>Eight articles worth <span class="hl">writing</span>.</h2>
-      <p class="lede">Each one targets a search that a competitor's article wins today, and each is built on Vitaco's own product facts. Open any brief to see its outline.</p>
+      <p class="lede">Each one targets a search that a competitor's article wins today, and each is built on Vitaco's own product facts. Every draft follows the TGA rules, and a person at Vitaco signs it off before it goes live. Open any brief to see its outline.</p>
     </div>
-    <details class="f brief"><summary><span class="id">Musashi</span><span class="t">What is creatine, and is it safe to take every day?</span><span class="chev">›</span></summary><div class="body">
+    <div class="card" style="margin-bottom:16px">
+      <h3 style="margin-bottom:6px">Written to the rules, signed off by a person</h3>
+      <p class="muted" style="margin:0 0 18px">Bulk Nutrients can say things Vitaco can't. So every draft is written to the rules below and checked against them before your team sees it. Nothing publishes without a sign-off.</p>
+      <div class="two">
+        <div>
+          <span class="eyebrow" style="margin-bottom:8px">The rules every draft follows</span>
+          <ul class="outline">
+            <li>Product claims stay within the product's permitted indications on the ARTG, and never touch serious diseases</li>
+            <li>General education is cited to the AIS, NHMRC or TGA, and kept separate from the product section</li>
+            <li>Never call a product "safe", side-effect free or guaranteed to work</li>
+            <li>No endorsements from health professionals</li>
+            <li>Listed medicines carry "Always read the label and follow the directions for use"</li>
+            <li>Sports foods, bars and snacks follow the Food Standards Code health claim rules instead</li>
+            <li>Vitaco's own rules on top, such as no consumption imagery and approved product wording</li>
+          </ul>
+        </div>
+        <div>
+          <span class="eyebrow" style="margin-bottom:8px">The loop for each article</span>
+          <ol class="outline">
+            <li><b>Draft.</b> Written to the rules, with product facts taken from the label only.</li>
+            <li><b>Claims check.</b> Every claim is matched to the label or a cited source. Risky words (safe, cure, treat, disease names) are flagged.</li>
+            <li><b>Human review.</b> Your writer edits it, and regulatory signs off anything that mentions a product.</li>
+            <li><b>Publish.</b> Your team publishes it.</li>
+            <li><b>Re-check.</b> A month later, on Google and in the AI answers.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <details class="f brief"><summary><span class="id">Musashi</span><span class="t">What is creatine, and what does the evidence say about daily use?</span><span class="chev">›</span></summary><div class="body">
       <p><span class="muted">Targets:</span> <b>what is creatine</b> 12,100/mo · <b>creatine</b> 135,000/mo</p>
       <p><span class="muted">Winning now:</span> VPA's blog (#9). Musashi isn't in the top 100 for "creatine".</p>
       <p><span class="muted">Why this one:</span> The same question we put to the AI assistants, where Musashi was named in 1 of 6 answers. ChatGPT's own searches asked for "evidence" and "safety position stand".</p>
-      <ol class="outline"><li>What creatine is and what it does</li><li>What the evidence says about daily use, citing the AIS and TGA</li><li>Dose: 3–5 g a day, no loading needed</li><li>Who should check with a doctor first</li><li>Musashi Creatine Monohydrate: facts from the label</li></ol></div></details>
+      <ol class="outline"><li>What creatine is and what it does</li><li>What the evidence says about daily use, citing the AIS and TGA</li><li>Dose: 3–5 g a day, no loading needed</li><li>Who should check with a doctor first</li><li>Musashi Creatine Monohydrate: facts from the label</li></ol>
+      <p class="muted" style="margin:10px 0 0">Claims to watch: the evidence section can discuss safety research, cited. The product section never calls the product "safe".</p></div></details>
     <details class="f brief"><summary><span class="id">Musashi</span><span class="t">Whey concentrate vs isolate: which should you buy?</span><span class="chev">›</span></summary><div class="body">
       <p><span class="muted">Targets:</span> <b>whey protein and whey protein isolate</b> 18,100/mo · <b>whey protein</b> 27,100/mo</p>
       <p><span class="muted">Winning now:</span> True Protein (#1) and Bulk Nutrients (#8).</p>
@@ -666,17 +696,19 @@
       <p><span class="muted">Targets:</span> <b>magnesium glycinate</b> 110,000/mo · <b>magnesium oxide</b> 5,400/mo · <b>magnesium glycinate vs citrate</b> 3,600/mo</p>
       <p><span class="muted">Winning now:</span> Blackmores' Health Hub article (#3 for "glycinate vs citrate").</p>
       <p><span class="muted">Why this one:</span> Nutra-Life used to sit at #11 for "magnesium glycinate" and has slipped out of the top 30. A comparison page protects its biggest search.</p>
-      <ol class="outline"><li>How the three forms differ</li><li>Absorption and gut tolerance</li><li>Which suits sleep, muscles or general use</li><li>Nutra-Life Magnesium Sleep and glycinate range: facts from the label</li></ol></div></details>
+      <ol class="outline"><li>How the three forms differ</li><li>Absorption and gut tolerance</li><li>What each form is commonly used for, cited</li><li>Nutra-Life Magnesium Sleep and glycinate range: facts from the label</li></ol>
+      <p class="muted" style="margin:10px 0 0">Claims to watch: sleep and muscle claims for the product use the wording on its ARTG listing, word for word.</p></div></details>
     <details class="f brief"><summary><span class="id">Nutra-Life</span><span class="t">Foods high in magnesium, and when a supplement helps</span><span class="chev">›</span></summary><div class="body">
       <p><span class="muted">Targets:</span> <b>magnesium rich foods</b> 8,100/mo · <b>magnesium in food</b> 8,100/mo · <b>magnesium</b> 60,500/mo</p>
       <p><span class="muted">Winning now:</span> Swisse's blog (#4–9 across the group) and True Protein's "25 foods" list.</p>
       <p><span class="muted">Why this one:</span> Swisse's single article ranks across a cluster of magnesium-food searches. Nutra-Life isn't in the top 100 for "magnesium".</p>
-      <ol class="outline"><li>Top magnesium foods with amounts per serve</li><li>Daily needs by age, from NHMRC guidelines</li><li>Signs you may not be getting enough</li><li>When a supplement makes sense</li></ol></div></details>
-    <details class="f brief"><summary><span class="id">Nutra-Life</span><span class="t">Which probiotic for which gut problem?</span><span class="chev">›</span></summary><div class="body">
+      <ol class="outline"><li>Top magnesium foods with amounts per serve</li><li>Daily needs by age, from NHMRC guidelines</li><li>Who may not be getting enough, and when to see a GP</li><li>When a supplement makes sense</li></ol></div></details>
+    <details class="f brief"><summary><span class="id">Nutra-Life</span><span class="t">Which probiotic? What the strains do and what the research says</span><span class="chev">›</span></summary><div class="body">
       <p><span class="muted">Targets:</span> <b>probiotics</b> 33,100/mo · <b>kids probiotic</b> 2,400/mo</p>
       <p><span class="muted">Winning now:</span> Swisse (#3) and Blackmores (#9). Nutra-Life is #14.</p>
       <p><span class="muted">Why this one:</span> The closest Vitaco page to page one for a big search. ChatGPT searched "evidence strains IBS constipation bloating" before answering.</p>
-      <ol class="outline"><li>Strains and what the evidence supports</li><li>Matching a strain to bloating, IBS or constipation</li><li>Daily vs travel vs kids</li><li>Nutra-Life Probiotica range: strains from the label</li></ol></div></details>
+      <ol class="outline"><li>Strains and what the research supports</li><li>Common digestive concerns and the research on each, cited</li><li>Daily vs travel vs kids</li><li>Nutra-Life Probiotica range: strains from the label</li></ol>
+      <p class="muted" style="margin:10px 0 0">Claims to watch: the research section stays general. Products are never matched to a condition like IBS unless that's a permitted indication on the listing.</p></div></details>
     <details class="f brief"><summary><span class="id">Healtheries</span><span class="t">Healthy lunchbox snacks kids will actually eat</span><span class="chev">›</span></summary><div class="body">
       <p><span class="muted">Targets:</span> <b>healthy snacks for kids</b> 2,900/mo · <b>school snacks for kids</b> 480/mo</p>
       <p><span class="muted">Winning now:</span> Blackmores' Health Hub article (#8).</p>
@@ -687,7 +719,7 @@
       <p><span class="muted">Winning now:</span> VPA's homemade protein bar recipe (#10). Woolworths holds #1.</p>
       <p><span class="muted">Why this one:</span> Matches ChatGPT's search for "healthiest protein bars ingredients comparison". Aussie Bodies isn't named in any AI answer today.</p>
       <ol class="outline"><li>What to look for per bar: protein, sugar, fibre</li><li>Low sugar vs low carb, explained</li><li>Bars for snacks vs bars for training</li><li>Aussie Bodies range compared on the label</li></ol></div></details>
-    <p class="muted" style="margin-top:14px">Every article goes through the same loop: published, then re-checked a month later on Google and in the AI answers.</p>
+    <p class="muted" style="margin-top:14px">Every article goes through the same loop: drafted to the rules, signed off by your team, published, then re-checked a month later on Google and in the AI answers.</p>
   </div>
 </section>
 
@@ -790,7 +822,7 @@ hreflang="zh-Hans" href="https://nutralife.com.au/zh"</span></pre>
     <div class="slogan"><h3>Your team does the work. <span class="hl">We keep score.</span></h3></div>
     <div class="lanes">
       <div class="card lane auto"><span class="pill ok">Phlo</span><h3>Measure and prioritise</h3><div class="who">every month</div><p>Re-run every AI check, site scan and Google audit. A one-page report of what moved and a ranked list of what to do next, plus two calls a month to work through it.</p></div>
-      <div class="card lane"><span class="pill warn">Your marketing &amp; SEO team</span><h3>Pages, content, outreach</h3><div class="who">musashi.com · nutralife.com.au · aussiebodies.com</div><p>Product page facts, the Shopify knowledge base, articles from the content plan, and getting listed and linked on the sites AI cites.</p></div>
+      <div class="card lane"><span class="pill warn">Your marketing &amp; SEO team</span><h3>Pages, content, outreach</h3><div class="who">musashi.com · nutralife.com.au · aussiebodies.com</div><p>Product page facts, the Shopify store FAQs, articles from the content plan, and getting listed and linked on the sites AI cites.</p></div>
       <div class="card lane"><span class="pill warn">Your agency</span><h3>Healtheries fixes</h3><div class="who">healtheries.com.au · .co.nz</div><p>Each work order includes URLs, expected output and a one-line test. The monthly re-check shows when each one is done.</p></div>
     </div>
   </div>
